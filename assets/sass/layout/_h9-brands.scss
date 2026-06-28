@@ -1,0 +1,86 @@
+@use "../utilities" as *;
+
+/* START: H9 Brands CSS */
+.h9-brands {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	border-top: 1px solid var(--tj-color-border-2);
+	border-inline-start: 1px solid var(--tj-color-border-2);
+
+	.brand_item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 192px;
+		background-color: var(--tj-color-common-white);
+		border-inline-end: 1px solid var(--tj-color-border-2);
+		border-bottom: 1px solid var(--tj-color-border-2);
+
+		div {
+			position: relative;
+
+			img {
+				display: block;
+				max-width: 100%;
+				object-fit: contain;
+				filter: opacity(0.4);
+				transition: all 500ms ease;
+
+				&:first-child {
+					position: absolute;
+					inset-inline-start: 0px;
+					top: 0px;
+					inset-inline-end: 0px;
+					bottom: 0px;
+					z-index: 1;
+					transform: translateX(50%) scaleX(1.5);
+					opacity: 0;
+					filter: blur(10px);
+				}
+			}
+		}
+		a {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+
+			&:hover {
+				div {
+					img {
+						filter: opacity(1);
+
+						&:first-child {
+							transform: translateX(0) scaleX(1);
+							opacity: 1;
+							filter: blur(0);
+						}
+						&:last-child {
+							transform: translateX(-50%) scaleX(1.5);
+							opacity: 0;
+							filter: blur(10px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$lg, $md, $sm, $xs} {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+	@media #{$md,$sm} {
+		.brand_item {
+			height: 160px;
+		}
+	}
+	@media #{$xs} {
+		grid-template-columns: repeat(2, 1fr);
+
+		.brand_item {
+			height: 150px;
+		}
+	}
+}
+/* !END: H9 Brands CSS */

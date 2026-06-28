@@ -1,0 +1,172 @@
+@use "../utilities" as *;
+
+/* START: Case Study CSS */
+.h5-case-study {
+	&-section {
+		background-color: var(--tj-color-theme-bg);
+		padding-top: 120px;
+		padding-bottom: 120px;
+		overflow: hidden;
+
+		.sec-heading {
+			max-width: 555px;
+			width: 100%;
+			text-align: center;
+			margin-inline-start: auto;
+			margin-inline-end: auto;
+			margin-bottom: 60px;
+			.sub-title {
+				background-color: var(--tj-color-common-white);
+			}
+		}
+	}
+
+	&-slider {
+		overflow: inherit;
+	}
+
+	&-item {
+		&-inner {
+			min-height: 524px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			position: relative;
+			z-index: 1;
+			overflow: hidden;
+		}
+
+		.case-study-content {
+			background-color: var(--tj-color-common-white);
+			padding: 30px 22px 30px 30px;
+			max-width: 410px;
+			width: 100%;
+			position: absolute;
+			inset-inline-end: 0;
+			bottom: 0;
+			z-index: 2;
+			transform: translateY(100%);
+			transition: 0.4s;
+
+			.category {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 11px;
+				margin-bottom: 15px;
+
+				li {
+					display: inline-flex;
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 40px;
+						border: 1px solid var(--tj-color-border-2);
+						color: var(--tj-color-text-body);
+						font-size: 14px;
+						line-height: 1;
+						padding: 5px 9px;
+
+						&:hover {
+							border-color: var(--tj-color-theme-primary);
+							background-color: var(--tj-color-theme-primary);
+							color: var(--tj-color-common-white);
+						}
+					}
+				}
+			}
+
+			.case-study-text {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: end;
+				justify-content: space-between;
+				gap: 20px;
+
+				.title {
+					margin: 0;
+					max-width: calc(100% - 84px);
+
+					a {
+						&:hover {
+							color: var(--tj-color-theme-primary);
+						}
+					}
+				}
+
+				.icon-btn {
+					width: 64px;
+					height: 64px;
+					&:hover {
+						background-color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+		}
+
+		&:hover {
+			.case-study-content {
+				transform: translate(0);
+			}
+		}
+	}
+
+	@media #{$lg} {
+		&-section {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+		&-item {
+			.case-study-content {
+				padding: 30px 20px;
+				max-width: 390px;
+			}
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		&-section {
+			padding-top: 80px;
+			padding-bottom: 80px;
+
+			.sec-heading {
+				margin-bottom: 40px;
+			}
+		}
+		&-item {
+			.case-study-content {
+				padding: 30px 20px;
+				max-width: 390px;
+			}
+		}
+	}
+	@media #{$sm, $xs} {
+		&-item {
+			.case-study-content {
+				max-width: 350px;
+
+				.case-study-text {
+					.title {
+						max-width: calc(100% - 70px);
+					}
+
+					.icon-btn {
+						width: 50px;
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+	@media #{$xs} {
+		&-item {
+			&-inner {
+				min-height: 400px;
+			}
+			.case-study-content {
+				max-width: 320px;
+			}
+		}
+	}
+}
+/* !END: Case Study CSS */

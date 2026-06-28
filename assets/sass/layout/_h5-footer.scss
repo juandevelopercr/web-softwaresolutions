@@ -1,0 +1,95 @@
+@use "../utilities" as *;
+
+/* START: Home 5 Footer CSS */
+.h5-footer {
+	background-color: var(--tj-color-theme-bg);
+	border-top: 0;
+	.footer-top-area {
+		z-index: 2;
+		.line {
+			&::before {
+				background: var(--tj-color-border-2);
+			}
+		}
+	}
+	&-shape {
+		position: absolute;
+		bottom: 0;
+		inset-inline-start: -166px;
+		max-width: 333px;
+		width: 100%;
+		z-index: -1;
+		@media #{$xxl, $xl, $md} {
+			max-width: 280px;
+		}
+		@media #{$lg} {
+			max-width: 250px;
+		}
+		@media #{$sm} {
+			max-width: 270px;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+	}
+	&-copyright {
+		padding: 28px 0;
+		background-color: var(--tj-color-theme-dark);
+	}
+	.footer-widget {
+		.title {
+			color: var(--tj-color-heading-primary);
+		}
+		.desc {
+			color: var(--tj-color-common-black-2);
+		}
+		.widget-menu ul li a {
+			color: var(--tj-color-text-body);
+		}
+		.footer-social {
+			ul {
+				li {
+					a {
+						color: var(--tj-color-common-white);
+						background: rgba(5, 18, 41, 0.3);
+						i {
+							color: var(--tj-color-common-white);
+						}
+						&:hover {
+							background: var(--tj-color-theme-primary);
+						}
+					}
+				}
+			}
+		}
+		.newsletter-title {
+			@media #{$xs} {
+				max-width: 100%;
+			}
+		}
+		.newsletter-form {
+			.form-input {
+				input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+				input[type="email"] {
+					color: var(--tj-color-common-black-2);
+					background: var(--tj-color-common-white);
+					border: 1px solid var(--tj-color-common-white);
+					&:focus {
+						border: 1px solid var(--tj-color-theme-primary);
+					}
+					&::placeholder {
+						color: var(--tj-color-common-black-2);
+					}
+				}
+				button::before {
+					background: var(--tj-color-border-2);
+				}
+			}
+		}
+	}
+	.footer-newsletter-form {
+		@media #{$xs} {
+			border-top: 1px solid var(--tj-color-border-2);
+		}
+	}
+}

@@ -1,0 +1,215 @@
+@use "../utilities" as *;
+
+/* START: Case Study CSS */
+.h9-case-study {
+	background-color: var(--tj-color-theme-dark);
+	overflow: hidden;
+	.sec-heading {
+		margin: 0;
+		max-width: 507px;
+		&-wrap {
+			margin-bottom: 60px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 30px;
+			row-gap: 20px;
+			justify-content: space-between;
+			@media #{$xs} {
+				row-gap: 15px;
+			}
+			.sec-title {
+				color: var(--tj-color-common-white);
+			}
+			.desc {
+				max-width: 300px;
+				width: 100%;
+				color: var(--tj-color-common-white-2);
+			}
+
+			.tj-primary-btn {
+				color: var(--tj-color-theme-dark);
+				background-color: var(--tj-color-common-white);
+				@media #{$xs} {
+					margin-top: 10px;
+				}
+				.btn_text {
+					color: var(--tj-color-theme-dark);
+				}
+				&:hover {
+					.btn_text {
+						color: var(--tj-color-common-white);
+					}
+				}
+			}
+			@media #{$md, $sm, $xs} {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	&-inner {
+		display: flex;
+		gap: 30px;
+		padding: 0 18px;
+		@media #{$lg,$sm, $xs} {
+			gap: 20px;
+			padding: 0 8px;
+		}
+		@media #{$md} {
+			gap: 15px;
+			padding: 0 3px;
+		}
+		@media #{$sm, $xs} {
+			flex-direction: column;
+		}
+	}
+	&-item {
+		width: 240px;
+		height: 585px;
+		transition: all 0.5s ease-in-out;
+		@media (min-width: 1921px) {
+			width: 13%;
+			height: 600px;
+		}
+		@media #{$xl, $lg,$md} {
+			height: 400px;
+		}
+		@media #{$sm, $xs} {
+			width: 100%;
+			height: 100px;
+		}
+		&-inner {
+			z-index: 0;
+			height: 100%;
+			min-height: 100%;
+			background-color: var(--tj-color-theme-dark);
+			background-blend-mode: luminosity;
+			&::after,
+			&::before {
+				content: " ";
+				width: 100%;
+				height: 0;
+				background: linear-gradient(
+					180deg,
+					rgba(5, 18, 41, 0) 0%,
+					#051229 100%
+				);
+				position: absolute;
+				inset-inline-start: 0;
+				bottom: 0;
+				transition: all 0.4s 0.3s;
+				z-index: 1;
+			}
+			&::before {
+				height: 100%;
+				background: rgba(5, 18, 41, 0.7);
+				transition-duration: 0;
+				opacity: 1;
+			}
+		}
+		.case-study-content {
+			background-color: transparent;
+			padding: 30px 30px;
+			max-width: 100%;
+			z-index: 2;
+			transition-delay: 0.3s;
+			@media #{$xl} {
+				padding: 20px 20px;
+			}
+			@media #{$lg} {
+				padding: 20px 15px;
+			}
+			@media #{$md} {
+				padding: 20px 10px;
+			}
+			@media #{$xs} {
+				padding: 15px 15px;
+			}
+			.case-study-text {
+				align-items: flex-end;
+				gap: 6px;
+				@media #{$md} {
+					flex-wrap: wrap;
+					gap: 18px;
+				}
+
+				.title-area {
+					max-width: calc(100% - 75px);
+					@media #{$md} {
+						max-width: 100%;
+					}
+				}
+				.title {
+					max-width: 100%;
+					letter-spacing: -0.025em;
+					&:hover {
+						letter-spacing: 0;
+					}
+					a {
+						color: var(--tj-color-common-white);
+						margin-bottom: 15px;
+						white-space: nowrap;
+						&:hover {
+							color: var(--tj-color-common-white);
+						}
+					}
+				}
+			}
+			.category {
+				margin-bottom: 0;
+				li a {
+					color: var(--tj-color-common-white);
+					background-color: rgba(247, 247, 247, 0.1);
+					backdrop-filter: blur(50px);
+					border: 0;
+					margin-bottom: 0 !important;
+					&:hover {
+						color: var(--tj-color-common-white);
+						background-color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+
+			.icon-btn {
+				background-color: transparent;
+				border: 1px solid var(--tj-color-common-white);
+				&:hover {
+					border-color: var(--tj-color-theme-primary);
+				}
+			}
+		}
+
+		&:hover {
+			.case-study-content {
+				transform: translateY(100%);
+			}
+		}
+
+		&.active {
+			width: 780px;
+			place-content: unset;
+			@media (min-width: 1921px) {
+				width: 48%;
+			}
+			@media #{$sm, $xs} {
+				width: 100%;
+				height: 300px;
+			}
+			.h9-case-study-item-inner {
+				background-blend-mode: normal;
+				&::after {
+					height: 100%;
+					opacity: 0.8;
+				}
+				&::before {
+					opacity: 0;
+				}
+				.case-study-content,
+				&:hover {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}
+/* !END: Case Study CSS */

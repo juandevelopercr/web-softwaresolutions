@@ -1,0 +1,247 @@
+@use "../utilities" as *;
+
+/* START: About CSS */
+.tj-about-section-five {
+	overflow: hidden;
+}
+.about-wrapper-four {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 20px;
+	position: relative;
+	z-index: 2;
+	@media #{$md} {
+		flex-direction: column-reverse;
+		row-gap: 125px;
+	}
+	@media #{$sm, $xs} {
+		flex-direction: column-reverse;
+		row-gap: 50px;
+	}
+	.about_images {
+		position: absolute;
+		bottom: -120px;
+		inset-inline-end: -188px;
+		max-width: 220px;
+		width: 100%;
+		@media #{$xxl} {
+			inset-inline-end: -40px;
+		}
+		@media #{$xl} {
+			max-width: 198px;
+			inset-inline-end: -40px;
+		}
+		@media #{$lg} {
+			max-width: 180px;
+			inset-inline-end: -25px;
+			bottom: -100px;
+		}
+		@media #{$md} {
+			max-width: 180px;
+			inset-inline-end: -2px;
+			bottom: auto;
+			top: 373px;
+		}
+		@media #{$sm, $xs} {
+			display: none;
+		}
+	}
+}
+.about-images-group-three {
+	max-width: 610px;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 36%;
+		bottom: 0;
+		inset-inline-start: 0;
+		background: linear-gradient(
+			0deg,
+			rgba(5, 18, 41, 1) 10%,
+			rgba(5, 18, 41, 0) 100%
+		);
+		opacity: 1;
+		z-index: 1;
+		pointer-events: none;
+	}
+
+	.establish-text {
+		font-size: 66px;
+		color: var(--tj-color-common-white);
+		position: absolute;
+		bottom: 20px;
+		inset-inline-start: 30px;
+		z-index: 2;
+		font-family: var(--tj-ff-heading);
+		font-weight: var(--tj-fw-sbold);
+		letter-spacing: -0.025em;
+		line-height: 1;
+		span {
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke: 1px var(--tj-color-common-white);
+		}
+		@media #{$lg} {
+			font-size: 50px;
+		}
+		@media #{$sm, $xs} {
+			font-size: 40px;
+		}
+	}
+	@media #{$xl} {
+		max-width: 530px;
+	}
+	@media #{$lg} {
+		max-width: 450px;
+	}
+}
+
+.about-circle {
+	position: absolute;
+	max-width: 216px;
+	width: 100%;
+	height: 188px;
+	top: 50%;
+	inset-inline-start: -1px;
+	transform: translateY(-50%);
+	mask-image: url(../images/shapes/h5-about-mask.svg);
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	background-color: var(--tj-color-common-white);
+	mask-position: center;
+	z-index: 1;
+
+	.circle-wrap {
+		position: absolute;
+		width: 160px;
+		height: 160px;
+		top: 50%;
+		inset-inline-end: 15px;
+		background: var(--tj-color-theme-primary);
+		border-radius: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		.rotate-image {
+			position: absolute;
+			inset-inline-start: 50%;
+			top: 50%;
+			width: 135px;
+			height: 136px;
+			transform: translate(-50%, -50%);
+			animation: rotateImg 10s infinite linear;
+			z-index: 9;
+			@media #{$xl, $lg} {
+				width: 120px;
+				height: 120px;
+			}
+			@media #{$sm, $xs} {
+				width: 100px;
+				height: 100px;
+			}
+		}
+		.logo-icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			z-index: 5;
+		}
+		@media #{$xl, $lg} {
+			width: 140px;
+			height: 140px;
+		}
+		@media #{$sm, $xs} {
+			width: 120px;
+			height: 120px;
+		}
+	}
+	@media #{$xl, $lg} {
+		width: 195px;
+		height: 168px;
+	}
+	@media #{$sm, $xs} {
+		width: 170px;
+		height: 150px;
+	}
+}
+
+.about-content-five {
+	position: relative;
+	max-width: 550px;
+	width: 100%;
+	z-index: 1;
+	.sec-heading {
+		margin-bottom: 0;
+		.sec-title {
+			letter-spacing: -0.025em;
+			@media #{$lg} {
+				font-size: 40px;
+			}
+		}
+	}
+	.desc {
+		line-height: 1.5;
+		margin-inline-end: 20px;
+		margin-top: 10px;
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.about-button {
+		margin-top: 30px;
+	}
+	@media #{$lg} {
+		max-width: 465px;
+	}
+	@media #{$md, $sm, $xs} {
+		max-width: 100%;
+	}
+}
+.about-funfact {
+	background-color: var(--tj-color-theme-bg);
+	max-width: 520px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 25px;
+	.counter-item {
+		max-width: 50%;
+		padding: 24px 30px 33px;
+		border-inline-end: 2px solid var(--tj-color-common-white);
+		&::before {
+			inset-inline-end: -7px;
+		}
+		&::after {
+			background-color: var(--tj-color-theme-bg);
+		}
+		.sub-title {
+			color: var(--tj-color-heading-primary);
+			margin-top: 6px;
+		}
+		@media #{$xs} {
+			padding: 24px 20px 33px;
+		}
+	}
+	@media #{$sm} {
+		max-width: 516px;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+	}
+	@media #{$xs} {
+		justify-content: center;
+	}
+}
+
+/* !END: About CSS */

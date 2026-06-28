@@ -1,0 +1,104 @@
+@use "../utilities" as *;
+
+/* START: Section Title CSS */
+.sec-heading {
+	display: block;
+	margin-bottom: 50px;
+	.sub-title {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: var(--tj-fw-bold);
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--tj-color-theme-primary);
+		padding-inline-start: 16px;
+		padding-inline-end: 16px;
+		margin-bottom: 15px;
+		position: relative;
+		z-index: 1;
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			top: 50%;
+			inset-inline-start: 0;
+			transform: translateY(-50%);
+			background-color: var(--tj-color-theme-primary);
+		}
+		&::after {
+			inset-inline-start: auto;
+			inset-inline-end: 0;
+		}
+	}
+	.sec-title {
+		margin: 0;
+		letter-spacing: -0.04em;
+		span {
+			color: var(--tj-color-theme-primary);
+		}
+	}
+	.desc {
+		margin-top: 20px;
+		@media #{$md} {
+			margin-bottom: 15px;
+		}
+		@media #{$sm, $xs} {
+			margin-bottom: 15px;
+		}
+	}
+	@media #{$md} {
+		margin-bottom: 45px;
+	}
+	@media #{$sm, $xs} {
+		margin-bottom: 40px;
+		.sub-title {
+			margin-bottom: 10px;
+		}
+	}
+	&.style-2 {
+		.sub-title {
+			padding-inline-start: 0;
+			padding-inline-end: 0;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+	}
+	&.style-3 {
+		.sub-title {
+			line-height: 1;
+			padding: 5px 7px;
+			background-color: var(--tj-color-theme-bg);
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
+	}
+	&.style-4 {
+		.sub-title {
+			line-height: 1;
+			padding: 5px 7px 5px 17px;
+			background-color: var(--tj-color-theme-bg);
+			&::before {
+				inset-inline-start: 7px;
+			}
+			&::after {
+				display: none;
+			}
+		}
+	}
+	&-centered {
+		max-width: 560px;
+		width: 100%;
+		text-align: center;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+	}
+}
+/* !END: Section Title CSS */

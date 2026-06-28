@@ -1,0 +1,340 @@
+@use "../utilities" as *;
+
+// defalt section heading style
+.sec-heading.h9-section-heading {
+	&.sec-heading-centered {
+		max-width: 555px;
+		width: 100%;
+		text-align: center;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		margin-bottom: 50px;
+		@media #{$md} {
+			margin-bottom: 45px;
+		}
+		@media #{$sm, $xs} {
+			margin-bottom: 40px;
+		}
+	}
+	.sub-title {
+		padding: 0;
+		margin-bottom: 20px;
+		background-color: transparent;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.tj-gap-0 {
+	--bs-gutter-x: 0;
+	.row {
+		--bs-gutter-x: 0;
+	}
+}
+
+/* START: Hero CSS */
+
+.h9-hero {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+
+	.container {
+		@media #{$md,$sm,$xs} {
+			max-width: 100%;
+		}
+	}
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		inset-inline-start: 0;
+		top: 0;
+		background: var(--tj-color-theme-dark) url("../images/hero/h9-hero-bg.webp")
+			no-repeat center;
+		background-size: cover;
+		height: 100%;
+		width: 50%;
+		z-index: -1;
+
+		@media #{$md, $sm,$xs} {
+			display: none;
+		}
+	}
+	&::after {
+		background: var(--tj-color-theme-primary);
+		inset-inline-start: 50%;
+	}
+	&-wrapper {
+		position: relative;
+
+		&::after {
+			content: "";
+			width: 50%;
+			height: 283px;
+			position: absolute;
+			inset-inline-end: 0;
+			bottom: 0;
+			z-index: 3;
+			background: linear-gradient(
+				180deg,
+				rgba(0, 117, 255, 0) 0%,
+				#0075ff 100%
+			);
+			@media #{$md, $sm,$xs} {
+				width: 100%;
+			}
+		}
+	}
+
+	&-marquee {
+		&-wrapper {
+			position: absolute;
+			inset-inline-end: 0;
+			top: 0;
+			width: 50%;
+			overflow: hidden;
+			z-index: 1;
+			@media #{$md, $sm,$xs} {
+				width: 100%;
+				top: 50%;
+			}
+		}
+	}
+	&-content {
+		&-wrapper {
+			@media #{$md, $sm,$xs} {
+				background: var(--tj-color-theme-dark)
+					url("../images/hero/h9-hero-bg.webp") no-repeat center;
+				background-size: cover;
+			}
+		}
+		min-height: 770px;
+		max-width: 643px;
+		width: 100%;
+		padding-top: 0;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: 100%;
+		z-index: 1;
+		padding: 80px 0 80px 12px;
+
+		@media #{$lg} {
+			max-width: 450px;
+			min-height: 650px;
+		}
+		@media #{$md, $sm,$xs} {
+			max-width: 100%;
+			min-height: auto;
+			padding: 70px 0 70px 12px;
+		}
+		@media #{ $md} {
+			max-width: 720px;
+			margin: 0 auto;
+		}
+		@media #{ $sm} {
+			max-width: 540px;
+			margin: 0 auto;
+		}
+		@media #{ $xs} {
+			min-height: auto;
+			padding: 60px 0 60px 12px;
+		}
+		.hero-sub-title {
+			padding: 0 14px;
+			margin-bottom: 20px;
+			background-color: transparent;
+			display: inline-block;
+			font-size: 14px;
+			font-weight: var(--tj-fw-bold);
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: var(--tj-color-theme-primary);
+			position: relative;
+			line-height: 1;
+			&::before,
+			&::after {
+				position: absolute;
+				display: block;
+				content: "[";
+				width: auto;
+				height: auto;
+				border-radius: 0;
+				top: 50%;
+				inset-inline-start: 0;
+				transform: translateY(-50%);
+				background-color: transparent;
+			}
+			&::after {
+				content: "]";
+				inset-inline-start: auto;
+				inset-inline-end: 0;
+			}
+		}
+		.hero-title {
+			color: var(--tj-color-common-white);
+			letter-spacing: -0.025em;
+			line-height: 1.1;
+			margin-bottom: 20px;
+			.active-color {
+				color: var(--tj-color-theme-primary);
+			}
+			@media #{$sm, $xs} {
+				font-size: 45px;
+			}
+		}
+		.desc {
+			font-size: 18px;
+			color: var(--tj-color-common-white-2);
+			font-weight: var(--tj-fw-regular);
+			max-width: 524px;
+			width: 100%;
+			line-height: 1.5;
+			@media #{$lg} {
+				max-width: 433px;
+			}
+			@media #{$md} {
+				max-width: 100%;
+			}
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	&-action {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		flex-wrap: wrap;
+		margin-top: 40px;
+		@media #{$sm,$xs} {
+			margin-top: 25px;
+		}
+		.text-btn {
+			color: var(--tj-color-common-white);
+
+			&::before {
+				background-color: var(--tj-color-common-white);
+			}
+		}
+		.hero-button {
+			background-color: var(--tj-color-common-white);
+
+			.btn_text {
+				color: var(--tj-color-heading-primary);
+			}
+		}
+	}
+	&-banner {
+		&-wrapper {
+			@media #{$md,$sm,$xs} {
+				background: var(--tj-color-theme-primary);
+			}
+			@media #{$md,$sm} {
+				padding: 60px 0 0;
+			}
+			@media #{$xs} {
+				padding: 50px 0 0;
+			}
+		}
+		position: absolute;
+		inset-inline-end: 11%;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		max-width: 780px;
+
+		img {
+			position: relative;
+			z-index: 2;
+		}
+		@media #{$xxl,$xl} {
+			inset-inline-end: -2%;
+			max-width: 616px;
+		}
+		@media #{$lg} {
+			inset-inline-end: -2%;
+			max-width: 513px;
+			width: 100%;
+		}
+		@media #{$md,$sm,$xs} {
+			max-width: 480px;
+			position: relative;
+			width: 100%;
+			inset-inline-end: 0;
+			transform: none;
+			margin: 0 auto;
+		}
+		@media #{$xs} {
+			max-width: 100%;
+		}
+	}
+
+	&-chart {
+		&-wrapper {
+			position: absolute;
+			inset-inline-end: 0;
+			bottom: 96px;
+			transform: translateX(26%) rotate(8deg);
+			z-index: 4;
+			@media #{$xxl,$xl} {
+				transform: translateX(-42%) rotate(8deg);
+			}
+			@media #{$lg} {
+				transform: translateX(-28%) rotate(8deg);
+				bottom: 80px;
+			}
+			@media #{$md} {
+				transform: translateX(5%) rotate(8deg);
+				bottom: 50px;
+			}
+			@media #{$sm} {
+				transform: translateX(-28%) rotate(8deg);
+				bottom: 50px;
+			}
+			@media #{$xs} {
+				transform: translateX(-28%) rotate(8deg);
+				bottom: 60px;
+			}
+		}
+
+		position: relative;
+		max-width: 270px;
+		width: 100%;
+		@media #{$md,$sm} {
+			max-width: 250px;
+		}
+		@media #{$xs} {
+			max-width: 180px;
+		}
+		&::after,
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			inset-inline-start: 9px;
+			bottom: 9px;
+			background-color: var(--tj-color-common-white);
+			opacity: 0.3;
+			z-index: -1;
+		}
+		&::after {
+			inset-inline-start: 18px;
+			bottom: 18px;
+			opacity: 0.15;
+			z-index: -2;
+		}
+	}
+}
+
+/* !END: Hero CSS */

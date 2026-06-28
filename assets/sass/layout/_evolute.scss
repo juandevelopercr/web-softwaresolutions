@@ -1,0 +1,133 @@
+@use "../utilities" as *;
+
+/* START: Evolute CSS */
+.tj-evolute {
+	max-width: 905px;
+	padding: 71px 60px;
+	background-color: var(--tj-color-theme-bg-2);
+	clip-path: polygon(100% 0, 100% 90%, 90% 100%, 0 100%, 0 0);
+	margin-inline-start: auto;
+	margin-inline-end: -100px;
+	@media (max-width: 1790px) {
+		padding: 54px 50px;
+	}
+	@media #{$xl, $lg, $md, $sm, $xs} {
+		margin: 0;
+		max-width: 100%;
+		clip-path: none;
+	}
+	@media #{ $sm, $xs} {
+		padding: 40px;
+	}
+	@media #{ $xs} {
+		padding: 40px 25px;
+	}
+	&-area {
+		position: relative;
+		padding-top: 66px;
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			padding-top: 0;
+		}
+	}
+	&-image {
+		max-width: calc(100% - 80px);
+		position: relative;
+		bottom: 65px;
+		inset-inline-end: 0;
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%, 10% 0);
+		margin-inline-start: auto;
+		@media (max-width: 1790px) {
+			bottom: 58px;
+		}
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			max-width: 100%;
+			bottom: 0;
+			clip-path: none;
+		}
+		@media #{$xl, $lg, $sm, $xs} {
+			img {
+				height: 100% !important;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		@media #{$xl, $lg} {
+			height: 547px;
+		}
+		@media #{$xs} {
+			height: 450px;
+		}
+	}
+	&-title {
+		font-size: 24px;
+		font-family: var(--tj-ff-heading);
+		font-weight: 600;
+		display: inline-block;
+		background-color: var(--tj-color-theme-primary);
+		color: var(--tj-color-common-white);
+		padding: 5px 20px;
+		border-radius: 30px;
+		i {
+			font-size: 17px;
+			margin-inline-end: 5px;
+		}
+		@media #{ $sm, $xs} {
+			font-size: 18px;
+		}
+	}
+	.desc {
+		font-family: var(--tj-ff-heading);
+		font-size: 24px;
+		color: #364052;
+		max-width: 750px;
+		letter-spacing: -1px;
+		@media (max-width: 1870px) {
+			font-size: 22px;
+		}
+		@media (max-width: 1650px) {
+			font-size: 20px;
+			margin-bottom: 40px;
+		}
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			max-width: 100%;
+			font-size: 16px;
+			letter-spacing: 0;
+		}
+	}
+	&-counter {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		max-width: 560px;
+		gap: 35px;
+		@media #{$xl, $sm, $xs} {
+			gap: 15px;
+		}
+		@media (max-width: 500px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.counter-item {
+			padding: 0;
+			@media #{$sm, $xs} {
+				border: 0;
+			}
+			&::after,
+			&::before {
+				display: none;
+			}
+			.number {
+				font-size: 48px;
+				@media #{$sm, $xs} {
+					font-size: 36px;
+				}
+			}
+			.sub-title {
+				margin-top: 20px;
+				@media #{$sm, $xs} {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+/* !END: Counter CSS */

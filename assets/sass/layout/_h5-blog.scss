@@ -1,0 +1,74 @@
+@use "../utilities" as *;
+
+/* START: Home 5 Blog CSS */
+.h5-blog {
+	&-section {
+		overflow: hidden;
+		.sec-heading {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: end;
+			justify-content: space-between;
+			column-gap: 30px;
+			row-gap: 20px;
+			.desc {
+				margin: 0;
+				max-width: 300px;
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.blog-style-3 {
+	&.style-5 {
+		border: 1px solid var(--tj-color-border-2);
+		.blog-content {
+			background-color: transparent;
+		}
+	}
+}
+
+.blog-btn-2 {
+	font-weight: var(--tj-fw-bold);
+	color: var(--tj-color-theme-dark);
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	gap: 8px;
+	overflow: hidden;
+	position: relative;
+	.btn-icon {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 22px;
+		color: var(--tj-color-common-white);
+		background-color: var(--tj-color-theme-dark);
+		transition: background-color 0.3s ease-in-out 0s;
+	}
+	.btn-text {
+		transform: translateX(-20px);
+		opacity: 0;
+		visibility: hidden;
+		white-space: nowrap;
+		transition: all 0.3s ease-in-out 0s;
+	}
+	&:hover {
+		.btn-icon {
+			background-color: var(--tj-color-theme-primary);
+		}
+		.btn-text {
+			transform: translateX(0);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+/* END: Home 5 Blog CSS */

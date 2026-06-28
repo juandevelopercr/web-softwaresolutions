@@ -1,0 +1,129 @@
+@use "../utilities" as *;
+
+/* START: H9 Services CSS */
+.h9-services {
+	&-section {
+		overflow: hidden;
+		.sec-heading {
+			max-width: 555px;
+			width: 100%;
+			margin-inline-start: auto;
+			margin-inline-end: auto;
+			margin-bottom: 60px;
+			.sec-title {
+				letter-spacing: -0.025em;
+			}
+			@media #{$md, $sm, $xs} {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&-slider {
+		.swiper_pagination {
+			margin-top: 60px;
+		}
+	}
+	&-item {
+		&-inner {
+			position: relative;
+			z-index: 1;
+			background-color: var(--tj-color-theme-bg);
+			overflow: hidden;
+			padding: 30px;
+			.service-icon {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 80px;
+				height: 80px;
+				font-size: 62px;
+				line-height: 1;
+				border-radius: 50%;
+				color: var(--tj-color-theme-primary);
+				background-color: var(--tj-color-common-white);
+				margin-bottom: 25px;
+				transition: all 0.3s ease-in-out;
+				i {
+					transition: all 0.3s ease-in-out;
+				}
+			}
+			.number {
+				position: absolute;
+				top: 30px;
+				inset-inline-end: 30px;
+				font-size: 16px;
+				font-family: var(--tj-ff-heading);
+				font-weight: var(--tj-fw-sbold);
+				color: var(--tj-color-heading-primary);
+				line-height: 1;
+				display: inline-flex;
+			}
+			.service-content {
+				position: relative;
+				z-index: 1;
+				.title {
+					max-width: 250px;
+					margin: 0;
+					line-height: 1.3;
+					letter-spacing: -0.025em;
+					margin-bottom: 20px;
+					a {
+						&:hover {
+							color: var(--tj-color-theme-primary);
+						}
+					}
+				}
+				.check-list-one {
+					padding: 25px 0 6px;
+					border-top: 1px solid var(--tj-color-border-2);
+				}
+			}
+			@media #{$lg, $xxs} {
+				padding: 30px 20px;
+			}
+		}
+		.service-btn {
+			background-color: var(--tj-color-theme-dark);
+			width: 100%;
+			padding: 17px 15px 20px;
+			margin: 0;
+			display: inline-flex;
+			justify-content: center;
+			.text-btn {
+				color: var(--tj-color-common-white);
+				&::before {
+					background-color: var(--tj-color-common-white);
+				}
+			}
+			&:hover {
+				.text-btn {
+					&::before {
+						transform-origin: left;
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+		&:hover {
+			.h9-services-item-inner {
+				.service-icon {
+					background-color: var(--tj-color-theme-primary);
+					color: var(--tj-color-common-white);
+				}
+			}
+			.service-btn {
+				background-color: var(--tj-color-theme-primary);
+			}
+		}
+	}
+
+	@media #{$md, $sm, $xs} {
+		&-slider {
+			.swiper_pagination {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+/* END: H9 Services CSS */

@@ -1,0 +1,161 @@
+@use "../utilities" as *;
+
+/* START: Process CSS */
+.h9-process {
+	overflow: hidden;
+	&-inner {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+		position: relative;
+		z-index: 0;
+		@media #{$md, $sm, $xs} {
+			flex-direction: column;
+			gap: 80px;
+		}
+	}
+	&-item {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		z-index: 1;
+		width: 27%;
+		background-color: var(--tj-color-theme-bg);
+		@media #{$lg} {
+			width: 29%;
+		}
+		@media #{$md, $sm,$xs} {
+			width: 100%;
+		}
+
+		&::before {
+			display: none;
+		}
+		.process-img {
+			margin: 0;
+			max-width: 220px;
+			width: 100%;
+			height: 250px;
+			flex-shrink: 0;
+			mask-image: url(../images/shapes/about-mark-2.svg);
+			mask-size: cover;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			background-color: var(--tj-color-common-white);
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: -1px;
+			z-index: 1;
+			transition: all 0.4s;
+			@media #{$lg} {
+				max-width: 175px;
+				height: 200px;
+			}
+			img {
+				max-width: 202px;
+				height: 203px;
+				object-fit: cover;
+				border-radius: 50%;
+				margin-top: 27px;
+				@media #{$lg} {
+					max-width: 160px;
+					height: 161px;
+					border-radius: 50%;
+					margin-top: 22px;
+				}
+			}
+		}
+		.process-content {
+			padding: 0 25px 44px;
+			text-align: center;
+			position: relative;
+			z-index: 2;
+			margin-top: -35px;
+			@media #{$xl} {
+				padding: 0 20px 40px;
+			}
+			@media #{$lg} {
+				padding: 0 18px 40px;
+			}
+			@media #{$md, $sm, $xs} {
+				padding: 0 20px 35px;
+			}
+			.step {
+				width: 64px;
+				height: 64px;
+				background-color: var(--tj-color-theme-primary);
+				color: var(--tj-color-common-white);
+				border: 6px solid var(--tj-color-common-white);
+				border-radius: 100%;
+				font-size: 20px;
+				font-weight: var(--tj-fw-sbold);
+				letter-spacing: -0.025em;
+				line-height: 1;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				padding: 6px;
+				margin-bottom: 20px;
+				transition: all 0.4s;
+				@media #{$lg,$md,$sm,$xs} {
+					width: 62px;
+					height: 62px;
+				}
+				@media #{$xs} {
+					font-size: 17px;
+					margin-bottom: 15px;
+				}
+			}
+			.title {
+				margin-bottom: 16px;
+				letter-spacing: -0.025em;
+				@media #{$xs} {
+					margin-bottom: 10px;
+				}
+			}
+			.desc {
+				line-height: 1.5;
+				p {
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.step-text {
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke: 1px var(--tj-color-border-2);
+			font-family: var(--tj-ff-heading);
+			font-weight: var(--tj-fw-sbold);
+			font-size: 48px;
+			writing-mode: sideways-lr;
+			line-height: 0.9;
+			letter-spacing: -0.03em;
+			position: absolute;
+			top: 50%;
+			right: -82px;
+			transform: translateY(-50%);
+			@media #{$xl} {
+				font-size: 44px;
+				right: -75px;
+			}
+			@media #{$lg} {
+				font-size: 35px;
+				right: -47px;
+			}
+			@media #{$md, $sm, $xs} {
+				writing-mode: unset;
+				font-size: 40px;
+				top: inherit;
+				bottom: -60px;
+				right: 50%;
+				transform: translate(50%, 0);
+			}
+		}
+	}
+}
+
+/* !END: Process CSS */

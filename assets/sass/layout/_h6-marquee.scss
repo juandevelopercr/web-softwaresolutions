@@ -1,0 +1,53 @@
+@use "../utilities" as *;
+
+/* START: H6 Marquee CSS */
+.h6-marquee {
+	&-slider {
+		background-color: var(--tj-color-theme-primary);
+		padding: 30px 0 22px 0;
+
+		.marquee-wrapper {
+			-webkit-transition-timing-function: linear;
+			transition-timing-function: linear;
+		}
+
+		.marquee_item {
+			width: auto;
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			color: var(--tj-color-common-white);
+			font-family: var(--tj-ff-heading);
+			font-weight: var(--tj-fw-sbold);
+			font-size: 55px;
+			line-height: 1;
+			letter-spacing: -0.03em;
+		}
+
+		@media #{$lg} {
+			.marquee_item {
+				font-size: 50px;
+			}
+		}
+		@media #{$md} {
+			.marquee_item {
+				font-size: 45px;
+			}
+		}
+		@media #{$sm} {
+			padding: 30px 0 25px 0;
+
+			.marquee_item {
+				font-size: 40px;
+			}
+		}
+		@media #{$xs} {
+			padding: 30px 0 25px 0;
+
+			.marquee_item {
+				font-size: 35px;
+			}
+		}
+	}
+}
+/* !END: H6 Marquee CSS */

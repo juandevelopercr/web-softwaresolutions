@@ -1,0 +1,146 @@
+@use "../utilities" as *;
+
+/* START: Feature CSS */
+.tj-feature-section {
+	overflow: hidden;
+
+	&.with-shape {
+		position: relative;
+		z-index: 3;
+		padding-top: 40px;
+		margin-top: -40px;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 1px;
+			inset-inline-start: 0;
+			width: 100%;
+			height: 40px;
+			mask-image: url(../images/shapes/h1-hero-shapes.svg);
+			background: var(--tj-color-common-white);
+			mask-repeat: no-repeat;
+			mask-position: center bottom;
+			mask-size: contain;
+			z-index: 2;
+		}
+	}
+	&-wrap {
+		background-color: var(--tj-color-common-white);
+	}
+	.sec-heading {
+		max-width: 585px;
+		width: 100%;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		.desc {
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+.tj-feature-section-two {
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	.sec-heading {
+		max-width: 500px;
+		width: 100%;
+		margin-inline-start: 0;
+		margin-bottom: 50px;
+		.sec-title {
+			@media #{$lg, $md, $sm, $xs} {
+				color: var(--tj-color-common-white);
+			}
+		}
+		@media #{$md, $sm, $xs} {
+			margin-bottom: 40px;
+		}
+	}
+	.feature-bg-images {
+		position: absolute;
+		bottom: 0;
+		inset-inline-end: 0;
+		max-width: 1050px;
+		width: 100%;
+		height: calc(100% - 120px);
+		z-index: -1;
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+		@media #{$xxl} {
+			max-width: 850px;
+		}
+		@media #{$xl} {
+			max-width: 790px;
+		}
+		@media #{$lg, $md, $sm, $xs} {
+			max-width: 100%;
+			height: 100%;
+		}
+	}
+}
+.feature-item {
+	border: 1px solid var(--tj-color-border-2);
+	padding: 40px 30px;
+	background-color: var(--tj-color-common-white);
+
+	.feature-icon {
+		max-width: 80px;
+		width: 100%;
+		margin-bottom: 35px;
+	}
+	.feature-content {
+		.title {
+			margin-bottom: 20px;
+			letter-spacing: -0.025em;
+		}
+		.desc {
+			line-height: 1.5;
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	&:hover {
+		.feature-icon {
+			animation: wobble-horizontal-hover 1s ease-in-out 1;
+		}
+	}
+	&.hover-bg {
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			inset-inline-start: auto;
+			inset-inline-end: 0;
+			width: 0;
+			height: 100%;
+			background-color: var(--tj-color-theme-bg);
+			border-color: var(--tj-color-theme-bg);
+			@include transition(all 0.3s ease-in-out 0s);
+			z-index: -1;
+		}
+		&:hover {
+			&::before {
+				width: 100%;
+				inset-inline-start: 0;
+				inset-inline-end: auto;
+			}
+		}
+	}
+	@media #{$lg, $md, $sm, $xs} {
+		padding: 35px 15px;
+	}
+}
+
+/* !END: Feature CSS */

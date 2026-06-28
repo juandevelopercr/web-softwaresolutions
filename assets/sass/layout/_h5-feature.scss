@@ -1,0 +1,85 @@
+@use "../utilities" as *;
+
+/* START: Feature CSS */
+.tj-feature-section-three {
+	background-color: var(--tj-color-theme-dark);
+	overflow: hidden;
+}
+.feature-style-5 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+
+	@media #{$lg, $md} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media #{$sm, $xs} {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+.feature-item {
+	&.style-5 {
+		border: 0;
+		border-inline-end: 1px solid var(--tj-color-border-1);
+		border-inline-start: 1px solid var(--tj-color-border-1);
+		padding: 60px 35px 55px 40px;
+		background-color: transparent;
+		position: relative;
+		overflow: hidden;
+		margin-inline-start: -1px;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -150px;
+			inset-inline-start: 50%;
+			width: 272px;
+			height: 124px;
+			background-color: var(--tj-color-theme-primary);
+			filter: blur(16px);
+			border-radius: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease-in;
+		}
+		.feature-icon {
+			color: var(--tj-color-common-white);
+		}
+		.feature-content {
+			.title {
+				color: var(--tj-color-common-white);
+				margin-bottom: 20px;
+				letter-spacing: -0.025em;
+			}
+			.desc {
+				color: var(--tj-color-common-white-2);
+				line-height: 1.5;
+				p {
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		&:hover {
+			.feature-icon {
+				animation: wobble-horizontal-hover 1s ease-in-out 1;
+			}
+			&::after {
+				bottom: -90px;
+				opacity: 1;
+				visibility: visible;
+				@media #{$sm, $xs} {
+					bottom: -100px;
+				}
+			}
+		}
+		@media #{$lg, $md, $sm, $xs} {
+			border-bottom: 1px solid var(--tj-color-border-1);
+		}
+		@media #{$sm, $xs} {
+			padding: 40px 30px 35px;
+		}
+	}
+}
+
+/* !END: Feature CSS */

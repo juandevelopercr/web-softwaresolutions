@@ -1,0 +1,94 @@
+@use "../utilities" as *;
+
+/* START: Footer CSS */
+.h9-footer {
+	z-index: 3;
+
+	.footer-top-area {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		@media #{$md, $sm, $xs} {
+			padding: 80px 0;
+		}
+	}
+	&-widget {
+		&-2 {
+			padding-inline-start: 45px;
+			@media #{$xxl,$xl,$lg} {
+				padding-inline-start: 73px;
+			}
+			@media #{$lg} {
+				padding-inline-start: 65px;
+			}
+			@media #{$md} {
+				padding-inline-start: 0;
+			}
+			@media #{$sm} {
+				padding-inline-start: 0;
+			}
+			@media #{$xs} {
+				padding-inline-start: 0;
+			}
+		}
+		&-3 {
+			padding-inline-start: 40px;
+			@media #{$lg} {
+				padding-inline-start: 15px;
+			}
+			@media #{$md,$sm,$xs} {
+				padding-inline-start: 0;
+			}
+		}
+		&-4 {
+			margin-inline-start: auto;
+			@media #{$sm, $xs} {
+				margin-inline-start: 0;
+			}
+		}
+	}
+	&-img {
+		&-wrapper {
+			position: absolute;
+			inset-inline-start: 0;
+			bottom: 84px;
+			width: 38%;
+			height: 677px;
+			@media #{$lg} {
+				height: 539px;
+			}
+			@media #{$md,$sm,$xs} {
+				position: static;
+				width: 100%;
+				height: 332px;
+			}
+		}
+		height: 100%;
+		width: 100%;
+		@media #{$md,$sm,$xs} {
+			height: 100%;
+			width: 100%;
+		}
+		img {
+			height: 100%;
+			object-fit: cover;
+			width: auto;
+			width: 100%;
+		}
+	}
+
+	.backtop {
+		right: 20px;
+		bottom: 100px;
+
+		@media #{$md} {
+			bottom: 165px;
+		}
+		@media #{$sm, $xs} {
+			width: 45px;
+			height: 45px;
+			bottom: 180px;
+		}
+	}
+}
+
+/* !END: Footer CSS */

@@ -1,0 +1,214 @@
+@use "../utilities" as *;
+
+/* START: About CSS */
+.h7-about-section {
+	position: relative;
+	border-top: 1px solid var(--tj-color-border-2);
+
+	.about {
+		&-wrapper-four {
+			align-items: flex-start;
+			flex-wrap: nowrap;
+			@media #{$lg} {
+				gap: 35px;
+			}
+			@media #{$md,$sm,$xs} {
+				flex-wrap: wrap;
+			}
+			.sec-heading {
+				&.style-4 {
+					+ .desc {
+						margin-top: 16px;
+					}
+					.sub-title {
+						padding-inline-start: 9px;
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.about-images-group-three {
+				max-width: 645px;
+
+				@media #{$xl} {
+					min-height: 630px;
+				}
+				@media #{$lg} {
+					min-height: 630px;
+				}
+
+				@media #{$md,$sm,$xs} {
+					width: 100%;
+					max-width: 100%;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&-content-five {
+			position: static;
+			@media #{$md,$sm,$xs} {
+				max-width: 100%;
+			}
+		}
+
+		&-float-area {
+			position: absolute;
+			inset-inline-end: 0;
+			bottom: 0;
+
+			display: flex;
+			gap: 80px;
+
+			@media #{$lg} {
+				width: 100%;
+			}
+			@media #{$md,$sm,$xs} {
+				position: static;
+				flex-direction: column-reverse;
+				gap: 35px;
+				margin-top: 30px;
+			}
+
+			&-left {
+				padding: 48px 0 0 50px;
+				background-color: var(--tj-color-common-white);
+				@media #{$lg} {
+					padding: 40px 0 0 0;
+				}
+				@media #{$md,$sm,$xs} {
+					padding: 0;
+				}
+				.check-list-one {
+					display: flex;
+					gap: 30px;
+					border: 1px solid var(--tj-color-border-2);
+					border-inline-end: 0;
+					border-inline-start: 0;
+					@media #{$xs} {
+						gap: 5px;
+						flex-direction: column;
+						padding: 25px 0;
+					}
+					.vr-line {
+						width: 1px;
+						background-color: var(--tj-color-border-2);
+
+						@media #{$xs} {
+							width: 0;
+							height: 0;
+						}
+					}
+					ul {
+						padding: 26px 0;
+						@media #{$md} {
+							max-width: 45%;
+							width: 100%;
+						}
+						@media #{$sm} {
+							max-width: 44%;
+							width: 100%;
+						}
+						@media #{$xs} {
+							padding: 0;
+						}
+					}
+				}
+
+				.btn-area {
+					display: flex;
+					align-items: flex-end;
+					flex-wrap: wrap;
+					gap: 10px 20px;
+					margin-top: 26px;
+					.images-thumb {
+						margin-bottom: 0;
+						li {
+							max-width: 60px;
+							flex-shrink: 0;
+							@media #{$xs} {
+								max-width: 56px;
+							}
+							&:not(&:first-child) {
+								margin-inline-start: -24px;
+							}
+							img {
+								height: 60px;
+								padding: 4px;
+								@media #{$xs} {
+									height: 56px;
+								}
+							}
+							&.plus {
+								padding: 4px;
+								i {
+									background-color: var(--tj-color-theme-primary);
+									height: 52px;
+									width: 52px;
+									padding: 4px;
+									@media #{$xs} {
+										height: 48px;
+										width: 48px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&-statistics {
+			position: relative;
+			> img {
+				width: 100%;
+				height: 300px;
+				object-fit: cover;
+			}
+		}
+		&-funfact {
+			position: absolute;
+			bottom: 15px;
+			inset-inline-start: 15px;
+			inset-inline-end: 15px;
+			width: auto;
+			max-width: inherit;
+			margin-top: 0;
+			padding: 11px 15px 21px;
+			background: rgba(247, 247, 247, 0.1);
+			backdrop-filter: blur(35px);
+			gap: 10px;
+			.funfact-wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				.counter-item {
+					padding: 0;
+					border-inline-end: 0;
+					&::after,
+					&::before {
+						display: none;
+					}
+				}
+				.number {
+					font-size: 58px;
+					color: var(--tj-color-common-white);
+				}
+				.sub-title {
+					color: var(--tj-color-common-white);
+					margin-top: 0;
+				}
+
+				img {
+					opacity: 0.27;
+				}
+			}
+		}
+	}
+}
+
+/* !END: About CSS */

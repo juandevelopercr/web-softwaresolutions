@@ -1,0 +1,98 @@
+@use "../utilities" as *;
+
+/* START: Project CSS */
+
+.tj-brand {
+	background: var(--tj-color-theme-dark);
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.sec-heading {
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+
+		margin-bottom: 0;
+		margin-inline-start: 13px;
+		@media #{$xl} {
+			margin-inline-start: 0;
+		}
+		@media #{$md,$sm,$xs} {
+			margin-bottom: 40px;
+			margin-inline-start: 0;
+		}
+
+		.sec-title {
+			color: rgba(225, 232, 240, 1);
+			letter-spacing: -0.025em;
+			span {
+				color: var(--tj-color-theme-primary);
+			}
+		}
+
+		.text-btn {
+			color: var(--tj-color-common-white);
+			margin-top: 10px;
+			&::before {
+				background-color: var(--tj-color-common-white);
+			}
+		}
+	}
+
+	&-inner {
+		background: rgba(247, 247, 247, 0.1);
+		backdrop-filter: blur(35px);
+
+		display: flex;
+		flex-wrap: wrap;
+
+		.brand-logo {
+			flex: 0 1 33%;
+			height: 160px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid rgba(247, 247, 247, 0.1);
+			border-inline-start: 0;
+			border-top: 0;
+			transform: translateY(0);
+
+			&:last-child,
+			&:nth-child(3n) {
+				border-inline-end: 0;
+			}
+
+			&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(6) {
+				border-bottom: 0;
+			}
+			@media #{$lg,$xs} {
+				flex: 0 1 50%;
+
+				&:nth-child(3n) {
+					border-inline-end: 1px solid rgba(247, 247, 247, 0.1);
+				}
+				&:nth-child(2n),
+				&:last-child {
+					border-inline-end: 0;
+				}
+				&:nth-child(4) {
+					border-bottom: 1px solid rgba(247, 247, 247, 0.1);
+				}
+			}
+			@media #{$lg,$xs} {
+				a {
+					max-width: 85%;
+				}
+			}
+			&:hover {
+				a {
+					transform: translateY(-4px);
+				}
+			}
+		}
+	}
+}
+
+/* !END: Project CSS */

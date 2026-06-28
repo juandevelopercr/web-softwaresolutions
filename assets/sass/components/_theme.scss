@@ -1,0 +1,474 @@
+@use "../utilities" as *;
+
+/*----------------------------------------------------------
+     
+Theme Name: Solvior - Business Consulting HTML Template
+Theme URI: https://themejunction.net/html/Solvior/demo/
+Author: Theme-Junction
+Author URI: https://themeforest.net/user/theme-junction
+Description: Solvior - Business Consulting HTML Template
+
+-----------------------------------------------------------*/
+
+/*--------------- TABLE OF CONTENTS -------------
+
+  01. Default CSS
+  02. Background CSS
+  03. Buttons CSS
+  04. Mouse Cursor CSS
+  05. Preloader CSS
+  06. Header CSS
+  07. Search CSS
+  08. Hamburger CSS
+  09. Footer CSS
+  10. Swiper CSS
+  11. Backtotop CSS
+  12. Socials CSS
+  13. Progress-bar CSS
+  14. Page Header CSS
+  15. Hero CSS
+  16. Feature CSS
+  17. About CSS
+  18. Brand CSS
+  19. Blog CSS
+  20. Blog Details CSS
+  21. Project CSS
+  22. Counter CSS
+  23. Evolute CSS
+  24. Service CSS
+  25. Service details CSS
+  26. Skill CSS
+  27. Pricing CSS
+  28. Testimonial CSS
+  29. Slider CSS
+  30. Team CSS
+  31. Team details CSS
+  32. Faq CSS
+  33. History CSS
+  34. Careers CSS
+  35. Contact CSS
+  36. CTA CSS
+  37. Progress CSS
+  38. Marquee CSS
+  39. Section Title CSS
+
+-------------------------------------------------*/
+
+/* START: Default CSS */
+@import url($font-url);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	position: relative;
+	// overflow-x: hidden;
+}
+
+body {
+	font-family: var(--tj-ff-body);
+	font-size: var(--tj-fs-body);
+	font-weight: normal;
+	color: var(--tj-color-text-body);
+	background-color: var(--tj-color-common-white);
+	line-height: 1.6;
+
+	main {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+html.lenis,
+html.lenis body {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	-ms-scroll-chaining: none;
+	overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+	pointer-events: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--tj-ff-heading);
+	color: var(--tj-color-heading-primary);
+	margin-top: 0px;
+	font-weight: var(--tj-fw-sbold);
+	line-height: 1.2;
+	letter-spacing: -0.025em;
+	@include transition(all 0.3s ease-in-out 0s);
+}
+
+h1 {
+	font-size: var(--tj-fs-h1);
+	@media #{$xl} {
+		font-size: 65px;
+	}
+	@media #{$lg} {
+		font-size: 50px;
+	}
+	@media #{$md} {
+		font-size: 45px;
+	}
+	@media #{$sm} {
+		font-size: 40px;
+	}
+	@media #{$xs} {
+		font-size: 35px;
+	}
+}
+
+h2 {
+	font-size: var(--tj-fs-h2);
+	@media #{$md} {
+		font-size: 40px;
+	}
+	@media #{$sm} {
+		font-size: 35px;
+	}
+	@media #{$xs} {
+		font-size: 30px;
+	}
+}
+
+h3 {
+	font-size: var(--tj-fs-h3);
+	@media #{$lg, $md} {
+		font-size: 28px;
+	}
+	@media #{$sm} {
+		font-size: 24px;
+	}
+	@media #{$xs} {
+		font-size: 22px;
+	}
+}
+
+h4 {
+	font-size: var(--tj-fs-h4);
+	@media #{$lg} {
+		font-size: 22px;
+	}
+	@media #{$md, $sm, $xs} {
+		font-size: 20px;
+	}
+}
+
+h5 {
+	font-size: var(--tj-fs-h5);
+	@media #{$sm, $xs} {
+		font-size: 17px;
+	}
+}
+
+h6 {
+	font-size: var(--tj-fs-h6);
+	@media #{$sm, $xs} {
+		font-size: 16px;
+	}
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	display: block;
+}
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a,
+h6:hover a {
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+a,
+.btn,
+button,
+span,
+p,
+input,
+select,
+textarea,
+li,
+img,
+svg path,
+*::after,
+*::before,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include transition(all 0.3s ease-in-out 0s);
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus,
+button:focus:not(:focus-visible) {
+	outline: 0;
+	box-shadow: 0 0 0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+select,
+.nice-select,
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+	outline: none;
+	background-color: var(--tj-color-common-white);
+	height: auto;
+	width: 100%;
+	font-size: var(--tj-fs-body);
+	border: 1px solid var(--tj-color-common-white);
+	color: var(--tj-color-common-black);
+	padding: 10px 15px;
+}
+
+input[type="color"] {
+	appearance: none;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	border-radius: 50%;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--tj-color-theme-primary) var(--tj-color-theme-bg);
+}
+::-webkit-scrollbar {
+	height: 4px;
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--tj-color-theme-primary);
+	-webkit-border-radius: 1ex;
+	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+*::-moz-selection {
+	background: var(--tj-color-common-black);
+	color: var(--tj-color-common-white);
+	text-shadow: none;
+}
+::-moz-selection {
+	background: var(--tj-color-common-black);
+	color: var(--tj-color-common-white);
+	text-shadow: none;
+}
+::selection {
+	background: var(--tj-color-common-black);
+	color: var(--tj-color-common-white);
+	text-shadow: none;
+}
+
+* {
+	@include placeholder {
+		color: var(--tj-color-common-black);
+		font-size: var(--tj-fs-body);
+		opacity: 1;
+	}
+}
+
+/**
+ 	Common Classes CSS
+*/
+.dark-bg {
+	background-color: var(--tj-color-theme-dark);
+}
+.section-space {
+	padding: 120px 0;
+	@media #{$lg} {
+		padding: 100px 0;
+	}
+	@media #{$md, $sm, $xs} {
+		padding: 80px 0;
+	}
+}
+.section-bottom-space {
+	padding-bottom: 120px;
+	@media #{$lg} {
+		padding-bottom: 100px;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-bottom: 80px;
+	}
+}
+img {
+	max-width: 100%;
+}
+.w-img {
+	& img {
+		width: 100%;
+	}
+}
+.m-img {
+	& img {
+		max-width: 100%;
+	}
+}
+.fix {
+	overflow: hidden;
+}
+.rg-30 {
+	row-gap: 30px;
+}
+.rg-40 {
+	row-gap: 40px;
+}
+.rg-50 {
+	row-gap: 50px;
+}
+.rg-60 {
+	row-gap: 60px;
+}
+.rg-70 {
+	row-gap: 70px;
+}
+.rg-80 {
+	row-gap: 80px;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+.mb-30 {
+	margin-bottom: 30px;
+}
+.mt-40 {
+	margin-top: 40px;
+}
+.mb-40 {
+	margin-bottom: 40px;
+}
+.mt-50 {
+	margin-top: 50px;
+}
+.mb-50 {
+	margin-bottom: 50px;
+}
+.mt-60 {
+	margin-top: 60px;
+}
+.mb-60 {
+	margin-bottom: 60px;
+}
+.hover\:shine {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		inset-inline-start: -140%;
+		bottom: 0;
+		width: 100%;
+		background-image: linear-gradient(
+			to right,
+			transparent 50%,
+			rgba(255, 255, 255, 0.3) 100%
+		);
+		transform: skewX(-25deg);
+		transition: 0.5s ease;
+		z-index: 1;
+	}
+	&:is(:hover, :focus-within) {
+		&::before {
+			animation: shine 1s ease forwards;
+		}
+	}
+}
+.move-anim {
+	animation: move 5s linear infinite;
+}
+.move-anim-2 {
+	animation: move-two 5s linear infinite;
+}
+.zoominout {
+	animation: zoom-effect 3s linear infinite;
+}
+.wow {
+	opacity: 0;
+}
+.svg-animate svg path {
+	animation-play-state: paused;
+	opacity: 1;
+}

@@ -1,0 +1,110 @@
+@use "../utilities" as *;
+
+/* START: Counter CSS */
+.h9-counter {
+	&-wrapper {
+		display: flex;
+
+		align-items: center;
+
+		gap: 70px;
+		@media #{$xl,$lg} {
+			gap: 16px;
+		}
+		@media #{$lg,$md} {
+			gap: 20px;
+		}
+		@media #{$sm} {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+		@media #{$xs} {
+			justify-content: center;
+			flex-direction: column;
+			gap: 30px;
+		}
+	}
+
+	&-item {
+		position: relative;
+		width: 100%;
+		max-width: 224px;
+		padding: 0;
+		padding-inline-start: 20px;
+		z-index: 1;
+		@media #{$xl,$lg} {
+			padding-inline-start: 16px;
+		}
+		@media #{$lg,$md} {
+			padding-inline-start: 15px;
+		}
+		@media #{$sm} {
+			padding-inline-start: 15px;
+			max-width: 224px;
+		}
+		@media #{$xs} {
+			padding-inline-start: 15px;
+			max-width: 200px;
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			width: 4px;
+			height: 42%;
+			top: 30%;
+			inset-inline-start: 0;
+			transform: translateY(-50%);
+			background-color: var(--tj-color-theme-primary);
+			z-index: 2;
+			@media #{$lg,$md} {
+				height: 36%;
+				top: 25%;
+			}
+			@media #{$sm,$xs} {
+				height: 33%;
+				top: 23%;
+			}
+		}
+		.number {
+			display: flex;
+			align-items: center;
+			color: var(--tj-color-heading-primary);
+			font-family: var(--tj-ff-heading);
+			font-size: 70px;
+			font-weight: var(--tj-fw-sbold);
+
+			position: relative;
+			line-height: 1;
+
+			@media #{$xl} {
+				font-size: 60px;
+			}
+			@media #{$lg} {
+				font-size: 45px;
+			}
+			@media #{$md} {
+				font-size: 44px;
+			}
+			@media #{$sm, $xs} {
+				font-size: 40px;
+			}
+			span {
+				line-height: 1;
+				font-family: inherit;
+			}
+		}
+
+		.sub-title {
+			line-height: 1.5;
+			display: block;
+			margin-inline-start: 10px;
+
+			@media #{$xl, $lg,$sm, $xs} {
+				margin-inline-start: 5px;
+			}
+		}
+	}
+}
+
+/* !END: Counter CSS */

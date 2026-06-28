@@ -1,0 +1,87 @@
+@use "../utilities" as *;
+
+/* START: About CSS */
+.h10-about {
+	&-section {
+		position: relative;
+		background-color: var(--tj-color-theme-bg);
+	}
+	&-content-wrap {
+		padding-inline-start: 80px;
+		.sec-heading {
+			margin-bottom: 20px;
+		}
+
+		@media #{$xl} {
+			padding-inline-start: 30px;
+		}
+		@media #{$lg} {
+			padding-inline-start: 10px;
+		}
+		@media #{$md,$sm,$xs} {
+			max-width: 100%;
+			padding-inline-start: 0;
+			padding-bottom: 40px;
+		}
+		.btn-area {
+			margin-top: 25px;
+		}
+	}
+}
+.h6-insight_accordion {
+	&.h10-about-accordion {
+		border-inline-start: 0;
+		border-inline-end: 0;
+		margin-bottom: 0;
+		.accordion_item {
+			.accordion_title {
+				padding: 20px 40px 20px 0;
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				&::before {
+					content: "\e91e";
+					font-family: "solvior-icons" !important;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 19px;
+					position: absolute;
+					top: 50%;
+					inset-inline-end: 0;
+					width: 25px;
+					height: 25px;
+					border: 0;
+					border-radius: 0;
+					transform: translateY(-50%);
+					color: var(--tj-color-heading-primary);
+				}
+
+				&:not(.collapsed) {
+					&::before {
+						content: "\e91e";
+						transform: translateY(-50%) rotate(-180deg);
+					}
+					.subtitle {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+
+				.subtitle {
+					font-size: 20px;
+					color: var(--tj-color-common-black-2);
+					margin-bottom: 0;
+					@media #{$xs} {
+						font-size: 17px;
+					}
+				}
+			}
+			.accordion_desc {
+				.accordion-body {
+					padding: 0 20px 22px 0;
+				}
+			}
+		}
+	}
+}
+
+/* !END: About CSS */

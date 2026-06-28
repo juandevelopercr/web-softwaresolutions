@@ -1,0 +1,184 @@
+@use "../utilities" as *;
+
+/* START: CTA CSS */
+.tj-cta-section {
+	position: relative;
+	background-color: var(--tj-color-theme-primary);
+	padding: 53px 0;
+	z-index: 2;
+	overflow: hidden;
+
+	.cta-shape-1,
+	.cta-shape-2 {
+		position: absolute;
+		inset-inline-start: 10%;
+		top: 0;
+		z-index: -1;
+	}
+	.cta-shape-2 {
+		top: auto;
+		bottom: 0;
+		inset-inline-start: auto;
+		inset-inline-end: 22%;
+	}
+	@media #{$xxl, $xl, $lg} {
+		.cta-shape-1 {
+			inset-inline-start: 0;
+		}
+		.cta-shape-2 {
+			inset-inline-end: 10%;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		.cta-shape-1 {
+			inset-inline-start: 0;
+			max-width: 160px;
+		}
+		.cta-shape-2 {
+			inset-inline-end: 0;
+			max-width: 160px;
+		}
+	}
+	@media #{$xs} {
+		.cta-shape-1,
+		.cta-shape-2 {
+			max-width: 135px;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		padding: 45px 0;
+	}
+}
+
+.cta-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	align-items: center;
+	justify-content: space-between;
+	.cta-title {
+		.title {
+			color: var(--tj-color-common-white);
+			font-size: 72px;
+			letter-spacing: -0.025em;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			line-height: 1;
+		}
+	}
+	@media #{$lg} {
+		.cta-title {
+			.title {
+				font-size: 55px;
+			}
+		}
+	}
+	@media #{$md} {
+		.cta-title {
+			.title {
+				font-size: 40px;
+			}
+		}
+	}
+	@media #{$sm} {
+		justify-content: center;
+		.cta-title {
+			.title {
+				font-size: 40px;
+			}
+		}
+	}
+	@media #{$xs} {
+		justify-content: center;
+		text-align: center;
+		.cta-title {
+			.title {
+				font-size: 28px;
+			}
+		}
+	}
+}
+
+.tj-cta-section-3 {
+	padding: 38px 0;
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	&::before {
+		position: absolute;
+		top: 0;
+		inset-inline-start: 0;
+		content: "";
+		height: 100%;
+		width: 50%;
+		background-color: var(--tj-color-theme-primary);
+		z-index: -1;
+		@media #{$md, $sm, $xs} {
+			width: 100%;
+		}
+	}
+	&::after {
+		position: absolute;
+		top: 0;
+		inset-inline-end: 0;
+		width: 50%;
+		height: 100%;
+		content: "";
+		background-image: url("../images/shapes/cta-3.png");
+		background-repeat: no-repeat;
+		z-index: -1;
+		@media #{$md, $sm, $xs} {
+			display: none;
+		}
+	}
+}
+.tj-cta-list {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 15px;
+	column-gap: 40px;
+	@media #{$md, $sm, $xs} {
+		column-gap: 30px;
+	}
+	li {
+		list-style: none;
+		position: relative;
+		&:not(:first-child)::before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			transform: translateY(-50%);
+			inset-inline-start: -20px;
+			width: 1px;
+			height: 18px;
+			background-color: rgba(247, 247, 247, 0.3);
+			@media #{$md, $sm, $xs} {
+				display: none;
+			}
+		}
+		a,
+		span {
+			color: var(--tj-color-common-white);
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 18px;
+		}
+		span {
+			color: var(--tj-color-heading-primary);
+			@media #{$md, $sm, $xs} {
+				color: var(--tj-color-common-white);
+			}
+		}
+	}
+	&.style-2 {
+		padding-inline-start: 35px;
+		@media #{$md, $sm, $xs} {
+			padding-inline-start: 0;
+		}
+		@media #{$xs} {
+			margin-top: 15px;
+		}
+	}
+}
+/* !END: Cta CSS */

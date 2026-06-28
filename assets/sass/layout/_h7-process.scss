@@ -1,0 +1,240 @@
+@use "../utilities" as *;
+
+/* START: Process CSS */
+.h7-process {
+	background-color: var(--tj-color-theme-bg);
+	padding-bottom: 0;
+	@media #{$lg} {
+		padding-bottom: 0;
+	}
+	@media #{$md, $sm, $xs} {
+		padding-bottom: 0;
+	}
+	.sec-heading {
+		margin-bottom: 20px;
+		.sub-title {
+			background: var(--tj-color-common-white);
+		}
+	}
+
+	.process {
+		&-left {
+			position: relative;
+			z-index: 0;
+			height: 100%;
+		}
+		&-banner {
+			position: relative;
+			width: 100%;
+			margin-top: 20px;
+			max-width: 526px;
+			z-index: 0;
+			@media #{$lg} {
+				margin-top: 54px;
+			}
+			@media #{$md,$sm,$xs} {
+				width: auto;
+				margin-inline-start: auto;
+				margin-inline-end: auto;
+			}
+			&-bg {
+				position: absolute;
+				inset-inline-start: 0;
+				bottom: 0;
+				width: 100%;
+
+				height: 80%;
+				background-color: var(--tj-color-theme-primary);
+				z-index: -1;
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					inset-inline-start: 0;
+					top: 0;
+					width: 100%;
+					height: 70px;
+					mask-image: url(../images/shapes/h7-process-banner-shape-1.svg);
+					mask-size: cover;
+					mask-repeat: no-repeat;
+					mask-position: center;
+					background-color: var(--tj-color-theme-dark);
+					z-index: 1;
+				}
+				&::before {
+					mask-image: url(../images/shapes/h7-process-banner-shape-2.svg);
+					background-color: var(--tj-color-theme-bg);
+					z-index: 0;
+				}
+			}
+		}
+
+		&-inner {
+			display: flex;
+			flex-direction: column;
+			gap: 36px;
+			max-width: 612px;
+			margin-inline-start: auto;
+			position: relative;
+			z-index: 0;
+			margin-bottom: 120px;
+			width: 100%;
+			@media #{$lg} {
+				margin-bottom: 100px;
+			}
+			@media #{$md, $sm} {
+				margin-bottom: 60px;
+				max-width: 100%;
+			}
+			@media #{$xs} {
+				margin-bottom: 40px;
+				max-width: 100%;
+			}
+			.process {
+				&-line {
+					position: absolute;
+					width: 1px;
+					height: 100%;
+					background-color: var(--tj-color-border-2);
+					top: 0;
+					inset-inline-start: 48px;
+					transform: translateX(-50%);
+					z-index: 0;
+					&-active {
+						position: absolute;
+						width: 100%;
+						height: 33.333%;
+						background-color: var(--tj-color-border-1);
+						top: 0;
+						inset-inline-start: 0;
+						transition: all 0.4s;
+						z-index: 1;
+					}
+				}
+			}
+		}
+		&-item {
+			&.style-4 {
+				position: relative;
+				display: flex;
+				align-items: center;
+				z-index: 1;
+
+				@media #{ $xs} {
+					flex-wrap: wrap;
+				}
+				&::before {
+					display: none;
+				}
+				.process-index {
+					margin: 0;
+					max-width: 112px;
+					width: 100%;
+					height: 98px;
+					flex-shrink: 0;
+					mask-image: url(../images/shapes/h7-process.svg);
+					mask-size: cover;
+					mask-repeat: no-repeat;
+					mask-position: center;
+					background-color: var(--tj-color-common-white);
+					position: relative;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					z-index: 1;
+
+					@media #{$lg,$md,$sm, $xs} {
+						max-width: 91px;
+						height: 80px;
+					}
+					@media #{ $xs} {
+						transform: rotate(90deg);
+						margin-bottom: 5px;
+					}
+					span {
+						width: 68px;
+						height: 68px;
+						background-color: var(--tj-color-theme-bg);
+						color: var(--tj-color-heading-primary);
+						border-radius: 100%;
+						font-size: 20px;
+						font-weight: var(--tj-fw-sbold);
+						letter-spacing: -0.025em;
+						line-height: 1;
+						display: inline-flex;
+						justify-content: center;
+						align-items: center;
+						margin-inline-end: 14px;
+						transition: all 0.4s;
+						@media #{ $xs} {
+							transform: rotate(-90deg);
+							width: 62px;
+							height: 62px;
+							font-size: 17px;
+						}
+					}
+				}
+				.process-content {
+					padding: 0;
+					background-color: var(--tj-color-common-white);
+					padding: 30px;
+					@media #{$lg,$md,$sm, $xs} {
+						padding: 20px;
+						padding: 30px 20px;
+					}
+
+					.title {
+						margin-bottom: 18px;
+						letter-spacing: -0.025em;
+					}
+					.desc {
+						line-height: 1.5;
+					}
+				}
+			}
+
+			&.active {
+				.process {
+					&-index {
+						span {
+							background-color: var(--tj-color-theme-primary);
+							color: var(--tj-color-common-white);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-circle {
+		max-width: inherit;
+		width: auto;
+		height: auto;
+		top: 50%;
+		inset-inline-start: auto;
+		inset-inline-end: 30px;
+		transform: translateY(-50%);
+
+		mask-image: none;
+
+		background-color: transparent;
+
+		z-index: 1;
+
+		.circle-wrap {
+			background-color: var(--tj-color-theme-dark);
+			.logo-icon {
+				background: var(--tj-color-theme-primary);
+				border-radius: 100%;
+				width: 80px;
+				height: 80px;
+				@media #{$sm,$xs} {
+					width: 65px;
+					height: 65px;
+				}
+			}
+		}
+	}
+}
+
+/* !END: Process CSS */

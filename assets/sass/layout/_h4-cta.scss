@@ -1,0 +1,141 @@
+@use "../utilities" as *;
+
+/* START: Cta CSS */
+.h4-cta-section {
+	padding: 80px 0;
+	border-bottom: 1px solid var(--tj-color-border-1);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: var(--tj-color-theme-primary);
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	.thumb {
+		position: absolute;
+		top: 0;
+		inset-inline-start: 0;
+		width: 100%;
+		height: 100%;
+		&::before {
+			position: absolute;
+			content: "";
+			top: 0;
+			inset-inline-start: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(5, 18, 41, 0) 0%, #051229 100%);
+			z-index: 2;
+		}
+		img {
+			opacity: 0.2;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.h4-cta-wrapper {
+	position: relative;
+	z-index: 2;
+	.h4-cta-shape {
+		position: absolute;
+		inset-inline-start: 0;
+		top: -80px;
+		height: 300px;
+		img {
+			height: 100%;
+		}
+		@media #{$lg, $md, $sm, $xs} {
+			height: 285px;
+		}
+	}
+}
+.h4-cta-newsletter {
+	max-width: 650px;
+	margin: 0 auto;
+	text-align: center;
+	.title {
+		color: var(--tj-color-common-white);
+		margin-bottom: 20px;
+		@media #{$lg, $md, $sm} {
+			font-size: 35px;
+		}
+	}
+}
+.newsletter-form.style-4 {
+	position: relative;
+	z-index: 2;
+	.form-input {
+		position: relative;
+		z-index: 2;
+		input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+		input[type="email"] {
+			color: var(--tj-color-text-body);
+			font-weight: var(--tj-fw-regular);
+			font-size: 16px;
+			padding: 18px 160px 18px 25px;
+			background: var(--tj-color-common-white);
+			border: 0;
+			border-radius: 60px;
+			&::-ms-input-placeholder {
+				color: var(--tj-color-common-black-2);
+				font-weight: var(--tj-fw-regular);
+				font-size: 16px;
+			}
+			&::placeholder {
+				color: var(--tj-color-common-black-2);
+				font-weight: var(--tj-fw-regular);
+				font-size: 16px;
+			}
+		}
+		button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			inset-inline-end: 25px;
+			font-size: 16px;
+			font-weight: var(--tj-fw-bold);
+			color: var(--tj-color-text-body);
+			&::before {
+				content: "";
+				position: absolute;
+				width: 1px;
+				height: 30px;
+				top: 50%;
+				inset-inline-start: -16px;
+				background: var(--tj-color-border-2);
+				transform: translate(0, -50%);
+			}
+			i {
+				font-size: 22px;
+				transition: transform 0.3s ease-in-out;
+				color: var(--tj-color-theme-primary);
+				margin-inline-end: 10px;
+			}
+			&:hover {
+				i {
+					transform: rotate(40deg);
+				}
+			}
+		}
+	}
+	@media #{$lg, $md} {
+		width: 73%;
+		margin: 0 auto;
+	}
+	@media #{$sm} {
+		width: 90%;
+		margin: 0 auto;
+	}
+	@media #{$xs} {
+		max-width: 396px;
+		margin: 0 auto;
+	}
+}
+
+.footer-widget {
+	.title {
+		color: var(--tj-color-common-white);
+	}
+}

@@ -1,0 +1,97 @@
+@use "../utilities" as *;
+
+/* START: H9 Team CSS */
+.h9-team {
+	&-section {
+		.sec-heading {
+			.more_team {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	&-item {
+		background-color: var(--tj-color-theme-bg);
+
+		.team_image {
+			img {
+				width: 100%;
+			}
+		}
+		.team_content {
+			padding: 20px 30px 25px 30px;
+			.name {
+				margin: 0;
+				a {
+					&:hover {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+			.designation {
+				display: block;
+				margin-top: 10px;
+				font-size: 14px;
+				line-height: 1.2;
+			}
+			.socials {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 8px;
+				margin-top: 13px;
+
+				li {
+					display: inline-flex;
+					line-height: 1;
+
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 24px;
+						height: 24px;
+						font-size: 14px;
+						background-color: var(--tj-color-theme-dark);
+						color: var(--tj-color-common-white);
+						opacity: 0.4;
+						border-radius: 50%;
+
+						i,
+						svg {
+							display: inline-flex;
+							line-height: 1;
+						}
+
+						&:hover {
+							background-color: var(--tj-color-theme-primary);
+							color: var(--tj-color-common-white);
+							opacity: 1;
+							i,
+							svg {
+								color: var(--tj-color-common-white);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$sm, $xs} {
+		&-section {
+			.sec-heading {
+				margin-bottom: 10px;
+				.desc {
+					margin-bottom: 0;
+				}
+			}
+
+			.more_team {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+/* !END: H9 Team CSS */

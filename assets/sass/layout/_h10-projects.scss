@@ -1,0 +1,213 @@
+@use "../utilities" as *;
+
+/* START: H10 Projects CSS */
+.h10-projects {
+	&-section {
+		overflow: hidden;
+		.sec-heading {
+			max-width: 550px;
+			width: 100%;
+			margin-inline-start: auto;
+			margin-inline-end: auto;
+			margin-bottom: 60px;
+		}
+	}
+
+	&_wrap {
+		.h10-projects_item {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&_item {
+		position: relative;
+		height: 670px;
+		z-index: 1;
+
+		.h10-project-img {
+			position: absolute;
+			inset-inline-start: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: -1;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset-inline-start: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(
+				180deg,
+				rgba(5, 18, 41, 0) 0%,
+				#051229 84%
+			);
+			z-index: 1;
+		}
+
+		.project_content {
+			max-width: 460px;
+			width: 100%;
+			background-color: rgba(247, 247, 247, 0.15);
+			backdrop-filter: blur(35px);
+			padding: 35px 30px;
+			position: absolute;
+			inset-inline-end: 60px;
+			bottom: 70px;
+			z-index: 2;
+
+			.category {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				line-height: 1;
+				gap: 11px;
+				margin-bottom: 12px;
+
+				li {
+					display: inline-flex;
+					line-height: 1;
+
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background-color: transparent;
+						border: 1px solid rgba(247, 247, 247, 0.15);
+						border-radius: 40px;
+						font-family: Lato;
+						font-size: 14px;
+						line-height: 1;
+						color: var(--tj-color-common-white);
+						padding: 5px 9px;
+
+						&:hover {
+							border-color: var(--tj-color-theme-primary);
+							background-color: var(--tj-color-theme-primary);
+						}
+					}
+				}
+			}
+
+			.project_title {
+				letter-spacing: -0.025em;
+				color: var(--tj-color-common-white);
+				margin: 0;
+
+				a {
+					&:hover {
+						letter-spacing: 0;
+					}
+				}
+			}
+			.desc {
+				color: var(--tj-color-common-white-2);
+				margin-top: 15px;
+			}
+			.project_button {
+				background-color: var(--tj-color-common-white);
+				margin-top: 25px;
+
+				.btn_inner {
+					.btn_text {
+						color: var(--tj-color-heading-primary);
+					}
+				}
+
+				&:hover {
+					.btn_inner {
+						.btn_text {
+							color: var(--tj-color-common-white);
+						}
+					}
+				}
+			}
+		}
+	}
+	@media #{$xl} {
+		&_item {
+			height: 600px;
+
+			.project_content {
+				inset-inline-end: 50px;
+				bottom: 50px;
+			}
+		}
+	}
+	@media #{$lg} {
+		&-section {
+			.sec-heading {
+				margin-bottom: 50px;
+			}
+		}
+
+		&_item {
+			height: 550px;
+
+			.project_content {
+				inset-inline-end: 40px;
+				bottom: 40px;
+			}
+		}
+	}
+	@media #{$md} {
+		&-section {
+			.sec-heading {
+				margin-bottom: 40px;
+			}
+		}
+		&_item {
+			height: 550px;
+
+			.project_content {
+				max-width: 445px;
+				inset-inline-end: 30px;
+				bottom: 30px;
+			}
+		}
+	}
+	@media #{$sm} {
+		&-section {
+			.sec-heading {
+				margin-bottom: 40px;
+			}
+		}
+		&_item {
+			height: 550px;
+
+			.project_content {
+				max-width: 420px;
+				padding: 30px 25px;
+				inset-inline-end: 30px;
+				bottom: 30px;
+			}
+		}
+	}
+	@media #{$xs} {
+		&-section {
+			.sec-heading {
+				margin-bottom: 40px;
+			}
+		}
+		&_item {
+			height: 500px;
+
+			.project_content {
+				max-width: 360px;
+				padding: 30px 25px;
+				inset-inline-end: 0;
+				bottom: 0;
+			}
+		}
+	}
+}
+/* !END: H10 Projects CSS */

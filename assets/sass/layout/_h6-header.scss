@@ -1,0 +1,96 @@
+@use "../utilities" as *;
+
+/* START: Home 6 Header CSS */
+.tj-header-area {
+	&.header-6 {
+		border-color: var(--tj-color-border-2);
+		.header-bottom {
+			padding-inline-start: 18px;
+			padding-inline-end: 18px;
+			@media #{$lg,$md,$sm,$xs} {
+				padding-inline-start: 0;
+				padding-inline-end: 0;
+			}
+		}
+		.mainmenu {
+			ul {
+				> li {
+					> a {
+						color: var(--tj-color-heading-primary);
+						&:hover {
+							color: var(--tj-color-theme-primary);
+						}
+					}
+
+					&.current-menu-ancestor,
+					&.current-menu-item,
+					&:hover {
+						> a {
+							color: var(--tj-color-theme-primary);
+						}
+					}
+				}
+			}
+		}
+		.tj-primary-btn {
+			padding: 5px;
+			.btn_inner {
+				padding: 12px 18px 12px 50px;
+				&::before {
+					width: 40px;
+				}
+				.btn_icon {
+					min-width: 40px;
+					font-size: 1.4em;
+				}
+			}
+			&:hover {
+				.btn_inner {
+					&::before {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	&.style-6 {
+		.header_search {
+			color: var(--tj-color-heading-primary);
+			i {
+				color: var(--tj-color-heading-primary);
+			}
+		}
+		.header_right_info {
+			column-gap: 0;
+			& > *:not(:last-child) {
+				padding-inline-end: 13px;
+				margin-inline-end: 12px;
+				position: relative;
+			}
+			& > *:first-child::after {
+				content: "";
+				position: absolute;
+				inset-inline-end: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 16px;
+				width: 1px;
+				background-color: var(--tj-color-border-2);
+			}
+		}
+		&.header-duplicate {
+			.header_search {
+				color: var(--tj-color-common-white);
+				i {
+					color: var(--tj-color-common-white);
+				}
+			}
+			.header_right_info {
+				& > *:first-child::after {
+					background-color: var(--tj-color-border-1);
+				}
+			}
+		}
+	}
+}
+/* END: Home 6 Header CSS */

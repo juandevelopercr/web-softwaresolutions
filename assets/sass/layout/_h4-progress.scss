@@ -1,0 +1,87 @@
+@use "../utilities" as *;
+
+/* Progress css */
+.h4-progress-section {
+	position: relative;
+	overflow: hidden;
+	padding-top: 480px;
+	padding-bottom: 60px;
+	z-index: 1;
+
+	.h4-progress-bg {
+		position: absolute;
+		inset-inline-start: 0;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+		height: 130%; /* Slightly bigger for parallax depth */
+		background-size: cover;
+		background-position: center;
+		will-change: transform;
+
+		@media #{$sm, $xs} {
+			height: 100%;
+		}
+	}
+
+	@media #{$xl} {
+		padding-top: 350px;
+	}
+	@media #{$lg} {
+		padding-top: 250px;
+	}
+	@media #{$md} {
+		padding-top: 200px;
+	}
+	@media #{$sm} {
+		padding-top: 160px;
+		padding-bottom: 15px;
+	}
+	@media #{$xs} {
+		padding-top: 240px;
+		padding-bottom: 15px;
+	}
+}
+.h4-progress {
+	.progress-style-2 {
+		max-width: 485px;
+		padding: 30px;
+		margin-inline-start: auto;
+		background: rgba(247, 247, 247, 0.1);
+		backdrop-filter: blur(17.5px);
+		flex-wrap: nowrap;
+		gap: 80px;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			top: 50%;
+			inset-inline-start: 48%;
+			width: 1px;
+			height: 204px;
+			background-color: rgb(247, 247, 247, 0.1);
+			transform: translate(-50%, -50%);
+		}
+		@media #{$xs} {
+			padding: 16px;
+			justify-content: space-between;
+			gap: 30px;
+		}
+		.proggess-item {
+			.proggess-circle {
+				text-align: start;
+				@media #{$xs} {
+					text-align: center;
+				}
+			}
+			.proggess-text .sub-title,
+			.proggess-circle input {
+				color: var(--tj-color-common-white) !important;
+			}
+			.proggess-text .sub-title {
+				line-height: 1;
+				font-family: var(--tj-ff-body);
+			}
+		}
+	}
+}

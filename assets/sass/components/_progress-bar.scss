@@ -1,0 +1,107 @@
+@use "../utilities" as *;
+
+/* START: Progress Bar CSS */
+.tj-progress {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 8px;
+	background: var(--tj-color-theme-bg-2);
+	position: relative;
+	border-radius: 0;
+	z-index: 0;
+	@media #{$md,$sm,$xs} {
+		height: 6px;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 24px;
+		list-style: none;
+		@media #{$md,$sm,$xs} {
+			margin-top: 20px;
+			gap: 16px;
+		}
+		@media #{$sm,$xs} {
+			margin-top: 20px;
+			gap: 16px;
+		}
+		&.style-2 {
+			.tj-progress__title {
+				color: var(--tj-color-common-white);
+			}
+			.tj-progress {
+				background: rgba(247, 247, 247, 0.2);
+			}
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		margin-bottom: 10px;
+		@media #{$md,$sm,$xs} {
+			font-size: 15px;
+		}
+	}
+	&__bar {
+		width: 0;
+		height: 100%;
+		background: var(--tj-color-theme-primary);
+		position: relative;
+		z-index: 1;
+		border-radius: 0;
+		&::after {
+			content: "";
+			width: 18px;
+			height: 18px;
+			border: 4px solid var(--tj-color-theme-primary);
+			border-radius: 100%;
+			position: absolute;
+			inset-inline-end: 0;
+			top: 50%;
+			transform: translate(3px, -50%);
+			background: var(--tj-color-common-white);
+			z-index: 2;
+			@media #{$md,$sm,$xs} {
+				width: 16px;
+				height: 16px;
+				border-width: 4px;
+			}
+		}
+	}
+	&__perchant {
+		font-size: 12px;
+		padding: 5px 7px 4px;
+		line-height: 1;
+		height: auto;
+		position: absolute;
+		inset-inline-end: 0;
+		bottom: 100%;
+		transform: translate(11px, -13px);
+		color: var(--tj-color-common-white) !important;
+		background: var(--tj-color-theme-primary);
+		z-index: 2;
+		@media #{$md,$sm,$xs} {
+			font-size: 10px;
+			padding: 4px 3px 4px 5px;
+			transform: translate(9px, -11px);
+		}
+		&::after {
+			content: "";
+			width: 0;
+			height: 0;
+			border: 5px solid transparent;
+			border-top-color: var(--tj-color-theme-primary);
+			position: absolute;
+			top: 100%;
+			inset-inline-start: 50%;
+			transform: translateX(-50%);
+			@media #{$md,$sm,$xs} {
+				border-width: 4px;
+			}
+		}
+	}
+}
+
+/* !END: Progress Bar CSS */

@@ -1,0 +1,137 @@
+@use "../utilities" as *;
+
+/* START: H10 Services CSS */
+
+.h10-service-item {
+	padding: 50px 30px;
+	border: 1px solid var(--tj-color-border-2);
+	border-bottom: 0;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	.service-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+		width: 90px;
+		height: 90px;
+		line-height: 1;
+		font-size: 70px;
+		color: var(--tj-color-theme-primary);
+		background: var(--tj-color-theme-bg);
+		border-radius: 50%;
+		position: relative;
+		z-index: 2;
+		transition: all 0.3s ease-in-out;
+		@media #{$md, $sm, $xs} {
+			font-size: 50px;
+			width: 70px;
+			height: 70px;
+		}
+	}
+	&:hover {
+		background-color: var(--tj-color-theme-bg);
+		.service-icon {
+			background-color: var(--tj-color-theme-primary);
+			color: var(--tj-color-common-white);
+		}
+	}
+	@media #{$xl, $lg} {
+		padding: 40px 30px;
+	}
+	@media #{$sm, $xs} {
+		padding: 30px 20px;
+	}
+	&:first-child {
+		.service-reveal-bg {
+			margin-top: 20px;
+		}
+	}
+	&:last-child {
+		border-bottom: 1px solid var(--tj-color-border-2);
+		.service-reveal-bg {
+			margin-top: -20px;
+		}
+	}
+
+	&:hover {
+		.service-reveal-bg {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+}
+.service-content-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+	.service-title {
+		display: flex;
+		flex: wrap;
+		align-items: center;
+		max-width: 370px;
+		width: 100%;
+		gap: 20px;
+		.title {
+			margin-bottom: 0;
+			a {
+				&:hover {
+					color: var(--tj-color-theme-primary);
+				}
+			}
+		}
+	}
+	.service-content {
+		.desc {
+			max-width: 330px;
+			width: 100%;
+			margin-bottom: 0;
+			@media #{$md, $sm, $xs} {
+				max-width: 100%;
+			}
+		}
+		@media #{$md, $sm, $xs} {
+			margin-top: 20px;
+			padding-inline-start: 90px;
+		}
+	}
+	.service-btn {
+		display: inline-flex;
+		@media #{$md, $sm, $xs} {
+			margin-top: 30px;
+			padding-inline-start: 90px;
+		}
+	}
+}
+.service-reveal-bg {
+	position: absolute;
+	top: 50%;
+	inset-inline-start: 43%;
+	width: 290px;
+	height: 290px;
+	opacity: 0;
+	overflow: hidden;
+	pointer-events: none;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translate(-50%, -50%) scale(0.7);
+	transition: opacity 0.6s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
+		-webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	z-index: 5;
+	@media #{$xl} {
+		width: 250px;
+		height: 250px;
+	}
+	@media #{$lg, $md, $sm, $xs} {
+		display: none;
+	}
+}
+.service-btn-area {
+	margin-top: 60px;
+}
+
+/* END: H10 Services CSS */

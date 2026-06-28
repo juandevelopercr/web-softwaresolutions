@@ -1,0 +1,105 @@
+@use "../utilities" as *;
+
+/* START: Marquee CSS */
+.tj-marquee-section {
+	position: relative;
+	padding-top: 25px;
+	padding-bottom: 23px;
+	background-color: var(--tj-color-theme-primary);
+	overflow: hidden;
+}
+.marquee-slider-wrapper {
+	.marquee-slider {
+		.marquee-wrapper {
+			transition-timing-function: linear;
+		}
+	}
+}
+.marquee-item {
+	width: auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	padding-inline-end: 30px;
+	.marquee-title {
+		.text {
+			color: var(--tj-color-common-white);
+			letter-spacing: -0.025em;
+			margin-bottom: 0;
+		}
+	}
+	.marquee-icons {
+		position: relative;
+		top: 3px;
+		max-width: 32px;
+		width: 100%;
+		img {
+			animation: rotateImg-2 6s infinite linear;
+		}
+	}
+}
+.marquee-slider-two {
+	position: relative;
+	z-index: 1;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		top: 0;
+		inset-inline-start: 0;
+		width: 40%;
+		height: 100%;
+		background-image: linear-gradient(
+			90deg,
+			var(--tj-color-theme-dark) 0%,
+			rgba(5, 18, 41, 0) 100%
+		);
+		z-index: 2;
+	}
+	&::after {
+		inset-inline-start: auto;
+		inset-inline-end: 0;
+		background-image: linear-gradient(
+			-90deg,
+			var(--tj-color-theme-dark) 0%,
+			rgba(5, 18, 41, 0) 100%
+		);
+	}
+}
+.scrolling-ticker-box {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	user-select: none;
+	gap: 20px;
+	align-items: center;
+}
+.scrolling-content {
+	flex-shrink: 0;
+	display: flex;
+	gap: 20px;
+	min-width: 100%;
+	animation: scroll 120s linear infinite;
+}
+.scrolling-content span {
+	font-size: 114px;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1;
+	text-transform: uppercase;
+	color: var(--tj-color-common-white);
+	vertical-align: middle;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+.scrolling-content span i {
+	color: var(--tj-color-theme-primary);
+	font-size: 50px;
+	display: inline-flex;
+	line-height: 1;
+	animation: rotateMarquee 6s infinite linear;
+}
+/* !END: Theme Marquee CSS */

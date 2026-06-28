@@ -1,0 +1,283 @@
+@use "../utilities" as *;
+
+/* START: Project CSS */
+.tj-service-section-four {
+	background-color: var(--tj-color-theme-bg);
+	overflow: hidden;
+	.sec-heading {
+		margin: 0;
+		max-width: 500px;
+		&-wrap {
+			margin-bottom: 60px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 30px;
+			row-gap: 20px;
+			justify-content: space-between;
+
+			.desc {
+				max-width: 300px;
+				width: 100%;
+			}
+			@media #{$md, $sm, $xs} {
+				margin-bottom: 40px;
+			}
+		}
+		.sub-title {
+			background-color: var(--tj-color-common-white);
+		}
+	}
+}
+
+.h5-service-wrap {
+	display: flex;
+	flex-direction: row;
+	background-color: var(--tj-color-common-white);
+	padding: 40px 0;
+	@media #{$md, $sm, $xs} {
+		flex-direction: column;
+		padding: 0;
+	}
+}
+
+.service-style-5 {
+	position: relative;
+	display: flex;
+	padding: 0 45px;
+	width: 175px;
+	height: 437px;
+	place-content: center;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+	border-inline-end: 1px solid var(--tj-color-border-2);
+	&:last-child {
+		border: 0;
+	}
+	.service-icon {
+		width: 80px;
+		height: 80px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 25px;
+		border-radius: 50%;
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		span {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 80px;
+			height: 80px;
+			font-size: 52px;
+			line-height: 1;
+			border-radius: 50%;
+			color: var(--tj-color-theme-primary);
+			background-color: var(--tj-color-theme-bg);
+
+			@media #{$lg, $sm, $xs} {
+				width: 70px;
+				height: 70px;
+				font-size: 45px;
+			}
+			@media #{$xxs} {
+				width: 60px;
+				height: 60px;
+			}
+		}
+		@media #{$lg, $sm, $xs} {
+			width: 70px;
+			height: 70px;
+			margin-bottom: 15px;
+		}
+		@media #{$xxs} {
+			width: 60px;
+			height: 60px;
+		}
+	}
+	.blog-btn-2 {
+		i {
+			transform: rotate(-45deg);
+			transition: all 0.3s ease-in-out;
+		}
+		&:hover {
+			i {
+				transform: rotate(0);
+			}
+		}
+	}
+	.h5-service-content {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+
+		.h5-title-area {
+			position: absolute;
+			height: 247px;
+			bottom: 70px;
+			inset-inline-start: 13px;
+			text-align: start;
+			transition: all 0.5s ease-in;
+			.title {
+				writing-mode: sideways-lr;
+				margin-bottom: 0;
+
+				@media #{$md, $sm, $xs} {
+					writing-mode: inherit;
+				}
+			}
+			@media #{$md, $sm, $xs} {
+				max-width: 245px;
+				width: 100%;
+				height: auto;
+				inset-inline-start: 110px;
+				bottom: 50%;
+				transform: translateY(50%);
+			}
+			@media #{ $sm, $xs} {
+				inset-inline-start: 100px;
+			}
+			@media #{$xxs} {
+				max-width: 195px;
+				inset-inline-start: 88px;
+			}
+		}
+		.title {
+			margin-bottom: 16px;
+			a {
+				display: inline-block;
+				&:hover {
+					color: var(--tj-color-theme-primary);
+				}
+			}
+		}
+		.blog-btn-2 {
+			position: absolute;
+			bottom: 0;
+			inset-inline-start: 15px;
+			&.mobile-show {
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.2s ease-in-out;
+				@media #{$md, $sm, $xs} {
+					visibility: visible;
+					opacity: 1;
+					inset-inline-start: auto;
+					inset-inline-end: 20px;
+					top: 35px;
+				}
+			}
+			@media #{$lg} {
+				inset-inline-start: 10px;
+			}
+			@media #{$md, $sm, $xs} {
+				inset-inline-start: 20px;
+				bottom: 30px;
+				visibility: hidden;
+				opacity: 0;
+			}
+			@media #{$xxs} {
+				.btn-icon {
+					width: 45px;
+					height: 45px;
+				}
+			}
+		}
+		&-inner {
+			position: relative;
+			text-align: start;
+			top: 0;
+			inset-inline-start: 0;
+			width: 330px;
+			transform: translateX(-100%);
+			transition: transform 0.5s ease-in-out;
+			opacity: 0;
+			visibility: hidden;
+
+			@media #{$lg} {
+				width: 300px;
+			}
+			@media #{$md, $sm, $xs} {
+				width: calc(100% - 60px);
+				padding-bottom: 60px;
+			}
+		}
+		@media #{$md, $sm, $xs} {
+			padding: 30px 20px;
+		}
+	}
+	&.active {
+		place-content: unset;
+		width: 420px;
+		.h5-service-content {
+			opacity: 1;
+			visibility: visible;
+			&-inner {
+				transform: translateX(0);
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		.h5-title-area {
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.2s ease-out;
+		}
+		.service-icon {
+			span {
+				background-color: var(--tj-color-theme-primary);
+				color: var(--tj-color-common-white);
+			}
+		}
+		.blog-btn-2 {
+			visibility: visible;
+			opacity: 1;
+			inset-inline-start: 0;
+			@media #{$md, $sm, $xs} {
+				inset-inline-start: 20px;
+			}
+			&.mobile-show {
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
+		@media #{$xl} {
+			width: 390px;
+			padding: 0 30px;
+		}
+		@media #{$lg} {
+			width: 360px;
+			padding: 0 20px;
+		}
+		@media #{$md, $sm, $xs} {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	@media #{$xl} {
+		width: 145px;
+		padding: 0 30px;
+	}
+	@media #{$lg} {
+		width: 115px;
+		padding: 0 20px;
+	}
+	@media #{$md, $sm, $xs} {
+		width: 100%;
+		height: 130px;
+		padding: 0;
+		border-inline-end: 0;
+		border-bottom: 1px solid var(--tj-color-border-2);
+	}
+	@media #{$xxs} {
+		height: 120px;
+	}
+}
+.services-btn {
+	margin-top: 40px;
+}
+
+/* !END: Project CSS */

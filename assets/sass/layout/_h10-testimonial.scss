@@ -1,0 +1,68 @@
+@use "../utilities" as *;
+
+/* START: Home 6 Testimonial CSS */
+.h10-testimonial {
+	background-color: var(--tj-color-theme-bg);
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	.sec-heading .desc {
+		margin-bottom: 0;
+		max-width: 400px;
+	}
+	.sec-title {
+		max-width: 550px;
+	}
+	.sec-text {
+		@media #{$lg, $md} {
+			.swiper_navigations {
+				width: 180px;
+			}
+		}
+	}
+
+	.h6-testimonial-slider {
+		margin-inline-end: 0;
+		margin-inline-start: 0;
+	}
+	&-item {
+		&.style-6 {
+			padding: 22px 30px 30px;
+			@media #{$xs} {
+				padding: 22px 20px 30px;
+			}
+			.testimonial-content {
+				.tj-testimonial-author {
+					width: 100%;
+					padding-bottom: 22px;
+					border-bottom: 1px dashed var(--tj-color-border-2);
+					margin-top: 0;
+					gap: 14px;
+					@media #{$xs} {
+						margin-bottom: 10px;
+					}
+				}
+				.author-images {
+					mask-image: url(../images/shapes/test-shapes.svg);
+					height: 90px;
+					width: 110px;
+					margin-bottom: 0;
+					margin-inline-start: -33.5px;
+					@media #{$xs} {
+						margin-inline-start: -23.5px;
+					}
+					img {
+						top: 8px;
+						inset-inline-end: 11px;
+					}
+				}
+				.desc {
+					padding-bottom: 0;
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+/* START: Home 6 Testimonial CSS */

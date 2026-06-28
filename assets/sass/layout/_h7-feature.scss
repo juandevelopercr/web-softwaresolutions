@@ -1,0 +1,81 @@
+@use "../utilities" as *;
+
+/* START: Feature CSS */
+.h7-feature-section {
+	.container {
+		--bs-gutter-x: 30px;
+		.row {
+			--bs-gutter-x: 30px;
+			@media #{$sm, $xs} {
+				--bs-gutter-x: 20px;
+			}
+		}
+
+		.rg-30 {
+			@media #{$sm, $xs} {
+				row-gap: 20px;
+			}
+		}
+	}
+	.feature-item {
+		&.style-4 {
+			padding: 30px 30px 30px 25px;
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			gap: 15px;
+			background-color: var(--tj-color-theme-bg);
+			border: 0;
+			z-index: 1;
+			@media #{$lg,$md,$sm, $xs} {
+				flex-wrap: wrap;
+				padding: 20px;
+			}
+			&::before {
+				display: none;
+			}
+			.feature-icon {
+				margin: 0;
+				max-width: 98px;
+				width: 100%;
+				height: 112px;
+				flex-shrink: 0;
+				mask-image: url(../images/shapes/h7-feature-icon-bg.svg);
+				mask-size: cover;
+				mask-repeat: no-repeat;
+				mask-position: center;
+				background-color: var(--tj-color-common-white);
+				position: relative;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 1;
+				margin-top: -30px;
+				@media #{$lg,$md,$sm, $xs} {
+					margin-bottom: 10px;
+					margin-top: -20px;
+
+					max-width: 80px;
+					height: 91px;
+				}
+				svg,
+				img {
+					width: 62px;
+					margin-top: 13px;
+					@media #{$lg,$md,$sm, $xs} {
+						width: 46px;
+					}
+				}
+			}
+			.feature-content {
+				padding: 0;
+				@media #{$sm, $xs} {
+					padding: 0;
+				}
+				.title {
+					margin-bottom: 18px;
+				}
+			}
+		}
+	}
+}

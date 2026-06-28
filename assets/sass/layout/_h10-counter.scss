@@ -1,0 +1,64 @@
+@use "../utilities" as *;
+
+/* START: Counter CSS */
+.h10-counter-section {
+	background-color: var(--tj-color-theme-dark);
+	overflow: hidden;
+	.counter-wrapper {
+		background-color: var(--tj-color-theme-dark);
+		@media #{$sm} {
+			max-width: 100%;
+		}
+	}
+}
+
+.counter-item {
+	&.style-2 {
+		max-width: 25%;
+		border-color: var(--tj-color-border-1);
+		padding: 54px 80px 60px 80px;
+		.counter-item-inner {
+			max-width: 190px;
+			margin: 0 auto;
+			@media #{$md, $sm, $xs} {
+				max-width: 130px;
+			}
+		}
+		&::before {
+			border: 3px solid var(--tj-color-theme-dark);
+			background-color: var(--tj-color-theme-primary);
+		}
+		&::after {
+			background-color: var(--tj-color-theme-primary);
+			@media #{$md, $sm, $xs} {
+				width: 16px;
+				height: 16px;
+				inset-inline-end: -8px;
+			}
+		}
+		.number {
+			color: var(--tj-color-common-white);
+		}
+		.sub-title {
+			color: var(--tj-color-common-white-2);
+		}
+		@media #{$xl} {
+			padding: 50px 60px 60px 80px;
+		}
+		@media #{$lg} {
+			padding: 50px 20px 60px 70px;
+		}
+		@media #{$md} {
+			padding: 40px 20px 50px 30px;
+		}
+		@media #{$sm} {
+			max-width: 50%;
+			padding: 30px 20px 35px;
+		}
+		@media #{$xs} {
+			max-width: 50%;
+			padding: 30px 15px;
+		}
+	}
+}
+/* !END: Counter CSS */

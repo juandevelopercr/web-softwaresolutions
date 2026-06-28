@@ -1,0 +1,322 @@
+@use "../utilities" as *;
+
+/* START: Hero CSS */
+
+.h10-hero {
+	position: relative;
+	overflow: hidden;
+	padding: 0 0 60px;
+	@media #{$md, $sm, $xs} {
+		padding: 0 0 60px;
+	}
+	&-inner {
+		overflow: visible;
+		&::before {
+			display: none;
+		}
+	}
+	&-content {
+		min-height: 90vh;
+		max-width: 812px;
+		width: 100%;
+		padding-top: 0;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		height: 100%;
+		z-index: 1;
+		padding: 232px 0 80px 12px;
+
+		@media #{$lg} {
+			max-width: 100%;
+			min-height: 787px;
+		}
+		@media #{$md, $sm,$xs} {
+			max-width: 100%;
+			min-height: auto;
+			padding: 70px 0 70px 12px;
+		}
+		@media #{ $md} {
+			min-height: 690px;
+			padding: 200px 0 70px 12px;
+		}
+		@media #{ $sm} {
+			max-width: 100%;
+			min-height: 675px;
+			padding: 110px 0 70px;
+		}
+		@media #{ $xs} {
+			max-width: 100%;
+			min-height: 761px;
+			padding: 140px 0 70px;
+		}
+
+		.hero-title {
+			color: var(--tj-color-common-white);
+			font-size: 110px;
+			letter-spacing: -0.025em;
+			line-height: 1;
+			margin-bottom: 20px;
+
+			span {
+				color: var(--tj-color-theme-primary);
+			}
+			@media #{$xl} {
+				font-size: 100px;
+			}
+			@media #{$lg} {
+				font-size: 90px;
+			}
+			@media #{$md} {
+				font-size: 80px;
+			}
+			@media #{$sm} {
+				font-size: 68px;
+				text-align: center;
+			}
+			@media #{ $xs} {
+				font-size: 50px;
+				text-align: center;
+			}
+		}
+		.desc {
+			font-size: 18px;
+			color: var(--tj-color-common-white-2);
+			font-weight: var(--tj-fw-regular);
+			max-width: 524px;
+			width: 100%;
+			line-height: 1.5;
+			@media #{$lg} {
+				max-width: 433px;
+			}
+			@media #{$md} {
+				max-width: 100%;
+			}
+			@media #{$sm, $xs} {
+				text-align: center;
+			}
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&-sroll-down {
+		position: absolute;
+		inset-inline-start: 24px;
+		bottom: 9%;
+		max-width: 365px;
+		color: var(--tj-color-common-white-2);
+
+		@media #{$xl} {
+			inset-inline-start: 12px;
+		}
+		@media #{$lg} {
+			inset-inline-start: 12px;
+		}
+		@media #{$md} {
+			max-width: 361px;
+			inset-inline-start: 15px;
+		}
+		@media #{$sm,$xs} {
+			position: static;
+			text-align: center;
+			margin: 30px auto 0;
+		}
+		&-icon {
+			animation: bounce2 2s infinite;
+		}
+	}
+	&-stat {
+		position: absolute;
+		inset-inline-end: 0;
+		bottom: -60px;
+
+		@media #{$xl} {
+			inset-inline-end: 12px;
+		}
+		@media #{$lg} {
+			inset-inline-end: 12px;
+		}
+		@media #{$md} {
+			inset-inline-end: 12px;
+		}
+		@media #{$sm} {
+			inset-inline-end: 50%;
+			transform: translateX(50%);
+			max-width: 410px;
+			width: 100%;
+			bottom: -57px;
+		}
+		@media #{$xs} {
+			inset-inline-end: 50%;
+			transform: translateX(50%);
+			width: 100%;
+			max-width: 100%;
+			bottom: -54px;
+		}
+		&-inner {
+			display: flex;
+			gap: 15px;
+			align-items: center;
+			background: rgba(247, 247, 247, 0.1);
+			backdrop-filter: blur(35px);
+			padding: 30px 20px 40px;
+			@media #{$md} {
+				padding: 20px 10px 30px 15px;
+			}
+			@media #{$sm,$xs} {
+				padding: 20px 10px 30px 15px;
+			}
+			@media #{$xs} {
+				text-align: center;
+				flex-direction: column;
+				gap: 15px;
+			}
+		}
+		&-chart {
+			width: 185px;
+			position: relative;
+
+			@media #{$md} {
+				width: 157px;
+			}
+			@media #{$sm,$xs} {
+				width: 157px;
+			}
+			&-text {
+				position: absolute;
+				inset-inline-start: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				font-weight: var(--tj-fw-bold);
+				color: var(--tj-color-common-white-2);
+				margin: 3px 0 0;
+				line-height: 1;
+			}
+		}
+		.h10-hero-counter-item {
+			.number {
+				color: var(--tj-color-common-white);
+				@media #{$xs} {
+					flex: 0 0 auto;
+				}
+				sup {
+					font-size: 0.53em;
+					top: -0.8em;
+				}
+			}
+			.sub-title {
+				color: var(--tj-color-common-white-2);
+			}
+		}
+		&-action {
+			.tj-primary-btn {
+				background-color: var(--tj-color-theme-primary);
+				width: 100%;
+				border-radius: 0;
+				justify-content: space-between;
+				text-align: start;
+				font-size: 18px;
+				font-weight: var(--tj-fw-sbold);
+
+				@media #{$sm,$xs} {
+					font-size: 16px;
+					text-align: start;
+				}
+				.btn_inner {
+					padding: 15px 43px 15px 24px;
+					text-align: start;
+					@media #{$md} {
+						padding: 15px 33px 15px 19px;
+					}
+					@media #{$sm,$xs} {
+						padding: 15px 33px 15px 19px;
+						text-align: start;
+					}
+					&::before {
+						width: 100%;
+						background-color: var(--tj-color-theme-primary);
+					}
+				}
+				.btn_icon {
+					inset-inline-start: auto;
+					inset-inline-end: 10px;
+					@media #{$md} {
+						inset-inline-end: 5px;
+					}
+					@media #{$sm,$xs} {
+						inset-inline-end: 5px;
+					}
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&-counter {
+		&-item {
+			position: relative;
+			width: 100%;
+			max-width: 228px;
+			padding: 0;
+
+			z-index: 1;
+
+			@media #{$sm} {
+				max-width: 228px;
+			}
+			@media #{$xs} {
+				max-width: 100%;
+				display: flex;
+			}
+
+			.number {
+				display: flex;
+				align-items: center;
+				color: var(--tj-color-heading-primary);
+				font-family: var(--tj-ff-heading);
+				font-size: 88px;
+				font-weight: var(--tj-fw-sbold);
+				position: relative;
+				line-height: 1;
+
+				@media #{$xl} {
+					font-size: 78px;
+				}
+				@media #{$lg} {
+					font-size: 58px;
+				}
+				@media #{$md} {
+					font-size: 58px;
+				}
+				@media #{$sm, $xs} {
+					font-size: 48px;
+				}
+				span {
+					line-height: 1;
+					font-family: inherit;
+				}
+			}
+
+			.sub-title {
+				line-height: 1.5;
+				display: block;
+				margin-inline-start: 10px;
+
+				@media #{$xl, $lg,$sm} {
+					margin-inline-start: 5px;
+				}
+				@media #{$xs} {
+					text-align: start;
+					margin-inline-start: 15px;
+				}
+			}
+		}
+	}
+}
+
+/* !END: Hero CSS */

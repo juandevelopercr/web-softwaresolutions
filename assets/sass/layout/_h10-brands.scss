@@ -1,0 +1,127 @@
+@use "../utilities" as *;
+
+/* START: H10 Brands CSS */
+.h10-brands {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+
+	.brand_item {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 192px;
+		background-color: var(--tj-color-theme-bg);
+		border-inline-end: 2px solid var(--tj-color-common-white);
+		z-index: 1;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		&:last-child {
+			border: 0;
+		}
+
+		// &:not(:first-child) {
+		// 	&::before {
+		// 		content: "";
+		// 		position: absolute;
+		// 		inset-inline-start: 0;
+		// 		top: 0;
+		// 		width: 2px;
+		// 		height: 100%;
+		// 		background-color: var(--tj-color-common-white);
+		// 		z-index: 1;
+		// 		transition: 0.4s;
+		// 	}
+		// }
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset-inline-start: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--tj-color-theme-bg);
+			z-index: -1;
+			transition: 0.4s;
+		}
+		div {
+			position: relative;
+			img {
+				display: block;
+				max-width: 100%;
+				object-fit: contain;
+				transition: all 500ms ease;
+
+				&:first-child {
+					position: absolute;
+					inset-inline-start: 0px;
+					top: 0px;
+					inset-inline-end: 0px;
+					bottom: 0px;
+					z-index: 1;
+					transform: scale(0.5);
+					opacity: 0;
+					filter: blur(10px);
+				}
+			}
+		}
+		a {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&:hover {
+			div {
+				img {
+					&:first-child {
+						transform: scale(1);
+						opacity: 1;
+						filter: blur(0) invert(1);
+					}
+					&:last-child {
+						transform: scale(0.5);
+						opacity: 0;
+						filter: blur(10px);
+					}
+				}
+			}
+			// &:not(:first-child) {
+			// 	&::before {
+			// 		background-color: transparent;
+			// 	}
+			// }
+			&::after {
+				background-color: rgba(0, 117, 255, 0.5);
+			}
+			// + .brand_item {
+			// 	&:not(:first-child) {
+			// 		&::before {
+			// 			background-color: transparent;
+			// 		}
+			// 	}
+			// }
+		}
+	}
+
+	@media #{$lg, $md, $sm, $xs} {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+	@media #{$md,$sm} {
+		.brand_item {
+			height: 160px;
+		}
+	}
+	@media #{$xs} {
+		grid-template-columns: repeat(2, 1fr);
+
+		.brand_item {
+			height: 150px;
+		}
+	}
+}
+/* !END: H10 Brands CSS */

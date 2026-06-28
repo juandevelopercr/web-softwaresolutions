@@ -1,0 +1,322 @@
+@use "../utilities" as *;
+
+/* START: Button CSS */
+.tj-primary-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: var(--tj-fw-bold);
+	color: var(--tj-color-common-white);
+	background-color: var(--tj-color-theme-dark);
+	padding: 5.5px;
+	border-radius: 50px;
+	position: relative;
+	z-index: 1;
+	.btn_inner {
+		position: relative;
+		z-index: 1;
+		padding: 15px 20px 15px 55px;
+		width: 100%;
+		text-align: center;
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			inset-inline-start: 0;
+			width: 45px;
+			height: 100%;
+			background-color: var(--tj-color-theme-primary);
+			border-radius: 50px;
+			transition: all 0.3s ease-in-out 0s;
+		}
+		.btn_icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			inset-inline-start: 0;
+			top: 0;
+			min-width: 45px;
+			height: 100%;
+			z-index: 2;
+			font-size: 1.6em;
+			line-height: 1;
+			color: var(--tj-color-common-white);
+			> span {
+				overflow: hidden;
+				position: relative;
+				display: inline-flex;
+
+				i {
+					&:first-child,
+					&:last-child {
+						transition: transform 0.4s ease-in-out 0s;
+					}
+				}
+				i:last-child {
+					position: absolute;
+					transform: translateX(-150%);
+				}
+			}
+		}
+		.btn_text {
+			display: inline-flex;
+			overflow: hidden;
+			color: var(--tj-color-common-white);
+			text-shadow: 0 23px 0 currentColor;
+			white-space: nowrap;
+			> span {
+				display: flex;
+				align-items: center;
+				backface-visibility: hidden;
+				transform: translateY(0);
+				transition: 0.5s;
+			}
+		}
+	}
+	&.white-btn {
+		background-color: var(--tj-color-common-white);
+		.btn_inner {
+			.btn_text {
+				color: var(--tj-color-heading-primary);
+			}
+		}
+		&:hover {
+			.btn_inner {
+				.btn_text {
+					color: var(--tj-color-common-white);
+				}
+			}
+		}
+	}
+
+	&.header_btn {
+		background-color: var(--tj-color-common-white);
+		padding: 4.5px;
+
+		.btn_inner {
+			padding: 12px 18px 12px 50px;
+
+			&::before {
+				width: 40px;
+			}
+
+			.btn_icon {
+				min-width: 40px;
+				font-size: 1.4em;
+			}
+
+			.btn_text {
+				color: var(--tj-color-heading-primary);
+			}
+		}
+	}
+
+	&:hover {
+		.btn_inner {
+			&::before {
+				width: 100%;
+			}
+			.btn_icon {
+				i:first-child {
+					transform: translateX(150%);
+				}
+				i:last-child {
+					transform: translateX(0);
+				}
+			}
+			.btn_text {
+				color: var(--tj-color-common-white);
+
+				> span {
+					transform: translateY(-24px);
+				}
+			}
+		}
+	}
+	@media #{$xs} {
+		padding: 4.5px;
+		.btn_inner {
+			padding: 12px 18px 12px 50px;
+
+			&::before {
+				width: 40px;
+			}
+
+			.btn_icon {
+				min-width: 40px;
+				font-size: 1.4em;
+			}
+		}
+	}
+}
+
+.text-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: var(--tj-fw-bold);
+	color: var(--tj-color-heading-primary);
+	position: relative;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 1px;
+		bottom: 0px;
+		inset-inline-start: 0;
+		transform-origin: right;
+		transform: scaleX(0);
+		background-color: var(--tj-color-heading-primary);
+		transition: transform 0.3s ease-in-out;
+	}
+	i {
+		position: relative;
+		font-size: 1.3em;
+		top: 1px;
+	}
+	&:hover {
+		&::before {
+			transform-origin: left;
+			transform: scaleX(1);
+		}
+	}
+}
+
+.icon-btn {
+	margin-top: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	font-size: 22px;
+	line-height: 1;
+	color: var(--tj-color-common-white);
+	background-color: var(--tj-color-heading-primary);
+	overflow: hidden;
+
+	i,
+	svg {
+		display: inline-flex;
+		line-height: 1;
+		color: var(--tj-color-common-white);
+	}
+
+	i {
+		transform: rotate(-45deg) translateX(0);
+		transition: transform 0.3s ease-in-out;
+		text-shadow: -40px 0 0;
+	}
+	&:hover {
+		i {
+			transform: rotate(-45deg) translateX(40px);
+		}
+	}
+}
+.icon-btn-2 {
+	font-weight: var(--tj-fw-bold);
+	color: var(--tj-color-theme-dark);
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	gap: 8px;
+	overflow: hidden;
+	position: relative;
+	.btn-icon {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 22px;
+		color: var(--tj-color-common-white);
+		background-color: var(--tj-color-theme-dark);
+		transition: background-color 0.3s ease-in-out 0s;
+	}
+	.btn-text {
+		transform: translateX(-20px);
+		opacity: 0;
+		visibility: hidden;
+		white-space: nowrap;
+		transition: all 0.3s ease-in-out 0s;
+	}
+	&:hover {
+		.btn-icon {
+			background-color: var(--tj-color-theme-primary);
+		}
+		.btn-text {
+			transform: translateX(0);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.text-btn-2 {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: var(--tj-fw-bold);
+	color: var(--tj-color-heading-primary);
+	position: relative;
+	z-index: 1;
+
+	.icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background-color: var(--tj-color-theme-dark);
+		color: var(--tj-color-common-white);
+		font-size: 18px;
+		transition: all 0.3s;
+
+		i,
+		svg {
+			display: inline-flex;
+			line-height: 1;
+		}
+	}
+
+	> * {
+		&:nth-child(1) {
+			transform: scale3d(0.5, 0.5, 1);
+			margin-inline-end: -28px;
+			background-color: var(--tj-color-theme-primary);
+			opacity: 0;
+		}
+		&:nth-child(3) {
+			transform: scale3d(1, 1, 1);
+			margin-inline-start: 0;
+			opacity: 1;
+		}
+	}
+
+	&:hover {
+		> * {
+			&:nth-child(1) {
+				transform: scale3d(1, 1, 1);
+				margin-inline-end: 0;
+				opacity: 1;
+			}
+			&:nth-child(3) {
+				transform: scale3d(0.5, 0.5, 1);
+				margin-inline-start: -28px;
+				opacity: 0;
+			}
+		}
+	}
+}
+/* !END: Button CSS */

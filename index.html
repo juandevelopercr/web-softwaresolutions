@@ -1,0 +1,777 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Empresa costarricense especializada en desarrollo de software a la medida, ERP comercial con facturación electrónica y software de aduanas. Más de 20 años sirviendo a empresas en Costa Rica." />
+   <meta name="keywords" content="desarrollo de software costa rica, software a la medida, ERP costa rica, facturación electrónica costa rica, software aduanas costa rica, empresa software alajuela" />
+   <link rel="canonical" href="https://www.softwaresolutions.co.cr/" />
+
+   <title>Software Solutions S.A. | Software a la medida en Costa Rica</title>
+
+   <link rel="apple-touch-icon" href="assets/images/fav.png" />
+   <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png" />
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="assets/css/animate.css" />
+   <link rel="stylesheet" href="assets/css/solvior-icons.css" />
+   <link rel="stylesheet" href="assets/css/swiper.min.css" />
+   <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
+   <link rel="stylesheet" href="assets/css/nice-select.css" />
+   <link rel="stylesheet" href="assets/css/venobox.min.css" />
+   <link rel="stylesheet" href="assets/css/meanmenu.css" />
+   <link rel="stylesheet" href="assets/css/main.css" />
+
+   <!-- Schema.org Organization -->
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "Organization",
+     "name": "Software Solutions S.A.",
+     "url": "https://www.softwaresolutions.co.cr",
+     "logo": "https://www.softwaresolutions.co.cr/img/logo.png",
+     "contactPoint": {
+       "@type": "ContactPoint",
+       "telephone": "+50621013248",
+       "contactType": "customer service",
+       "areaServed": "CR",
+       "availableLanguage": "Spanish"
+     },
+     "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Alajuela",
+       "addressCountry": "CR"
+     },
+     "sameAs": [
+       "https://www.facebook.com/",
+       "https://www.instagram.com/",
+       "https://www.youtube.com/"
+     ]
+   }
+   </script>
+
+   <style>
+      /* WhatsApp flotante */
+      .whatsapp-float {
+         position: fixed;
+         width: 60px;
+         height: 60px;
+         bottom: 30px;
+         right: 30px;
+         background-color: #25d366;
+         color: #fff;
+         border-radius: 50px;
+         text-align: center;
+         font-size: 30px;
+         box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+         z-index: 9999;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-decoration: none;
+         transition: transform 0.2s;
+      }
+      .whatsapp-float:hover { transform: scale(1.1); color: #fff; }
+   .site-logo img{max-height:44px;width:auto;background:#fff;border-radius:6px;padding:4px 10px;}</style>
+   <!-- Open Graph -->
+   <meta property="og:type" content="website" />
+   <meta property="og:locale" content="es_CR" />
+   <meta property="og:site_name" content="Software Solutions S.A." />
+   <meta property="og:url" content="https://www.softwaresolutions.co.cr/" />
+   <meta property="og:title" content="Software Solutions S.A. | Software a la medida en Costa Rica" />
+   <meta property="og:description" content="Empresa costarricense especializada en desarrollo de software a la medida, ERP comercial con facturación electrónica y software de aduanas. Más de 20 años sirviendo a empresas en Costa Rica." />
+   <meta property="og:image" content="https://www.softwaresolutions.co.cr/img/og-image.jpg" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="Software Solutions S.A. | Software a la medida en Costa Rica" />
+   <meta name="twitter:description" content="Empresa costarricense especializada en desarrollo de software a la medida, ERP comercial con facturación electrónica y software de aduanas." />
+   <meta name="twitter:image" content="https://www.softwaresolutions.co.cr/img/og-image.jpg" />
+</head>
+
+<body>
+
+   <!-- Botón flotante WhatsApp -->
+   <a href="https://wa.me/50672722255" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+   </a>
+
+   <div class="mouseCursor cursor-outer"></div>
+   <div class="mouseCursor cursor-inner"><span><i class="tji-angle-left"></i>Drag<i class="tji-angle-right"></i></span></div>
+
+   <!-- Preloader -->
+   <div class="preloader">
+      <div class="loading-container">
+         <div class="loading"></div>
+         <div id="loading-icon"><img src="assets/images/loader.svg" alt="cargando"></div>
+      </div>
+   </div>
+
+   <!-- Hamburger Menu -->
+   <div class="body-overlay"></div>
+   <div class="hamburger-area" data-lenis-prevent>
+      <div class="hamburger_bg"></div>
+      <div class="hamburger_wrapper">
+         <div class="hamburger_top d-flex align-items-center justify-content-between">
+            <div class="hamburger_logo">
+               <a href="index.html" class="mobile_logo">
+                  <span style="font-size:1.2rem;font-weight:700;color:#fff;">Software Solutions S.A.</span>
+               </a>
+            </div>
+            <div class="hamburger_close">
+               <button class="hamburger_close_btn hamburgerCloseBtn"><i class="fa-thin fa-times"></i></button>
+            </div>
+         </div>
+         <div class="hamburger_menu">
+            <div class="mobile_menu"></div>
+         </div>
+         <div class="hamburger-infos">
+            <h4 class="hamburger-title">Información de contacto</h4>
+            <div class="contact-info">
+               <div class="contact_item">
+                  <span class="subtitle">Email</span>
+                  <div class="text"><a class="link" href="mailto:info@softwaresolutions.co.cr">info@softwaresolutions.co.cr</a></div>
+               </div>
+               <div class="contact_item">
+                  <span class="subtitle">Teléfono</span>
+                  <div class="text"><a class="link" href="tel:+50621013248">(506) 2101-3248</a></div>
+               </div>
+               <div class="contact_item">
+                  <span class="subtitle">WhatsApp</span>
+                  <div class="text"><a class="link" href="https://wa.me/50672722255">(506) 7272-2255</a></div>
+               </div>
+               <div class="contact_item">
+                  <span class="subtitle">Ubicación</span>
+                  <div class="text">Alajuela, Costa Rica</div>
+               </div>
+            </div>
+         </div>
+         <div class="hamburger-socials">
+            <h4 class="hamburger-title">Síguenos</h4>
+            <ul>
+               <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+               <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+               <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+
+   <!-- Header -->
+   <header class="tj-header-area header-1 header-absolute">
+      <div class="header-topbar">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">
+                  <div class="header-topbar_wrap">
+                     <div class="topbar_note">
+                        <i class="tji-check"></i> Su socio tecnológico de confianza en Costa Rica
+                        <a href="contacto.html"><span>Contáctenos</span><i class="tji-angle-right"></i></a>
+                     </div>
+                     <div class="topbar_infos">
+                        <div class="info_item">
+                           <span><i class="tji-clock"></i></span>
+                           <span>Lun – Vie : 9:00 am – 5:00 pm</span>
+                        </div>
+                        <div class="info_item">
+                           <span><i class="tji-email"></i></span>
+                           <a href="mailto:info@softwaresolutions.co.cr">info@softwaresolutions.co.cr</a>
+                        </div>
+                        <div class="info_item">
+                           <span><i class="tji-phone"></i></span>
+                           <a href="tel:+50621013248">(506) 2101-3248</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="header-bottom">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">
+                  <div class="header-wrapper">
+                     <!-- logo -->
+                     <div class="site-logo">
+                        <a class="logo" href="index.html">
+                           <img src="img/logo.png" alt="Software Solutions S.A." onerror="this.outerHTML='<span style=\'font-weight:800;font-size:1.1rem;\'>Software Solutions S.A.</span>'">
+                        </a>
+                     </div>
+                     <!-- nav -->
+                     <div class="mainmenu d-lg-block d-none" id="main-menu">
+                        <ul>
+                           <li class="current-menu-ancestor"><a href="index.html">Inicio</a></li>
+                           
+                           <li><a href="erp-comercial.html">ERP Comercial</a></li>
+                           <li><a href="erp-aduanas.html">ERP Aduanas</a></li>
+                           <li class="has-dropdown">
+                              <a href="servicios.html">Servicios</a>
+                              <ul class="sub-menu">
+                                 <li><a href="servicios.html#desarrollo">Desarrollo de Software a la Medida</a></li>
+                                 <li><a href="servicios.html#web">Desarrollo Web</a></li>
+                                 <li><a href="servicios.html#ecommerce">Comercio Electrónico</a></li>
+                                 <li><a href="servicios.html#nube">Soluciones en la Nube</a></li>
+                                 <li><a href="servicios.html#apps-moviles">Apps Móviles Android e iOS</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+
+                           <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                     </div>
+                     <div class="header_right_info d-none d-md-inline-flex">
+                        <a href="contacto.html" class="tj-primary-btn header_btn">
+                           <div class="btn_inner">
+                              <div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div>
+                              <div class="btn_text"><span>Agendar su cita</span></div>
+                           </div>
+                        </a>
+                     </div>
+                     <button class="menu_btn d-lg-none hamburgerBtn">
+                        Menú
+                        <span class="cubes"><span></span><span></span><span></span><span></span></span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <!-- Header sticky duplicado -->
+   <header class="tj-header-area header-1 header-duplicate header-sticky">
+      <div class="header-bottom">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">
+                  <div class="header-wrapper">
+                     <div class="site-logo">
+                        <a class="logo" href="index.html">
+                           <img src="img/logo.png" alt="Software Solutions S.A." onerror="this.outerHTML='<span style=\'font-weight:800;font-size:1.1rem;\'>Software Solutions S.A.</span>'">
+                        </a>
+                     </div>
+                     <div class="mainmenu d-lg-block d-none" id="main-menu-sticky">
+                        <ul>
+                           <li class="current-menu-ancestor"><a href="index.html">Inicio</a></li>
+                           
+                           <li><a href="erp-comercial.html">ERP Comercial</a></li>
+                           <li><a href="erp-aduanas.html">ERP Aduanas</a></li>
+                           <li class="has-dropdown">
+                              <a href="servicios.html">Servicios</a>
+                              <ul class="sub-menu">
+                                 <li><a href="servicios.html#desarrollo">Desarrollo de Software a la Medida</a></li>
+                                 <li><a href="servicios.html#web">Desarrollo Web</a></li>
+                                 <li><a href="servicios.html#ecommerce">Comercio Electrónico</a></li>
+                                 <li><a href="servicios.html#nube">Soluciones en la Nube</a></li>
+                                 <li><a href="servicios.html#apps-moviles">Apps Móviles Android e iOS</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+
+                           <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                     </div>
+                     <div class="header_right_info d-none d-md-inline-flex">
+                        <a href="contacto.html" class="tj-primary-btn header_btn">
+                           <div class="btn_inner">
+                              <div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div>
+                              <div class="btn_text"><span>Agendar su cita</span></div>
+                           </div>
+                        </a>
+                     </div>
+                     <button class="menu_btn d-lg-none hamburgerBtn">
+                        Menú <span class="cubes"><span></span><span></span><span></span><span></span></span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <!-- MAIN -->
+   <div id="smooth-wrapper">
+      <div id="smooth-content">
+         <main id="primary" class="site-main">
+
+            <!-- HERO -->
+            <div class="heroStack">
+               <div class="stackOverlay"></div>
+               <section class="tj-hero-section">
+                  <div class="container">
+                     <div class="row">
+                        <div class="hero-wrapper">
+                           <div class="hero-content">
+                              <h1 class="hero-title text-anim">Software a la medida para su empresa en <span class="active-color">Costa Rica</span></h1>
+                              <div class="desc wow fadeInUp" data-wow-delay="0.1s">
+                                 <p>Desarrollamos soluciones de software 100% personalizadas, ERP comercial con facturación electrónica y software especializado en aduanas. Más de 20 años transformando empresas costarricenses.</p>
+                              </div>
+                              <div class="wow fadeInUp" data-wow-delay="0.3s">
+                                 <a href="contacto.html" class="tj-primary-btn hero-button">
+                                    <div class="btn_inner">
+                                       <div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div>
+                                       <div class="btn_text"><span>Solicitar consulta gratuita</span></div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="hero-shapes-1 move-anim"><img src="assets/images/shapes/hero-1.png" alt=""></div>
+                              <div class="hero-shapes-2 zoominout"><img src="assets/images/shapes/hero-3.png" alt=""></div>
+                           </div>
+                           <div class="hero-images-box">
+                              <div class="hero-images">
+                                 <img src="img/hero-home.svg" alt="Ecosistema de soluciones de software — Software Solutions Costa Rica" style="border-radius:16px;filter:drop-shadow(0 20px 50px rgba(0,0,0,.5));">
+                              </div>
+                              <div class="images-shapes move-anim-2"><img src="assets/images/shapes/hero-2.png" alt=""></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="hero_scroll d-none d-lg-block">
+                     <a class="down" href="#scroll-hero"><span><i class="tji-arrow-bown"></i></span>Ver más</a>
+                  </div>
+               </section>
+            </div>
+            <!-- /HERO -->
+
+            <!-- PRODUCTOS ESTRELLA -->
+            <section class="section-space" style="background:#f7f7f7;">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="sec-heading text-center">
+                           <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">Nuestros productos</span>
+                           <h2 class="sec-title text-anim">Soluciones empresariales completas</h2>
+                           <div class="desc wow fadeInUp" data-wow-delay="0.3s">
+                              <p>Software propio desarrollado en Costa Rica para empresas costarricenses</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row rg-30 mt-40">
+                     <!-- ERP Comercial -->
+                     <div class="col-lg-6 col-md-12">
+                        <div class="feature-item hover-bg" style="padding:40px;height:100%;border-radius:16px;background:#fff;box-shadow:0 4px 30px rgba(0,0,0,0.08);">
+                           <div class="feature-icon" style="margin-bottom:20px;">
+                              <i class="tji-business" style="font-size:3.5rem;color:var(--tj-color-theme-primary, #e63c20);"></i>
+                           </div>
+                           <div class="feature-content">
+                              <h3 class="title" style="margin-bottom:16px;">ERP Comercial</h3>
+                              <div class="desc">
+                                 <p>Sistema ERP completo para la gestión integral de su empresa. Incluye facturación electrónica del Ministerio de Hacienda de Costa Rica, punto de ventas, APP para Android para ruteros y API de integración.</p>
+                                 <ul style="margin-top:16px;padding-left:20px;">
+                                    <li>Facturación Electrónica (cumplimiento Hacienda CR)</li>
+                                    <li>Inventario y bodega</li>
+                                    <li>Contabilidad y cuentas por pagar/cobrar</li>
+                                    <li>Punto de Ventas (POS)</li>
+                                    <li>Suite de apps móviles (Android e iOS)</li>
+                                    <li>API de integración con sistemas externos</li>
+                                 </ul>
+                              </div>
+                              <div style="margin-top:24px;">
+                                 <a href="erp-comercial.html" class="tj-primary-btn">
+                                    <div class="btn_inner">
+                                       <div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div>
+                                       <div class="btn_text"><span>Ver ERP Comercial</span></div>
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ERP Aduanas -->
+                     <div class="col-lg-6 col-md-12">
+                        <div class="feature-item hover-bg" style="padding:40px;height:100%;border-radius:16px;background:#fff;box-shadow:0 4px 30px rgba(0,0,0,0.08);">
+                           <div class="feature-icon" style="margin-bottom:20px;">
+                              <i class="tji-executive" style="font-size:3.5rem;color:var(--tj-color-theme-primary, #e63c20);"></i>
+                           </div>
+                           <div class="feature-content">
+                              <h3 class="title" style="margin-bottom:16px;">ERP de Aduanas</h3>
+                              <div class="desc">
+                                 <p>Diseñado específicamente para agentes aduaneros, almacenes fiscales y generales, consolidación de carga, zonas francas y operadores logísticos en Costa Rica. Integración nativa con TICA, manifiestos electrónicos, entrega con comprobante digital y suite de apps móviles incluida.</p>
+                                 <ul style="margin-top:16px;padding-left:20px;">
+                                    <li>Almacén Fiscal</li>
+                                    <li>Almacén General</li>
+                                    <li>Desconsolidación de Carga</li>
+                                    <li>Zona Franca</li>
+                                 </ul>
+                              </div>
+                              <div style="margin-top:24px;">
+                                 <a href="erp-aduanas.html" class="tj-primary-btn">
+                                    <div class="btn_inner">
+                                       <div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div>
+                                       <div class="btn_text"><span>Ver ERP Aduanas</span></div>
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- /PRODUCTOS ESTRELLA -->
+
+            <!-- FEATURES -->
+            <section class="tj-feature-section with-shape" id="scroll-hero">
+               <div class="tj-feature-section-wrap section-space">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="sec-heading text-center">
+                              <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">Por qué elegirnos</span>
+                              <h2 class="sec-title text-anim">Lo que nos diferencia</h2>
+                              <div class="desc wow fadeInUp" data-wow-delay="0.3s">
+                                 <p>Nuestra misión es proveer la solución óptima que maximice su ecuación de costo-beneficio</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row rg-30">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="feature-item hover-bg">
+                              <div class="feature-icon"><i class="tji-optimization" style="font-size:3rem;"></i></div>
+                              <div class="feature-content">
+                                 <h5 class="title">Software a la medida</h5>
+                                 <div class="desc"><p>Desarrollamos exactamente lo que su empresa necesita. Sin funciones innecesarias, sin costos extras.</p></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="feature-item hover-bg">
+                              <div class="feature-icon"><i class="tji-strategic" style="font-size:3rem;"></i></div>
+                              <div class="feature-content">
+                                 <h5 class="title">Facturación electrónica CR</h5>
+                                 <div class="desc"><p>Cumplimiento total con el Ministerio de Hacienda. Integración nativa en nuestro ERP comercial, con la versión 4.4</p></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="feature-item hover-bg">
+                              <div class="feature-icon"><i class="tji-leadership" style="font-size:3rem;"></i></div>
+                              <div class="feature-content">
+                                 <h5 class="title">Soporte y mantenimiento</h5>
+                                 <div class="desc"><p>Acompañamos a nuestros clientes después de la Post Venta. Su continuidad operacional es nuestra prioridad.</p></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="feature-item hover-bg">
+                              <div class="feature-icon"><i class="tji-process" style="font-size:3rem;"></i></div>
+                              <div class="feature-content">
+                                 <h5 class="title">+20 años de experiencia</h5>
+                                 <div class="desc"><p>Más de 35 empresas costarricenses confían en nosotros. Expertos en software empresarial y de aduanas.</p></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- /FEATURES -->
+
+
+            <!-- SERVICIOS -->
+            <section class="section-space">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="sec-heading text-center">
+                           <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">Lo que hacemos</span>
+                           <h2 class="sec-title text-anim">Nuestros servicios de desarrollo</h2>
+                           <div class="desc wow fadeInUp" data-wow-delay="0.3s">
+                              <p>Respaldados por años de experiencia en análisis, desarrollo, implementación y soporte de sistemas de información</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row rg-30 mt-40">
+                     <div class="col-lg-4 col-md-6">
+                        <div class="feature-item hover-bg" style="padding:30px;border-radius:12px;border:1px solid #eee;height:100%;">
+                           <div class="feature-icon"><i class="tji-optimization" style="font-size:2.5rem;color:var(--tj-color-theme-primary,#e63c20);"></i></div>
+                           <div class="feature-content">
+                              <h5 class="title">Desarrollo de Software a la Medida</h5>
+                              <div class="desc"><p>Creamos sistemas 100% personalizados según las necesidades, procesos y plataforma tecnológica de su empresa. El cliente conoce su negocio; nosotros lo convertimos en software eficiente.</p></div>
+                              <a href="servicios.html#desarrollo" style="font-weight:600;margin-top:12px;display:inline-block;">Ver más &rarr;</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="feature-item hover-bg" style="padding:30px;border-radius:12px;border:1px solid #eee;height:100%;">
+                           <div class="feature-icon"><i class="tji-strategic" style="font-size:2.5rem;color:var(--tj-color-theme-primary,#e63c20);"></i></div>
+                           <div class="feature-content">
+                              <h5 class="title">Desarrollo Web</h5>
+                              <div class="desc"><p>Aplicaciones web modernas, robustas y escalables. Desde sistemas de gestión interna hasta portales de clientes con interfaces intuitivas y diseño responsive.</p></div>
+                              <a href="servicios.html#web" style="font-weight:600;margin-top:12px;display:inline-block;">Ver más &rarr;</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="feature-item hover-bg" style="padding:30px;border-radius:12px;border:1px solid #eee;height:100%;">
+                           <div class="feature-icon"><i class="tji-business" style="font-size:2.5rem;color:var(--tj-color-theme-primary,#e63c20);"></i></div>
+                           <div class="feature-content">
+                              <h5 class="title">Comercio Electrónico</h5>
+                              <div class="desc"><p>Tiendas en línea completas con carrito de compras, pasarelas de pago, gestión de inventario y reportes de ventas. Venda 24/7 desde Costa Rica al mundo.</p></div>
+                              <a href="servicios.html#ecommerce" style="font-weight:600;margin-top:12px;display:inline-block;">Ver más &rarr;</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="feature-item hover-bg" style="padding:30px;border-radius:12px;border:1px solid #eee;height:100%;">
+                           <div class="feature-icon"><i class="tji-process" style="font-size:2.5rem;color:var(--tj-color-theme-primary,#e63c20);"></i></div>
+                           <div class="feature-content">
+                              <h5 class="title">Soluciones en la Nube</h5>
+                              <div class="desc"><p>Migramos o desarrollamos su software directamente en la nube. Acceso desde cualquier lugar, alta disponibilidad, backups automáticos y escalabilidad según su crecimiento.</p></div>
+                              <a href="servicios.html#nube" style="font-weight:600;margin-top:12px;display:inline-block;">Ver más &rarr;</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="feature-item hover-bg" style="padding:30px;border-radius:12px;border:1px solid #eee;height:100%;">
+                           <div class="feature-icon"><i class="tji-executive" style="font-size:2.5rem;color:var(--tj-color-theme-primary,#e63c20);"></i></div>
+                           <div class="feature-content">
+                              <h5 class="title">Apps Móviles Android e iOS</h5>
+                              <div class="desc"><p>Desarrollamos aplicaciones móviles nativas para Android e iOS. Desde apps de ventas en ruta y logística con GPS hasta portales de cliente integrados con su ERP.</p></div>
+                              <a href="servicios.html#apps-moviles" style="font-weight:600;margin-top:12px;display:inline-block;">Ver más &rarr;</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- /SERVICIOS -->
+
+            <!-- STATS -->
+            <section class="section-space" style="background:var(--tj-color-theme-primary,#e63c20);color:#fff;">
+               <div class="container">
+                  <div class="row text-center">
+                     <div class="col-lg-3 col-md-6 col-sm-6" style="padding:30px 0;">
+                        <div class="odometer" data-count="20" style="font-size:3rem;font-weight:800;">20</div>
+                        <p style="margin-top:8px;font-size:1.1rem;">Años de experiencia</p>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6" style="padding:30px 0;">
+                        <div class="odometer" data-count="35" style="font-size:3rem;font-weight:800;">35+</div>
+                        <p style="margin-top:8px;font-size:1.1rem;">Clientes activos</p>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6" style="padding:30px 0;">
+                        <div class="odometer" data-count="6" style="font-size:3rem;font-weight:800;">6</div>
+                        <p style="margin-top:8px;font-size:1.1rem;">Líneas de servicio</p>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6" style="padding:30px 0;">
+                        <div class="odometer" data-count="30" style="font-size:3rem;font-weight:800;">30</div>
+                        <p style="margin-top:8px;font-size:1.1rem;">Software a la medida</p>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- /STATS -->
+
+            <!-- CLIENTES -->
+            <section class="section-space" style="background:#f7f7f7;">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="sec-heading text-center">
+                           <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">Empresas que confían en nosotros</span>
+                           <h2 class="sec-title text-anim">Algunos de nuestros clientes</h2>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row mt-40">
+                     <div class="col-12">
+                        <div class="swiper brand-active">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/total-natural.jpg" alt="Total Natural"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/provaltec.jpg" alt="Provaltec"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/novus-mensajeria.jpg" alt="Novus Mensajería"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/asosi.jpg" alt="ASOSI"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/kaf-internacional.jpg" alt="KAF Internacional"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/human-capital.jpg" alt="Human Capital"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/colegio-trabajadores-sociales.jpg" alt="Colegio de Trabajadores Sociales"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/boston-scientific.jpg" alt="Boston Scientific"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/soluciones-logisticas-mundiales.jpg" alt="Soluciones Logísticas Mundiales"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/human-talent-factory.jpg" alt="Human Talent Factory"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/cable-pacayas.jpg" alt="Cable Pacayas"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/rush-cargo.jpg" alt="Rush Cargo"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/araica.jpg" alt="ARAICA"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/tnt-costa-rica.jpg" alt="TNT Costa Rica"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/jp-tecnicas.jpg" alt="JP Técnicas"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/interport.jpg" alt="Interport"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/tropical-tours.jpg" alt="Tropical Tours"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/deliexpress.jpg" alt="Deliexpress"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/show-marketing.jpg" alt="Show Marketing"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/sama-internacional.jpg" alt="Sama Internacional"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/intercontinental-kargo.jpg" alt="Intercontinental Kargo"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/sistamedica.jpg" alt="Sistamedica"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/aduanal-horizontes.jpg" alt="Aduanal Horizontes"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/cenacat.jpg" alt="Cenacat"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/constructora-cfc.jpg" alt="Constructora CFC"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/gdm.jpg" alt="GDM"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/muebles-san-rafael.jpg" alt="Muebles San Rafael"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/pd-lawyers.jpg" alt="PD Lawyers"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/nalakalu.jpg" alt="Nalakalu"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/rfs.jpg" alt="RFS"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/crcustomers.png" alt="CRCUSTOMERS"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/netcom.png" alt="Netcom"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/ipc.png" alt="IPC"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/alpiste.png" alt="Alpiste"></div></div>
+                              <div class="swiper-slide"><div class="brand-logo"><img src="img/clientes/u-san-judas-tadeo.png" alt="U San Judas Tadeo"></div></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- /CLIENTES -->
+
+            <!-- CTA -->
+            <section class="section-space">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-lg-8 col-md-8">
+                        <div class="sec-heading">
+                           <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">¿Listo para dar el siguiente paso?</span>
+                           <h2 class="sec-title text-anim">Modernizamos la gestión de su empresa</h2>
+                           <div class="desc wow fadeInUp" data-wow-delay="0.3s">
+                              <p>Contáctenos hoy. Analizamos sus necesidades sin costo y le presentamos la solución más adecuada para su negocio.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4 text-md-end mt-30 mt-md-0">
+                        <a href="contacto.html" class="tj-primary-btn">
+                           <div class="btn_inner">
+                              <div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div>
+                              <div class="btn_text"><span>Contáctenos ahora</span></div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- /CTA -->
+
+         </main>
+
+         <!-- FOOTER -->
+         <footer class="tj-footer-area" style="background:#111;">
+            <div class="footer-top-area fix">
+               <div class="container">
+                  <div class="row rg-50 line">
+                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-widget footer-contact-infos">
+                           <div class="footer-title"><h4 class="title" style="color:#fff;">Nuestra oficina</h4></div>
+                           <div class="infos-item" style="color:#aaa;">
+                              <span style="color:#fff;font-weight:600;">Software Solutions S.A.</span>
+                              <p style="margin-top:8px;">Alajuela, Costa Rica</p>
+                              <a href="tel:+50621013248" style="color:#aaa;display:block;margin-top:4px;">(506) 2101-3248</a>
+                              <a href="https://wa.me/50672722255" style="color:#aaa;display:block;margin-top:4px;">(506) 7272-2255 (WhatsApp)</a>
+                              <a href="mailto:info@softwaresolutions.co.cr" style="color:#aaa;display:block;margin-top:4px;">info@softwaresolutions.co.cr</a>
+                              <p style="margin-top:8px;">Lunes a Viernes: 9:00 am – 5:00 pm</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-widget widget_nav_menu">
+                           <div class="footer-title"><h4 class="title" style="color:#fff;">Empresa</h4></div>
+                           <div class="widget-menu">
+                              <ul style="list-style:none;padding:0;">
+                                 <li><a href="quienes-somos.html" style="color:#aaa;">Quiénes Somos</a></li>
+                                 <li><a href="servicios.html" style="color:#aaa;">Servicios</a></li>
+                                 <li><a href="contacto.html" style="color:#aaa;">Contacto</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget_nav_menu">
+                           <div class="footer-title"><h4 class="title" style="color:#fff;">Productos</h4></div>
+                           <div class="widget-menu">
+                              <ul style="list-style:none;padding:0;">
+                                 <li><a href="erp-comercial.html" style="color:#aaa;">ERP Comercial</a></li>
+                                 <li><a href="erp-comercial.html#facturacion" style="color:#aaa;">Facturación Electrónica</a></li>
+                                 <li><a href="erp-comercial.html#pos" style="color:#aaa;">Punto de Ventas</a></li>
+                                 <li><a href="erp-aduanas.html" style="color:#aaa;">ERP Aduanas</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget footer-newsletter-form">
+                           <div class="footer-title"><h4 class="title" style="color:#fff;">Sobre nosotros</h4></div>
+                           <p style="color:#aaa;margin-bottom:16px;">Empresa costarricense especializada en soluciones de software a la medida, ERP comercial y software de aduanas. Comprometidos con la tecnología aplicada al negocio de nuestros clientes.</p>
+                           <div style="display:flex;gap:12px;margin-top:16px;">
+                              <a href="https://www.facebook.com/" target="_blank" style="color:#aaa;font-size:1.2rem;"><i class="fa-brands fa-facebook-f"></i></a>
+                              <a href="https://www.instagram.com/" target="_blank" style="color:#aaa;font-size:1.2rem;"><i class="fa-brands fa-instagram"></i></a>
+                              <a href="https://www.youtube.com/" target="_blank" style="color:#aaa;font-size:1.2rem;"><i class="fa-brands fa-youtube"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-copyright-area">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="copyright-content-area" style="display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px;">
+                           <div class="copyright-text">
+                              <p style="color:#aaa;margin:0;">© 2026 <a href="index.html" style="color:#fff;">Software Solutions S.A.</a> Todos los derechos reservados.</p>
+                           </div>
+                           <div class="copyright-menu">
+                              <ul style="list-style:none;padding:0;margin:0;display:flex;gap:16px;">
+                                 <li><a href="contacto.html" style="color:#aaa;">Contacto</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="back-to-top-wrapper">
+               <button id="back_to_top" type="button" class="back-to-top-btn style-2">
+                  <i class="tji-arrow-up"></i><span>INICIO</span>
+               </button>
+            </div>
+         </footer>
+         <!-- /FOOTER -->
+
+      </div>
+   </div>
+
+   <!-- JS -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/gsap.min.js"></script>
+   <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="assets/js/gsap-split-text.min.js"></script>
+   <script src="assets/js/smooth-scroll.min.js"></script>
+   <script src="assets/js/appear.min.js"></script>
+   <script src="assets/js/wow.min.js"></script>
+   <script src="assets/js/odometer.min.js"></script>
+   <script src="assets/js/swiper.min.js"></script>
+   <script src="assets/js/nice-select.js"></script>
+   <script src="assets/js/venobox.min.js"></script>
+   <script src="assets/js/meanmenu.js"></script>
+   <script src="assets/js/main.js"></script>
+
+   <script>
+      // Swiper para clientes
+      new Swiper('.brand-active', {
+         slidesPerView: 2,
+         spaceBetween: 20,
+         loop: true,
+         autoplay: { delay: 2000, disableOnInteraction: false },
+         breakpoints: {
+            480:  { slidesPerView: 3 },
+            768:  { slidesPerView: 4 },
+            1024: { slidesPerView: 5 },
+            1280: { slidesPerView: 6 }
+         }
+      });
+   </script>
+
+</body>
+</html>

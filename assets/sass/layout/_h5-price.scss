@@ -1,0 +1,151 @@
+@use "../utilities" as *;
+/* START: Home 5 Price CSS */
+.h5-price-section {
+	@media #{$md, $sm, $xs} {
+		overflow: hidden;
+	}
+}
+.pricing-left-content {
+	.desc {
+		max-width: 300px;
+	}
+}
+.tj-sticky-top {
+	position: sticky;
+	top: 120px;
+	z-index: 1;
+	@media #{$lg} {
+		top: 100px;
+	}
+	@media #{$md, $sm, $xs} {
+		position: unset;
+	}
+}
+.pricing-card {
+	display: flex;
+	border: 1px solid var(--tj-color-border-2);
+	background-color: var(--tj-color-common-white);
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+	@media #{$lg} {
+		align-items: center;
+	}
+	@media #{$sm, $xs} {
+		flex-direction: column;
+		padding-bottom: 0;
+	}
+	&.active {
+		.pricing-badge {
+			display: inline-block;
+		}
+	}
+	.pricing-badge {
+		position: absolute;
+		top: 0;
+		inset-inline-end: 0;
+		display: none;
+		padding: 10px 11px 10px 35px;
+		color: var(--tj-color-common-white);
+		background-color: var(--tj-color-theme-primary);
+		line-height: 1;
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+	}
+	.pricing-left,
+	.pricing-right {
+		flex: 1;
+		padding: 30px;
+		@media #{$lg} {
+			padding: 30px 25px;
+		}
+		@media #{$sm, $xs} {
+			padding: 30px 25px;
+		}
+	}
+	.pricing-left {
+		background-color: var(--tj-color-theme-bg);
+		.title {
+			margin: 0;
+		}
+	}
+	.price {
+		margin: 18px 0;
+		font-size: var(--tj-fs-h1);
+		font-family: var(--tj-ff-heading);
+		font-weight: var(--tj-fw-sbold);
+		color: var(--tj-color-heading-primary);
+		line-height: 1;
+		@media #{$lg, $md} {
+			font-size: 60px;
+		}
+		@media #{$sm, $xs} {
+			font-size: 48px;
+		}
+		.dollar {
+			font-size: 18px;
+			vertical-align: top;
+			color: var(--tj-color-common-black-2);
+		}
+		.period {
+			font-size: 20px;
+			font-weight: normal;
+			color: var(--tj-color-common-black-2);
+		}
+	}
+	.offer {
+		margin-bottom: 25px;
+	}
+
+	.pricing-right {
+		position: relative;
+		h4 {
+			position: absolute;
+			inset-inline-end: 22px;
+			top: -20px;
+			transform: rotate(-90deg);
+			transform-origin: right;
+			font-size: 72px;
+			color: var(--tj-color-theme-bg);
+			letter-spacing: -2.5%;
+			margin: 0;
+			@media #{$lg} {
+				inset-inline-end: 18px;
+				top: -10px;
+			}
+			@media #{$lg, $md} {
+				font-size: 60px;
+			}
+			@media #{$sm, $xs} {
+				font-size: 48px;
+				top: 30px;
+			}
+		}
+		.features {
+			list-style: none;
+			padding-inline-start: 0;
+			margin-top: 0;
+			li {
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}
+				display: flex;
+				align-items: center;
+				color: var(--tj-color-common-black-3);
+				i {
+					font-size: 18px;
+					line-height: 1;
+					margin-inline-end: 8px;
+				}
+				&.active {
+					color: var(--tj-color-text-body);
+					i {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+		}
+	}
+}

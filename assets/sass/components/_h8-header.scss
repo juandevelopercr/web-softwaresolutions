@@ -1,0 +1,89 @@
+@use "../utilities" as *;
+
+/* START: Header CSS */
+
+// header 7 css
+.tj-header-area {
+	&.header-8 {
+		.mainmenu {
+			> ul {
+				gap: 45px;
+				@media #{$xl} {
+					gap: 30px;
+				}
+				@media #{$lg} {
+					gap: 24px;
+				}
+				> li {
+					> a {
+						position: relative;
+						color: var(--tj-color-common-white);
+						text-transform: uppercase;
+						@media #{$lg} {
+							font-size: 14px;
+						}
+
+						&::before {
+							content: "";
+							width: 0;
+							height: 3px;
+							background-color: var(--tj-color-theme-primary);
+							position: absolute;
+							inset-inline-start: 0;
+							bottom: -1px;
+						}
+						&::after {
+							display: none;
+						}
+					}
+
+					.sub-menu {
+						&::before {
+							display: none;
+						}
+					}
+					&:hover,
+					&.current-menu-item,
+					&.current-menu-ancestor {
+						> a {
+							color: var(--tj-color-theme-primary);
+
+							&::before {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.menu_btn {
+			color: var(--tj-color-common-white);
+			.cubes {
+				span {
+					border-color: var(--tj-color-common-white);
+					&:nth-child(2) {
+						box-shadow: inset 0 0 0 2px var(--tj-color-common-white);
+					}
+				}
+			}
+		}
+		.header {
+			&_right_info {
+				column-gap: 18px;
+				@media #{$lg} {
+					column-gap: 15px;
+				}
+			}
+			&_search {
+				&:hover {
+					i {
+						color: var(--tj-color-common-white);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* !END: Header CSS */

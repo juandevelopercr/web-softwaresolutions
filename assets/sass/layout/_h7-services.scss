@@ -1,0 +1,216 @@
+@use "../utilities" as *;
+
+/* START: H6 Services CSS */
+.h7-service-section {
+	.sec-heading {
+		margin: 0;
+		max-width: 500px;
+		&-wrap {
+			margin-bottom: 60px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 30px;
+			row-gap: 20px;
+			justify-content: space-between;
+			.desc {
+				max-width: 300px;
+				width: 100%;
+			}
+			@media #{$md, $sm, $xs} {
+				margin-bottom: 40px;
+			}
+		}
+		.sub-title {
+			background-color: var(--tj-color-common-white);
+			padding-inline-start: 9px;
+			&::before {
+				display: none;
+			}
+		}
+	}
+	.service-wrapper-two {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+	.service-style-3 {
+		padding: 30px;
+		min-height: auto;
+		border-bottom: 0;
+		@media #{$md, $sm, $xs} {
+			padding: 20px;
+		}
+		@media #{ $sm} {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		.service-title {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			max-width: 550px;
+			width: 100%;
+
+			@media #{$xl} {
+				max-width: 480px;
+			}
+			@media #{$lg} {
+				max-width: 400px;
+			}
+			@media #{$md, $sm, $xs} {
+				max-width: 320px;
+			}
+			@media #{ $sm,$xs} {
+				max-width: 100%;
+			}
+		}
+		.service-right {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-grow: 1;
+			@media #{  $xs} {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.desc {
+				@media #{$md} {
+					max-width: 235px;
+				}
+				@media #{ $sm} {
+					max-width: calc(100% - 120px);
+					margin-inline-start: 0;
+				}
+				@media #{ $sm, $xs} {
+					max-width: 100%;
+					margin-inline-start: 0;
+				}
+			}
+		}
+		.service-icon {
+			width: 80px;
+			height: 80px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			position: relative;
+			z-index: 2;
+			text-align: center;
+			flex-shrink: 0;
+			span {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 80px;
+				height: 80px;
+				font-size: 52px;
+				line-height: 1;
+				border-radius: 50%;
+				color: var(--tj-color-common-white);
+				background-color: var(--tj-color-theme-primary);
+
+				@media #{$lg, $sm, $xs} {
+					width: 70px;
+					height: 70px;
+					font-size: 45px;
+				}
+			}
+			@media #{$lg, $sm, $xs} {
+				width: 70px;
+				height: 70px;
+			}
+		}
+		.service-button {
+			margin: 0;
+			margin-top: 0px;
+			max-width: 112px;
+			width: 100%;
+			height: 98px;
+			flex-shrink: 0;
+			mask-image: url(../images/shapes/h7-service.svg);
+			mask-size: cover;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			background-color: var(--tj-color-theme-bg);
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			margin-inline-end: -30px;
+			@media #{$md, $sm, $xs} {
+				max-width: 100px;
+				height: 86px;
+				margin-inline-end: -20px;
+			}
+			@media #{ $sm} {
+				margin-top: -90px;
+			}
+			@media #{  $xs} {
+				height: 88px;
+				transform: rotate(90deg);
+				margin-bottom: -14px;
+				margin-top: 32px;
+				margin-inline-end: 0;
+			}
+			&:hover {
+				.blog-btn-2 .btn-icon {
+					transform: rotate(0deg);
+					@media #{ $xs} {
+						transform: rotate(-90deg);
+					}
+				}
+			}
+		}
+		.blog-btn-2 .btn-icon {
+			width: auto;
+			height: auto;
+			border-radius: 0;
+			display: block;
+			background-color: transparent;
+			font-size: 28px;
+			transform: rotate(-45deg);
+			transition: all 0.3s;
+			margin-inline-end: 13px;
+
+			@media #{ $xs} {
+				transform: rotate(-135deg);
+				font-size: 26px;
+			}
+		}
+		&:hover {
+			min-height: auto;
+			background-color: var(--tj-color-theme-primary);
+			.service-title {
+				max-width: 550px;
+				@media #{$xl} {
+					max-width: 480px;
+				}
+				@media #{$lg} {
+					max-width: 400px;
+				}
+				@media #{$md, $sm, $xs} {
+					max-width: 320px;
+				}
+				@media #{ $sm,$xs} {
+					max-width: 100%;
+				}
+			}
+			.service-icon {
+				span {
+					color: var(--tj-color-theme-primary);
+					background-color: var(--tj-color-common-white);
+				}
+			}
+			.blog-btn-2 .btn-icon {
+				i {
+					color: var(--tj-color-theme-primary);
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+/* END: H6 Services CSS */

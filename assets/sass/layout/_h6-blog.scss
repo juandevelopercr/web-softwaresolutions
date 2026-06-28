@@ -1,0 +1,55 @@
+@use "../utilities" as *;
+
+/* START: Home 6 Blog CSS */
+.h6-blog {
+	&-section {
+		position: relative;
+		overflow: hidden;
+		z-index: 2;
+	}
+	&-shape {
+		position: absolute;
+		inset-inline-start: -90px;
+		top: 50%;
+		transform: translateY(-50%);
+		max-width: 180px;
+		width: 100%;
+		z-index: -1;
+	}
+}
+
+.blog-style-2 {
+	&.style-6 {
+		display: flex;
+		border: 1px solid var(--tj-color-border-2);
+		background-color: var(--tj-color-common-white);
+		@media #{$sm, $xs} {
+			flex-direction: column;
+		}
+		.blog-images,
+		.blog-content {
+			flex: 1;
+		}
+		.blog-images {
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+			.blog-date {
+				inset-inline-start: 15px;
+				top: 15px;
+				inset-inline-end: auto;
+				bottom: auto;
+			}
+		}
+		.blog-content {
+			padding: 30px;
+			border: 0;
+			.blog-button {
+				margin-top: 25px;
+			}
+		}
+	}
+}
+/* END: Home 6 Blog CSS */

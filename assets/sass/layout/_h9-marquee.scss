@@ -1,0 +1,56 @@
+@use "../utilities" as *;
+
+/* START: H6 Marquee CSS */
+.h9-hero-marquee {
+	padding: 82px 0;
+
+	.marquee-wrapper {
+		transition-timing-function: linear;
+	}
+	.marquee-item {
+		align-items: center;
+		gap: 33px;
+		padding-inline-end: 33px;
+		.marquee-title {
+			.text {
+				color: var(--tj-color-common-white);
+				font-size: 162px;
+				line-height: 1;
+				font-weight: var(--tj-fw-bold);
+				text-transform: uppercase;
+				opacity: 0.14;
+			}
+		}
+		.marquee-icons {
+			max-width: 51px;
+		}
+
+		@media #{$xl, $lg} {
+			.marquee-title {
+				.text {
+					font-size: 140px;
+				}
+			}
+		}
+		@media #{$md} {
+			.marquee-title {
+				.text {
+					font-size: 130px;
+				}
+			}
+		}
+		@media #{$sm, $xs} {
+			gap: 20px;
+			padding-inline-end: 20px;
+			.marquee-title {
+				.text {
+					font-size: 100px;
+				}
+			}
+		}
+	}
+	@media #{$sm, $xs} {
+		padding: 50px 0;
+	}
+}
+/* !END: H6 Marquee CSS */

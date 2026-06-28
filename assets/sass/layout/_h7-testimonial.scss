@@ -1,0 +1,223 @@
+@use "../utilities" as *;
+
+/* START: Testimonial CSS */
+.h7-testimonial {
+	overflow: hidden;
+	.sec-heading {
+		max-width: 555px;
+		width: 100%;
+		text-align: center;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		margin-bottom: 60px;
+	}
+	&-wrap {
+		display: flex;
+		flex-direction: row;
+		background-color: var(--tj-color-common-white);
+		padding: 0;
+		@media #{$md, $sm, $xs} {
+			flex-direction: column;
+			padding: 0;
+		}
+	}
+
+	&-single {
+		position: relative;
+		display: flex;
+		width: 132px;
+		height: 509px;
+		place-content: center;
+		overflow: hidden;
+		transition: all 0.5s ease-in-out;
+		border-inline-start: 1px solid var(--tj-color-border-2);
+
+		&:last-child {
+			border-inline-end: 1px solid var(--tj-color-border-2);
+		}
+		@media #{$xl} {
+		}
+		@media #{$md,$sm,$xs} {
+		}
+		.testimonial-content {
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			max-width: 660px;
+			padding: 40px 45px;
+			&-inner {
+				position: relative;
+				text-align: start;
+				top: 0;
+				inset-inline-start: 0;
+				width: 570px;
+				transform: translateX(-100%);
+				transition: transform 0.5s ease-in-out;
+				opacity: 0;
+				visibility: hidden;
+
+				@media #{$lg} {
+					width: 495px;
+				}
+				@media #{$md, $sm, $xs} {
+					width: 100%;
+					padding-bottom: 10px;
+				}
+			}
+			@media #{$xl} {
+				padding: 20px 25px;
+			}
+			@media #{$lg} {
+				padding: 20px 25px;
+			}
+			@media #{$md, $sm, $xs} {
+				padding: 30px 20px;
+				max-width: 100%;
+			}
+
+			.desc {
+				font-size: 22px;
+				@media #{$xl, $lg} {
+					font-size: 20px;
+				}
+				@media #{$sm, $xs} {
+					font-size: 18px;
+				}
+			}
+
+			.testimonial-author {
+				margin-top: 24px;
+				padding-top: 30px;
+				border-top: 1px solid var(--tj-color-border-2);
+				.author-text {
+					.testimonial-rating {
+						background: var(--tj-color-common-white);
+					}
+				}
+			}
+		}
+		.h7-testimonial {
+			&-title {
+				position: absolute;
+				height: 100%;
+				bottom: 0;
+				inset-inline-start: 50%;
+				transform: translateX(-50%);
+				text-align: start;
+				transition: all 0.5s ease-in;
+				cursor: pointer;
+				.title {
+					writing-mode: sideways-lr;
+					margin-bottom: 0;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					height: 100%;
+					@media #{$md, $sm, $xs} {
+						writing-mode: inherit;
+					}
+				}
+				@media #{$md, $sm, $xs} {
+					max-width: 100%;
+					width: 100%;
+					height: auto;
+					inset-inline-start: 0;
+					bottom: 50%;
+					transform: translateY(50%);
+				}
+
+				.title {
+					margin-bottom: 16px;
+					@media #{$md, $sm, $xs} {
+						margin-bottom: 0;
+						width: 100%;
+					}
+					a {
+						display: inline-block;
+						&:hover {
+							color: var(--tj-color-theme-primary);
+						}
+					}
+				}
+			}
+		}
+
+		&.active {
+			place-content: unset;
+			width: 660px;
+			border: 0;
+
+			& + .h7-testimonial-single {
+				border-inline-start: 0;
+			}
+			.testimonial-content {
+				opacity: 1;
+				visibility: visible;
+				background-color: var(--tj-color-theme-bg);
+				&-inner {
+					transform: translateX(0);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			.h7-testimonial {
+				&-title {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.2s ease-out;
+				}
+			}
+
+			@media #{$xl} {
+				width: 640px;
+				padding: 0 0;
+			}
+			@media #{$lg} {
+				width: 560px;
+				padding: 0 0px;
+			}
+			@media #{$md, $sm, $xs} {
+				width: 100%;
+				height: auto;
+
+				border-top: 0 !important;
+				border-bottom: 0 !important;
+
+				& + .h7-testimonial-single {
+					border-top: 0;
+				}
+			}
+		}
+
+		@media #{$xl} {
+			width: 100px;
+			height: 470px;
+			padding: 0 15px;
+		}
+		@media #{$lg} {
+			width: 80px;
+			padding: 0 15px;
+		}
+		@media #{$md, $sm, $xs} {
+			width: 100%;
+			height: 80px;
+			padding: 0;
+			border-inline-end: 0;
+			border-inline-start: 0;
+			border-top: 1px solid var(--tj-color-border-2);
+
+			&:last-child {
+				border-inline-end: 0;
+			}
+			&:last-child {
+				border-bottom: 1px solid var(--tj-color-border-2);
+			}
+		}
+		@media #{$xxs} {
+			height: 80px;
+		}
+	}
+}
+
+/* !END: Testimonial CSS */

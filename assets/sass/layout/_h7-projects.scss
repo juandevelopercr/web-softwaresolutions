@@ -1,0 +1,219 @@
+@use "../utilities" as *;
+
+/* START: H6 Projects CSS */
+.h7-project {
+	overflow: hidden;
+	.swiper-container {
+		max-width: 872px;
+		width: 100%;
+
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		overflow: visible;
+
+		@media #{$lg} {
+			max-width: 700px;
+		}
+		@media #{$md} {
+			max-width: 600px;
+		}
+		@media #{$sm} {
+			max-width: 450px;
+		}
+		@media #{ $xs} {
+			max-width: 315px;
+		}
+	}
+	.sec-heading {
+		max-width: 555px;
+		width: 100%;
+		text-align: center;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		margin-bottom: 60px;
+		@media #{$md} {
+			margin-bottom: 45px;
+		}
+		@media #{$sm, $xs} {
+			margin-bottom: 40px;
+		}
+	}
+	.h7-case-study-slider-wrapper {
+		overflow: hidden;
+	}
+
+	.h5-case-study-item {
+		&-inner {
+			z-index: 0;
+			min-height: 565px;
+			@media #{$lg,$md} {
+				min-height: 400px;
+			}
+			@media #{$sm} {
+				min-height: 300px;
+			}
+			@media #{ $xs} {
+				min-height: 270px;
+			}
+			&::after,
+			&::before {
+				content: " ";
+				width: 100%;
+				height: 0;
+				background: linear-gradient(180deg, rgba(5, 18, 41, 0) 0%, #051229 84%);
+				position: absolute;
+				inset-inline-start: 0;
+				bottom: 0;
+				transition: all 0.4s 0.3s;
+				z-index: 1;
+			}
+			&::before {
+				height: 100%;
+				background: rgba(5, 18, 41, 0.7);
+				transition-duration: 0;
+				opacity: 1;
+			}
+		}
+		.case-study-content {
+			background-color: transparent;
+			padding: 30px 30px 20px;
+			max-width: 100%;
+			z-index: 2;
+			transition-delay: 0.3s;
+
+			@media #{$xs} {
+				padding: 15px 15px 5px;
+			}
+			.case-study-text {
+				align-items: center;
+			}
+			.category {
+				margin-bottom: 0;
+				li a {
+					color: var(--tj-color-common-white);
+					background-color: rgba(247, 247, 247, 0.1);
+					backdrop-filter: blur(50px);
+					border: 0;
+					&:hover {
+						color: var(--tj-color-common-white);
+						background-color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+			.title {
+				a {
+					color: var(--tj-color-common-white);
+					margin-bottom: 15px;
+				}
+			}
+
+			.icon-btn {
+				background-color: transparent;
+				border: 1px solid var(--tj-color-common-white);
+				&:hover {
+					border-color: var(--tj-color-theme-primary);
+				}
+			}
+		}
+
+		&:hover {
+			.case-study-content {
+				transform: translateY(100%);
+			}
+		}
+	}
+
+	.swiper-slide-active {
+		.h5-case-study-item {
+			&-inner {
+				&::after {
+					height: 100%;
+					opacity: 0.8;
+				}
+				&::before {
+					opacity: 0;
+				}
+				.case-study-content,
+				&:hover {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+
+	&-inner {
+		position: relative;
+
+		.tj-project-nav {
+			position: absolute;
+			inset-inline-end: 100%;
+			top: 50%;
+			transform: translateY(-50%) translateX(0);
+			z-index: 10;
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			color: var(--tj-color-theme-dark);
+			background-color: var(--tj-color-common-white);
+			opacity: 0;
+			transition: all 0.4s;
+			visibility: hidden;
+			border: 1px solid var(--tj-color-border-2);
+			border-radius: 100%;
+			font-size: 21px;
+
+			@media #{$xl,$lg,$md,$sm,$xs} {
+				display: none;
+			}
+			@media #{$sm,$xs} {
+				width: 48px;
+				height: 48px;
+				font-size: 14px;
+				inset-inline-start: 15px;
+			}
+
+			&-next {
+				inset-inline-start: 100%;
+				inset-inline-end: auto;
+
+				@media #{$sm,$xs} {
+					inset-inline-end: 15px;
+				}
+			}
+
+			&:hover {
+				background: var(--tj-color-theme-primary);
+				color: var(--tj-color-common-white);
+				border-color: var(--tj-color-theme-primary);
+			}
+		}
+
+		&:hover {
+			.tj-project-nav {
+				transform: translateY(-50%) translateX(-30px);
+				opacity: 1;
+				visibility: visible;
+				@media #{$xxl} {
+					transform: translateY(-50%) translateX(30px);
+				}
+				@media #{$sm,$xs} {
+					inset-inline-start: 15px;
+				}
+				&-next {
+					transform: translateY(-50%) translateX(30px);
+					@media #{$xxl} {
+						transform: translateY(-50%) translateX(-30px);
+					}
+					@media #{$sm,$xs} {
+						inset-inline-end: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* !END: H6 Projects CSS */

@@ -1,0 +1,236 @@
+<svg viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1e3c"/>
+      <stop offset="100%" stop-color="#1a3360"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2d50"/>
+      <stop offset="100%" stop-color="#162240"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="chart" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <clipPath id="roundCard">
+      <rect rx="12" ry="12" width="100%" height="100%"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="480" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="680" cy="60" r="120" fill="#3b82f6" fill-opacity="0.06"/>
+  <circle cx="50" cy="420" r="100" fill="#f97316" fill-opacity="0.05"/>
+
+  <!-- ═══ MAIN DASHBOARD CARD ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="30" width="460" height="300" rx="14" fill="url(#card)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  </g>
+
+  <!-- Dashboard header bar -->
+  <rect x="30" y="30" width="460" height="44" rx="14" fill="#1e3a6e"/>
+  <rect x="30" y="56" width="460" height="18" fill="#1e3a6e"/>
+  <circle cx="54" cy="52" r="6" fill="#ef4444"/>
+  <circle cx="72" cy="52" r="6" fill="#f59e0b"/>
+  <circle cx="90" cy="52" r="6" fill="#22c55e"/>
+  <text x="200" y="57" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="middle">ERP Comercial — Panel Principal</text>
+
+  <!-- KPI row -->
+  <!-- KPI 1: Ventas -->
+  <rect x="46" y="86" width="96" height="60" rx="8" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+  <text x="94" y="106" font-size="9" fill="#93c5fd" text-anchor="middle">VENTAS HOY</text>
+  <text x="94" y="124" font-size="17" fill="#fff" font-weight="700" text-anchor="middle">₡2.4M</text>
+  <text x="94" y="138" font-size="8" fill="#22c55e" text-anchor="middle">▲ 12.3%</text>
+
+  <!-- KPI 2: Facturas -->
+  <rect x="152" y="86" width="96" height="60" rx="8" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+  <text x="200" y="106" font-size="9" fill="#86efac" text-anchor="middle">FACTURAS</text>
+  <text x="200" y="124" font-size="17" fill="#fff" font-weight="700" text-anchor="middle">148</text>
+  <text x="200" y="138" font-size="8" fill="#22c55e" text-anchor="middle">▲ 8 vs ayer</text>
+
+  <!-- KPI 3: Clientes -->
+  <rect x="258" y="86" width="96" height="60" rx="8" fill="rgba(249,115,22,0.12)" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
+  <text x="306" y="106" font-size="9" fill="#fdba74" text-anchor="middle">CLIENTES</text>
+  <text x="306" y="124" font-size="17" fill="#fff" font-weight="700" text-anchor="middle">3,241</text>
+  <text x="306" y="138" font-size="8" fill="#22c55e" text-anchor="middle">▲ 5 nuevos</text>
+
+  <!-- KPI 4: Inventario -->
+  <rect x="364" y="86" width="96" height="60" rx="8" fill="rgba(168,85,247,0.12)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="412" y="106" font-size="9" fill="#d8b4fe" text-anchor="middle">PRODUCTOS</text>
+  <text x="412" y="124" font-size="17" fill="#fff" font-weight="700" text-anchor="middle">1,892</text>
+  <text x="412" y="138" font-size="8" fill="#f59e0b" text-anchor="middle">● 23 bajo stock</text>
+
+  <!-- Chart area -->
+  <rect x="46" y="158" width="220" height="100" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="56" y="173" font-size="9" fill="rgba(255,255,255,0.5)">Ventas — últimos 7 días</text>
+  <!-- Chart bars -->
+  <rect x="58" y="228" width="18" height="22" rx="3" fill="url(#blue)" opacity="0.7"/>
+  <rect x="82" y="215" width="18" height="35" rx="3" fill="url(#blue)" opacity="0.8"/>
+  <rect x="106" y="205" width="18" height="45" rx="3" fill="url(#blue)"/>
+  <rect x="130" y="220" width="18" height="30" rx="3" fill="url(#blue)" opacity="0.75"/>
+  <rect x="154" y="198" width="18" height="52" rx="3" fill="url(#blue)"/>
+  <rect x="178" y="210" width="18" height="40" rx="3" fill="url(#blue)" opacity="0.85"/>
+  <rect x="202" y="188" width="18" height="62" rx="3" fill="#22c55e"/>
+  <!-- X labels -->
+  <text x="67" y="258" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">L</text>
+  <text x="91" y="258" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">M</text>
+  <text x="115" y="258" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">X</text>
+  <text x="139" y="258" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">J</text>
+  <text x="163" y="258" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">V</text>
+  <text x="187" y="258" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">S</text>
+  <text x="211" y="258" font-size="7" fill="#22c55e" text-anchor="middle">H</text>
+
+  <!-- Mini table / recent transactions -->
+  <rect x="276" y="158" width="198" height="100" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="286" y="173" font-size="9" fill="rgba(255,255,255,0.5)">Últimas facturas</text>
+  <!-- rows -->
+  <line x1="276" y1="178" x2="474" y2="178" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="286" y="191" font-size="8" fill="rgba(255,255,255,0.7)">FE-00841</text>
+  <text x="390" y="191" font-size="8" fill="rgba(255,255,255,0.5)">Supermercado XYZ</text>
+  <text x="460" y="191" font-size="8" fill="#22c55e" text-anchor="end">₡128k</text>
+  <line x1="276" y1="196" x2="474" y2="196" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <text x="286" y="209" font-size="8" fill="rgba(255,255,255,0.7)">FE-00840</text>
+  <text x="390" y="209" font-size="8" fill="rgba(255,255,255,0.5)">Distribuidora PQ</text>
+  <text x="460" y="209" font-size="8" fill="#22c55e" text-anchor="end">₡84k</text>
+  <line x1="276" y1="214" x2="474" y2="214" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <text x="286" y="227" font-size="8" fill="rgba(255,255,255,0.7)">FE-00839</text>
+  <text x="390" y="227" font-size="8" fill="rgba(255,255,255,0.5)">Bodega Central</text>
+  <text x="460" y="227" font-size="8" fill="#22c55e" text-anchor="end">₡312k</text>
+  <line x1="276" y1="232" x2="474" y2="232" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <text x="286" y="245" font-size="8" fill="rgba(255,255,255,0.7)">FE-00838</text>
+  <text x="390" y="245" font-size="8" fill="rgba(255,255,255,0.5)">Mega Compras</text>
+  <text x="460" y="245" font-size="8" fill="#f59e0b" text-anchor="end">₡67k</text>
+
+  <!-- Bottom module pills -->
+  <text x="46" y="280" font-size="9" fill="rgba(255,255,255,0.35)">Módulos activos:</text>
+  <rect x="46" y="286" width="58" height="18" rx="9" fill="rgba(59,130,246,0.2)" stroke="rgba(59,130,246,0.4)" stroke-width="1"/>
+  <text x="75" y="298" font-size="8" fill="#93c5fd" text-anchor="middle">Inventario</text>
+  <rect x="110" y="286" width="52" height="18" rx="9" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.4)" stroke-width="1"/>
+  <text x="136" y="298" font-size="8" fill="#86efac" text-anchor="middle">Factura E.</text>
+  <rect x="168" y="286" width="44" height="18" rx="9" fill="rgba(249,115,22,0.2)" stroke="rgba(249,115,22,0.4)" stroke-width="1"/>
+  <text x="190" y="298" font-size="8" fill="#fdba74" text-anchor="middle">POS</text>
+  <rect x="218" y="286" width="52" height="18" rx="9" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.4)" stroke-width="1"/>
+  <text x="244" y="298" font-size="8" fill="#d8b4fe" text-anchor="middle">CRM</text>
+  <rect x="276" y="286" width="56" height="18" rx="9" fill="rgba(236,72,153,0.2)" stroke="rgba(236,72,153,0.4)" stroke-width="1"/>
+  <text x="304" y="298" font-size="8" fill="#f9a8d4" text-anchor="middle">Contabilid.</text>
+  <rect x="338" y="286" width="52" height="18" rx="9" fill="rgba(20,184,166,0.2)" stroke="rgba(20,184,166,0.4)" stroke-width="1"/>
+  <text x="364" y="298" font-size="8" fill="#5eead4" text-anchor="middle">RRHH</text>
+  <rect x="396" y="286" width="64" height="18" rx="9" fill="rgba(234,179,8,0.2)" stroke="rgba(234,179,8,0.4)" stroke-width="1"/>
+  <text x="428" y="298" font-size="8" fill="#fde047" text-anchor="middle">Proveedores</text>
+
+  <!-- ═══ PHONE MOCKUP — POS APP ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="510" y="45" width="140" height="260" rx="18" fill="#0d1526" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  </g>
+  <!-- Phone notch -->
+  <rect x="548" y="50" width="64" height="8" rx="4" fill="#1a2540"/>
+  <!-- Phone screen -->
+  <rect x="518" y="65" width="124" height="228" rx="6" fill="#111e38"/>
+  <!-- App header -->
+  <rect x="518" y="65" width="124" height="30" rx="0" fill="#1e3a6e"/>
+  <text x="580" y="84" font-size="9" fill="#fff" text-anchor="middle" font-weight="600">POS - Caja 1</text>
+  <!-- Product list -->
+  <text x="526" y="108" font-size="7" fill="rgba(255,255,255,0.4)">ARTÍCULO</text>
+  <text x="630" y="108" font-size="7" fill="rgba(255,255,255,0.4)" text-anchor="end">TOTAL</text>
+  <line x1="518" y1="111" x2="642" y2="111" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="526" y="123" font-size="8" fill="#fff">Arroz 5kg</text>
+  <text x="630" y="123" font-size="8" fill="#fff" text-anchor="end">₡3,500</text>
+  <text x="526" y="136" font-size="8" fill="#fff">Aceite 1L</text>
+  <text x="630" y="136" font-size="8" fill="#fff" text-anchor="end">₡1,200</text>
+  <text x="526" y="149" font-size="8" fill="#fff">Azúcar 2kg</text>
+  <text x="630" y="149" font-size="8" fill="#fff" text-anchor="end">₡2,100</text>
+  <line x1="518" y1="155" x2="642" y2="155" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="526" y="167" font-size="9" fill="rgba(255,255,255,0.6)">Subtotal</text>
+  <text x="630" y="167" font-size="9" fill="rgba(255,255,255,0.8)" text-anchor="end">₡6,800</text>
+  <text x="526" y="179" font-size="9" fill="rgba(255,255,255,0.6)">IVA 13%</text>
+  <text x="630" y="179" font-size="9" fill="rgba(255,255,255,0.8)" text-anchor="end">₡884</text>
+  <line x1="518" y1="184" x2="642" y2="184" stroke="#3b82f6" stroke-width="1"/>
+  <text x="526" y="196" font-size="10" fill="#fff" font-weight="700">TOTAL</text>
+  <text x="630" y="196" font-size="11" fill="#22c55e" font-weight="700" text-anchor="end">₡7,684</text>
+  <!-- Pay button -->
+  <rect x="526" y="204" width="108" height="26" rx="13" fill="url(#green)"/>
+  <text x="580" y="221" font-size="10" fill="#fff" font-weight="700" text-anchor="middle">COBRAR</text>
+  <!-- Tender buttons -->
+  <rect x="526" y="235" width="50" height="20" rx="5" fill="rgba(59,130,246,0.3)" stroke="rgba(59,130,246,0.5)" stroke-width="1"/>
+  <text x="551" y="248" font-size="8" fill="#93c5fd" text-anchor="middle">Efectivo</text>
+  <rect x="582" y="235" width="52" height="20" rx="5" fill="rgba(249,115,22,0.3)" stroke="rgba(249,115,22,0.5)" stroke-width="1"/>
+  <text x="608" y="248" font-size="8" fill="#fdba74" text-anchor="middle">Tarjeta</text>
+  <!-- Barcode strip -->
+  <rect x="526" y="262" width="108" height="24" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="580" y="277" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">||||| || |||| ||||||| |||</text>
+
+  <!-- ═══ FE CERTIFICATE CARD ═══ -->
+  <g filter="url(#shadow)">
+    <rect x="510" y="322" width="220" height="110" rx="12" fill="#0d2a1a" stroke="rgba(34,197,94,0.3)" stroke-width="1.5"/>
+  </g>
+  <!-- Green top accent -->
+  <rect x="510" y="322" width="220" height="5" rx="12" fill="#16a34a"/>
+  <rect x="510" y="327" width="220" height="5" fill="#16a34a"/>
+  <!-- Hacienda badge -->
+  <rect x="522" y="334" width="28" height="28" rx="6" fill="#16a34a"/>
+  <text x="536" y="353" font-size="14" text-anchor="middle">✓</text>
+  <text x="558" y="344" font-size="10" fill="#22c55e" font-weight="700">Facturación Electrónica</text>
+  <text x="558" y="357" font-size="8" fill="rgba(255,255,255,0.6)">Certificado — Ministerio de Hacienda CR</text>
+  <line x1="522" y1="368" x2="716" y2="368" stroke="rgba(34,197,94,0.2)" stroke-width="1"/>
+  <text x="522" y="381" font-size="8" fill="rgba(255,255,255,0.5)">XML Versión</text>
+  <text x="620" y="381" font-size="8" fill="#86efac" text-anchor="end">4.3</text>
+  <text x="522" y="394" font-size="8" fill="rgba(255,255,255,0.5)">Ambiente</text>
+  <text x="620" y="394" font-size="8" fill="#86efac" text-anchor="end">Producción ✓</text>
+  <text x="522" y="407" font-size="8" fill="rgba(255,255,255,0.5)">Tipo comprobantes</text>
+  <text x="716" y="407" font-size="7" fill="#86efac" text-anchor="end">FE · FEE · NC · ND · TiquetE</text>
+  <text x="522" y="420" font-size="8" fill="rgba(255,255,255,0.5)">Recepción SINPE</text>
+  <text x="716" y="420" font-size="8" fill="#22c55e" text-anchor="end">Incluido ✓</text>
+
+  <!-- ═══ SIDE FEATURE CARDS (right column) ═══ -->
+  <!-- Integrations card -->
+  <g filter="url(#shadow)">
+    <rect x="658" y="45" width="90" height="82" rx="10" fill="url(#card)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  </g>
+  <text x="703" y="62" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">INTEGRA CON</text>
+  <rect x="668" y="67" width="30" height="18" rx="4" fill="rgba(59,130,246,0.2)" stroke="rgba(59,130,246,0.4)" stroke-width="1"/>
+  <text x="683" y="80" font-size="7" fill="#93c5fd" text-anchor="middle">REST API</text>
+  <rect x="704" y="67" width="34" height="18" rx="4" fill="rgba(249,115,22,0.2)" stroke="rgba(249,115,22,0.4)" stroke-width="1"/>
+  <text x="721" y="80" font-size="7" fill="#fdba74" text-anchor="middle">WooComm</text>
+  <rect x="668" y="90" width="30" height="18" rx="4" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.4)" stroke-width="1"/>
+  <text x="683" y="103" font-size="7" fill="#86efac" text-anchor="middle">WhatsApp</text>
+  <rect x="704" y="90" width="34" height="18" rx="4" fill="rgba(168,85,247,0.2)" stroke="rgba(168,85,247,0.4)" stroke-width="1"/>
+  <text x="721" y="103" font-size="7" fill="#d8b4fe" text-anchor="middle">Correo</text>
+  <text x="703" y="120" font-size="8" fill="rgba(255,255,255,0.3)" text-anchor="middle">+8 más</text>
+
+  <!-- Apps badge -->
+  <g filter="url(#shadow)">
+    <rect x="658" y="136" width="90" height="68" rx="10" fill="url(#card)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  </g>
+  <text x="703" y="152" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">APPS MÓVILES</text>
+  <text x="703" y="168" font-size="22" text-anchor="middle">📱</text>
+  <text x="703" y="184" font-size="9" fill="#fff" text-anchor="middle" font-weight="600">3 Apps Flutter</text>
+  <text x="703" y="196" font-size="7" fill="rgba(255,255,255,0.4)" text-anchor="middle">Android &amp; iOS</text>
+
+  <!-- Cloud badge -->
+  <g filter="url(#shadow)">
+    <rect x="658" y="214" width="90" height="60" rx="10" fill="url(#card)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  </g>
+  <text x="703" y="230" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">PLATAFORMA</text>
+  <text x="703" y="248" font-size="22" text-anchor="middle">☁️</text>
+  <text x="703" y="264" font-size="9" fill="#fff" text-anchor="middle" font-weight="600">100% Web</text>
+
+  <!-- Label -->
+  <text x="380" y="355" font-size="11" fill="rgba(255,255,255,0.25)" text-anchor="middle">softwaresolutions.co.cr</text>
+</svg>

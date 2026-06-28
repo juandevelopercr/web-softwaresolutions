@@ -1,0 +1,202 @@
+@use "../utilities" as *;
+
+/* START: About CSS */
+.h6-about {
+	&-section {
+		overflow: hidden;
+	}
+	&-video {
+		position: relative;
+		height: 100%;
+		.about-shape-1 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 305px;
+			width: 100%;
+			height: 348px;
+			position: absolute;
+			bottom: -121px;
+			inset-inline-start: 0;
+			mask-image: url(../images/shapes/h6-about-video-shape.svg);
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			background: var(--tj-color-theme-bg);
+			mask-position: center;
+
+			.video-inner {
+				position: relative;
+				overflow: hidden;
+				max-width: 244px;
+				width: 100%;
+				border-radius: 50%;
+				margin-bottom: 45px;
+				&::before {
+					content: "";
+					background-color: var(--tj-color-theme-dark);
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					inset-inline-start: 0;
+					opacity: 0.3;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				.video-btn {
+					background-color: var(--tj-color-common-white);
+					color: var(--tj-color-theme-dark);
+					width: 52px;
+					height: 52px;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 14px;
+					animation: pulse 2s infinite;
+					position: absolute;
+					top: 50%;
+					inset-inline-start: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 2;
+					i {
+						line-height: 1;
+						display: inline-flex;
+						margin-inline-start: 2px;
+					}
+					&:hover {
+						transform: translate(-50%, -50%) scale(1.1);
+					}
+				}
+				@media #{$lg, $md, $sm, $xs} {
+					max-width: 200px;
+					margin-bottom: 35px;
+				}
+			}
+			@media #{$lg} {
+				max-width: 250px;
+				height: 288px;
+				bottom: -102px;
+			}
+			@media #{$md, $sm, $xs} {
+				position: relative;
+				max-width: 250px;
+				height: 288px;
+				bottom: -82px;
+				margin: 0 auto;
+			}
+		}
+	}
+	&-content {
+		position: relative;
+		.shape {
+			position: absolute;
+			max-width: 220px;
+			width: 100%;
+			top: 80px;
+			inset-inline-end: 0;
+			@media #{$lg} {
+				max-width: 160px;
+				top: inherit;
+				bottom: 60px;
+			}
+			@media #{$md, $sm, $xs} {
+				max-width: 130px;
+				top: inherit;
+				bottom: 10px;
+			}
+		}
+		.sec-heading {
+			max-width: 870px;
+			width: 100%;
+		}
+		.sec-title {
+			letter-spacing: -0.025em;
+		}
+		.about-btn-area {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 20px;
+		}
+		.images-thumb {
+			margin-bottom: 0;
+			li {
+				&.plus {
+					i {
+						background-color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+		}
+	}
+	&-funfact {
+		max-width: 645px;
+		width: 100%;
+		margin-inline-start: auto;
+		margin-top: -35px;
+		&-item {
+			display: flex;
+			align-items: center;
+			border: 1px solid var(--tj-color-border-2);
+			overflow: hidden;
+			&:not(:first-child) {
+				border-top: 0;
+			}
+			.counter-item {
+				max-width: 257px;
+				padding: 28px 30px 40px 30px;
+				border-inline-end: 0;
+				@media #{$xs} {
+					max-width: 160px;
+					flex: 0 0 auto;
+					padding: 20px 15px 30px 15px;
+				}
+			}
+			.desc {
+				position: relative;
+				padding: 30px;
+				&::before {
+					content: "";
+					background-color: var(--tj-color-border-2);
+					position: absolute;
+					width: 1px;
+					height: calc(100% + 100px);
+					top: -50px;
+					inset-inline-start: 0;
+					z-index: -1;
+				}
+				p {
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				@media #{$xs} {
+					padding: 20px;
+				}
+			}
+		}
+		@media #{$lg, $md, $sm, $xs} {
+			max-width: 100%;
+			margin-top: 50px;
+		}
+	}
+}
+
+.tj-text-invert > div {
+	background-size: 200% 100%;
+	background-position-x: 100%;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-image: linear-gradient(
+		to right,
+		var(--tj-color-theme-dark) 50%,
+		var(--tj-color-common-white-2) 50%
+	);
+}
+
+/* !END: About CSS */

@@ -1,0 +1,199 @@
+@use "../utilities" as *;
+
+/* START: H6 Insight CSS */
+.h6-insight {
+	&-section {
+		overflow: hidden;
+		.sec-heading {
+			margin-bottom: 18px;
+			max-width: 553px;
+			width: 100%;
+		}
+	}
+
+	&_accordion {
+		max-width: 553px;
+		width: 100%;
+		border: 1px solid var(--tj-color-border-2);
+
+		.accordion_item {
+			text-align: start;
+			&:not(:last-child) {
+				border-bottom: 1px solid var(--tj-color-border-2);
+			}
+
+			.accordion_title {
+				width: 100%;
+				border: none;
+				background-color: transparent;
+				outline: none;
+				box-shadow: 0 0 0;
+				padding: 28px 65px 20px 30px;
+				text-align: start;
+				position: relative;
+				z-index: 1;
+
+				&::before {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					inset-inline-end: 30px;
+					content: "+";
+					font-family: "Font Awesome 6 Pro";
+					font-weight: 500;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: 34px;
+					height: 34px;
+					border: 1px solid var(--tj-color-border-2);
+					font-size: 16px;
+					line-height: 1;
+					text-align: center;
+					border-radius: 50%;
+					color: var(--tj-color-heading-primary);
+					background-color: transparent;
+					transition: 0.4s;
+				}
+
+				&:not(.collapsed) {
+					&::before {
+						content: "-";
+					}
+					.subtitle {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+
+				.subtitle {
+					display: flex;
+					font-family: var(--tj-ff-heading);
+					font-weight: var(--tj-fw-sbold);
+					font-size: 16px;
+					line-height: 1;
+					letter-spacing: -0.025em;
+					color: #c0c6d1;
+					margin-bottom: 10px;
+				}
+				.title {
+					color: var(--tj-color-heading-primary);
+					font-size: 20px;
+					font-weight: var(--tj-fw-sbold);
+					font-family: var(--tj-ff-heading);
+					margin: 0;
+					letter-spacing: -0.025em;
+					line-height: 28px;
+					@media #{$xs} {
+						font-size: 17px;
+					}
+				}
+			}
+			.accordion_desc {
+				.accordion-body {
+					padding: 0 30px 25px 30px;
+				}
+			}
+		}
+	}
+
+	&-chart {
+		position: relative;
+		z-index: 1;
+		border: 1px solid var(--tj-color-border-2);
+		padding: 40px 30px;
+		margin-top: 8px;
+		text-align: center;
+
+		.chart_content {
+			text-align: start;
+			max-width: 240px;
+			width: 100%;
+			position: absolute;
+			inset-inline-start: 30px;
+			top: 30px;
+
+			.title {
+				font-family: var(--tj-ff-heading);
+				font-weight: var(--tj-fw-sbold);
+				font-size: 20px;
+				line-height: 1.3;
+				letter-spacing: -0.025em;
+				color: var(--tj-color-heading-primary);
+				margin-bottom: 20px;
+			}
+
+			.counter {
+				display: flex;
+				font-family: var(--tj-ff-heading);
+				font-weight: var(--tj-fw-sbold);
+				font-size: 45px;
+				line-height: 1;
+				letter-spacing: -0.025em;
+				color: var(--tj-color-heading-primary);
+				align-items: center;
+
+				span {
+					font-family: inherit;
+				}
+
+				.up {
+					display: inline-flex;
+					justify-content: center;
+					align-items: end;
+					width: 34px;
+					height: 34px;
+					font-size: 19px;
+					color: var(--tj-color-theme-primary);
+				}
+			}
+			.subtitle {
+				display: flex;
+				color: var(--tj-color-common-black-2);
+				line-height: 1;
+			}
+		}
+	}
+	@media #{$lg} {
+		&-chart {
+			padding: 62px 30px 40px 30px;
+		}
+	}
+	@media #{$md, $sm, $xs} {
+		&-section {
+			.sec-heading {
+				margin-bottom: 40px;
+			}
+		}
+
+		&_accordion {
+			margin-bottom: 40px;
+			max-width: 100%;
+		}
+	}
+
+	@media #{$xs} {
+		&-chart {
+			padding: 80px 30px 30px 30px;
+
+			.chart_content {
+				max-width: 195px;
+
+				.title {
+					font-size: 16px;
+					margin-bottom: 10px;
+				}
+				.counter {
+					font-size: 30px;
+
+					.up {
+						align-items: center;
+					}
+				}
+				.subtitle {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}
+/* END: H6 Insight CSS */

@@ -1,0 +1,672 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="es">
+<head>
+   <meta charset="utf-8" /><meta http-equiv="x-ua-compatible" content="ie=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Software de Aduanas para Costa Rica: Almacén Fiscal TICA, Almacén General 3PL, Zona Franca, Desconsolidación de Carga, logística con ePOD GPS y facturación electrónica. Diseñado para la realidad aduanera costarricense." />
+   <meta name="keywords" content="software aduanas costa rica, almacen fiscal costa rica, zona franca costa rica, TICA aduanas, software agentes aduaneros, ERP aduanas, desconsolidacion carga" />
+   <link rel="canonical" href="https://www.softwaresolutions.co.cr/erp-aduanas.html" />
+   <title>ERP de Aduanas | Almacén Fiscal, Zona Franca, Logística | Software Solutions S.A. Costa Rica</title>
+   <link rel="apple-touch-icon" href="assets/images/fav.png" /><link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png" />
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="assets/css/animate.css" />
+   <link rel="stylesheet" href="assets/css/solvior-icons.css" />
+   <link rel="stylesheet" href="assets/css/swiper.min.css" />
+   <link rel="stylesheet" href="assets/css/meanmenu.css" />
+   <link rel="stylesheet" href="assets/css/main.css" />
+   <style>
+      .whatsapp-float{position:fixed;width:60px;height:60px;bottom:30px;right:30px;background-color:#25d366;color:#fff;border-radius:50px;text-align:center;font-size:30px;box-shadow:2px 2px 8px rgba(0,0,0,.3);z-index:9999;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .2s}.site-logo img{max-height:44px;width:auto;background:#fff;border-radius:6px;padding:4px 10px;}.whatsapp-float:hover{transform:scale(1.1);color:#fff}
+      .page-banner{background:linear-gradient(135deg,#0a192f 0%,#112240 55%,#1d3557 100%);padding:160px 0 90px;color:#fff}
+      .page-banner .badge-pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:30px;padding:8px 20px;font-size:.85rem;font-weight:600;margin-bottom:20px;letter-spacing:.5px;backdrop-filter:blur(6px)}
+      .modulo-card{background:#fff;border-radius:14px;padding:36px;border:1px solid #eee;height:100%;box-shadow:0 2px 18px rgba(0,0,0,.06);transition:transform .25s,box-shadow .25s}
+      .modulo-card:hover{transform:translateY(-5px);box-shadow:0 10px 35px rgba(0,0,0,.13)}
+      .modulo-card .icon{font-size:3rem;color:var(--tj-color-theme-primary,#e63c20);margin-bottom:20px}
+      .modulo-card h4{font-size:1.2rem;font-weight:700;margin-bottom:10px}
+      .modulo-card ul{padding-left:0;list-style:none;margin:12px 0 0}
+      .modulo-card ul li{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px;font-size:.92rem;color:#555}
+      .modulo-card ul li i{color:var(--tj-color-theme-primary,#e63c20);margin-top:3px;flex-shrink:0}
+      .tica-section{background:linear-gradient(135deg,#0a192f 0%,#1d3557 100%);color:#fff;border-radius:20px;padding:60px 50px}
+      .tica-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px;margin-bottom:16px}
+      .tica-item h5{font-size:1rem;font-weight:700;color:#a8d8ff;margin-bottom:8px}
+      .tica-item p{font-size:.9rem;color:rgba(255,255,255,.75);margin:0}
+      .app-card{background:#fff;border-radius:14px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,.08);border:2px solid #f0f0f0;height:100%}
+      .app-card .app-icon{width:64px;height:64px;background:linear-gradient(135deg,#0a192f,#1d3557);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.8rem;color:#fff}
+      .stat-pill{background:#f7f7f7;border-radius:12px;padding:20px;text-align:center}
+      .stat-pill .num{font-size:2.2rem;font-weight:800;color:var(--tj-color-theme-primary,#e63c20)}
+      .audience-card{background:#fff;border-radius:12px;padding:28px;text-align:center;box-shadow:0 2px 15px rgba(0,0,0,.07);height:100%}
+      .audience-card .aud-icon{width:60px;height:60px;background:#f0f4ff;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6rem;color:#0a192f}
+      .process-step{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid #eee}
+      .process-step:last-child{border-bottom:none}
+      .process-num{min-width:42px;height:42px;background:var(--tj-color-theme-primary,#e63c20);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;flex-shrink:0}
+      .integration-tag{display:inline-block;background:#f0f4ff;border:1px solid #d0d8f0;color:#0a192f;border-radius:8px;padding:8px 16px;font-size:.88rem;font-weight:600;margin:4px}
+      .section-divider{height:4px;background:linear-gradient(90deg,var(--tj-color-theme-primary,#e63c20),#c0392b,transparent);border-radius:2px;margin-bottom:40px}
+      /* Forzar blanco en headings sobre fondos oscuros */
+      .page-banner h1,.page-banner h2,.page-banner h3,.page-banner h4,.page-banner p,.page-banner span{color:#fff}
+      .page-banner .badge-pill{color:#ff8a70}
+      .page-banner .stat-pill{background:#fff}
+      .page-banner .stat-pill .num{color:var(--tj-color-theme-primary,#e63c20)}
+      .page-banner .stat-pill div:last-child{color:#666}
+      .tica-section h1,.tica-section h2,.tica-section h3,.tica-section h4,.tica-section p,.tica-section span{color:#fff}
+      .tica-item h5{color:#a8d8ff !important}
+      .tica-item p{color:rgba(255,255,255,.75) !important}
+      section[style*="background:linear-gradient(135deg,#0a192f"] h1,
+      section[style*="background:linear-gradient(135deg,#0a192f"] h2,
+      section[style*="background:linear-gradient(135deg,#0a192f"] p{color:#fff}
+   </style>
+   <!-- Open Graph -->
+   <meta property="og:type" content="website" />
+   <meta property="og:locale" content="es_CR" />
+   <meta property="og:site_name" content="Software Solutions S.A." />
+   <meta property="og:url" content="https://www.softwaresolutions.co.cr/erp-aduanas.html" />
+   <meta property="og:title" content="ERP de Aduanas | Almacén Fiscal, Zona Franca, TICA | Software Solutions S.A." />
+   <meta property="og:description" content="Software de Aduanas para Costa Rica: Almacén Fiscal TICA, Almacén General, Zona Franca, Desconsolidación de Carga y suite de apps móviles. Diseñado para la aduana costarricense." />
+   <meta property="og:image" content="https://www.softwaresolutions.co.cr/img/og-image.jpg" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="ERP de Aduanas | Almacén Fiscal, TICA | Software Solutions S.A." />
+   <meta name="twitter:description" content="Software de Aduanas para Costa Rica: Almacén Fiscal TICA, Zona Franca, Desconsolidación de Carga y suite de apps móviles." />
+   <meta name="twitter:image" content="https://www.softwaresolutions.co.cr/img/og-image.jpg" />
+   <!-- Schema.org SoftwareApplication -->
+   <script type="application/ld+json">
+   {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ERP de Aduanas","applicationCategory":"BusinessApplication","operatingSystem":"Web, Android, iOS","description":"Software especializado para aduanas en Costa Rica: Almacén Fiscal integrado con TICA, Almacén General 3PL, Zona Franca, Desconsolidación de Carga y suite de apps móviles nativas.","offers":{"@type":"Offer","availability":"https://schema.org/InStock","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Software Solutions S.A.","url":"https://www.softwaresolutions.co.cr","telephone":"+50621013248","address":{"@type":"PostalAddress","addressLocality":"Alajuela","addressCountry":"CR"}}}
+   </script>
+</head>
+<body>
+<a href="https://wa.me/50672722255" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<div class="mouseCursor cursor-outer"></div><div class="mouseCursor cursor-inner"></div>
+<div class="preloader"><div class="loading-container"><div class="loading"></div><div id="loading-icon"><img src="assets/images/loader.svg" alt="cargando"></div></div></div>
+
+<div class="body-overlay"></div>
+<div class="hamburger-area" data-lenis-prevent><div class="hamburger_bg"></div>
+   <div class="hamburger_wrapper">
+      <div class="hamburger_top d-flex align-items-center justify-content-between">
+         <div class="hamburger_logo"><a href="index.html" class="mobile_logo"><span style="font-size:1.2rem;font-weight:700;color:#fff;">Software Solutions S.A.</span></a></div>
+         <div class="hamburger_close"><button class="hamburger_close_btn hamburgerCloseBtn"><i class="fa-thin fa-times"></i></button></div>
+      </div>
+      <div class="hamburger_menu"><div class="mobile_menu"></div></div>
+      <div class="hamburger-infos"><h4 class="hamburger-title">Información de contacto</h4>
+         <div class="contact-info">
+            <div class="contact_item"><span class="subtitle">Email</span><div class="text"><a class="link" href="mailto:info@softwaresolutions.co.cr">info@softwaresolutions.co.cr</a></div></div>
+            <div class="contact_item"><span class="subtitle">Teléfono</span><div class="text"><a class="link" href="tel:+50621013248">(506) 2101-3248</a></div></div>
+            <div class="contact_item"><span class="subtitle">WhatsApp</span><div class="text"><a class="link" href="https://wa.me/50672722255">(506) 7272-2255</a></div></div>
+            <div class="contact_item"><span class="subtitle">Ubicación</span><div class="text">Alajuela, Costa Rica</div></div>
+         </div>
+      </div>
+      <div class="hamburger-socials"><h4 class="hamburger-title">Síguenos</h4><ul>
+         <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+         <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+         <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+      </ul></div>
+   </div>
+</div>
+
+<header class="tj-header-area header-1 header-absolute">
+   <div class="header-topbar"><div class="container-fluid"><div class="row"><div class="col-12">
+      <div class="header-topbar_wrap">
+         <div class="topbar_note"><i class="tji-check"></i> Software aduanero diseñado para la realidad de Costa Rica <a href="contacto.html"><span>Solicitar demo</span><i class="tji-angle-right"></i></a></div>
+         <div class="topbar_infos">
+            <div class="info_item"><span><i class="tji-clock"></i></span><span>Lun – Vie : 9:00 am – 5:00 pm</span></div>
+            <div class="info_item"><span><i class="tji-email"></i></span><a href="mailto:info@softwaresolutions.co.cr">info@softwaresolutions.co.cr</a></div>
+            <div class="info_item"><span><i class="tji-phone"></i></span><a href="tel:+50621013248">(506) 2101-3248</a></div>
+         </div>
+      </div>
+   </div></div></div></div>
+   <div class="header-bottom"><div class="container-fluid"><div class="row"><div class="col-12">
+      <div class="header-wrapper">
+         <div class="site-logo"><a class="logo" href="index.html"><img src="img/logo.png" alt="Software Solutions S.A." onerror="this.outerHTML='<span style=\'font-weight:800;font-size:1.1rem;\'>Software Solutions S.A.</span>'"></a></div>
+         <div class="mainmenu d-lg-block d-none" id="main-menu"><ul>
+            <li><a href="index.html">Inicio</a></li>
+            
+                           <li><a href="erp-comercial.html">ERP Comercial</a></li>
+                           <li class="current-menu-ancestor"><a href="erp-aduanas.html">ERP Aduanas</a></li>
+                           <li class="has-dropdown"><a href="servicios.html">Servicios</a><ul class="sub-menu">
+               <li><a href="servicios.html#desarrollo">Desarrollo de Software a la Medida</a></li>
+               <li><a href="servicios.html#web">Desarrollo Web</a></li>
+               <li><a href="servicios.html#paginas">Páginas Web</a></li>
+               <li><a href="servicios.html#ecommerce">Comercio Electrónico</a></li>
+               <li><a href="servicios.html#nube">Soluciones en la Nube</a></li>
+            </ul></li>
+                           <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                           
+            <li><a href="contacto.html">Contacto</a></li>
+         </ul></div>
+         <div class="header_right_info d-none d-md-inline-flex"><a href="contacto.html" class="tj-primary-btn header_btn"><div class="btn_inner"><div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div><div class="btn_text"><span>Solicitar demo</span></div></div></a></div>
+         <button class="menu_btn d-lg-none hamburgerBtn">Menú <span class="cubes"><span></span><span></span><span></span><span></span></span></button>
+      </div>
+   </div></div></div></div>
+</header>
+<header class="tj-header-area header-1 header-duplicate header-sticky">
+   <div class="header-bottom"><div class="container-fluid"><div class="row"><div class="col-12">
+      <div class="header-wrapper">
+         <div class="site-logo"><a class="logo" href="index.html"><img src="img/logo.png" alt="Software Solutions S.A." onerror="this.outerHTML='<span style=\'font-weight:800;font-size:1.1rem;\'>Software Solutions S.A.</span>'"></a></div>
+         <div class="mainmenu d-lg-block d-none"><ul>
+            <li><a href="index.html">Inicio</a></li><li><a href="erp-comercial.html">ERP Comercial</a></li><li class="current-menu-ancestor"><a href="erp-aduanas.html">ERP Aduanas</a></li><li><a href="quienes-somos.html">Quiénes Somos</a></li><li><a href="contacto.html">Contacto</a></li>
+         </ul></div>
+         <div class="header_right_info d-none d-md-inline-flex"><a href="contacto.html" class="tj-primary-btn header_btn"><div class="btn_inner"><div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div><div class="btn_text"><span>Solicitar demo</span></div></div></a></div>
+         <button class="menu_btn d-lg-none hamburgerBtn">Menú <span class="cubes"><span></span><span></span><span></span><span></span></span></button>
+      </div>
+   </div></div></div></div>
+</header>
+
+<div id="smooth-wrapper"><div id="smooth-content">
+<main id="primary" class="site-main">
+
+   <!-- BANNER HERO -->
+   <section class="page-banner">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-6">
+               <div class="badge-pill"><i class="tji-check"></i> &nbsp;Cumplimiento TICA · RECAUCA · Hacienda CR</div>
+               <h1 style="font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.2;margin-bottom:20px;">ERP de Aduanas<br><span style="color:var(--tj-color-theme-primary,#e63c20);">El sistema que entiende</span><br>la aduana costarricense</h1>
+               <p style="font-size:1.15rem;color:rgba(255,255,255,.8);max-width:620px;line-height:1.7;">Diseñado específicamente para agentes aduaneros, almacenes fiscales, zonas francas y operadores logísticos en Costa Rica. Integración nativa con TICA, manifiestos electrónicos, desconsolidación de carga, entrega con comprobante digital y suite de apps móviles incluida.</p>
+               <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;">
+                  <a href="contacto.html" class="tj-primary-btn"><div class="btn_inner"><div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div><div class="btn_text"><span>Solicitar demo gratuita</span></div></div></a>
+                  <a href="https://wa.me/50672722255?text=Hola, me interesa una demo del ERP de Aduanas" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;padding:12px 24px;border-radius:8px;font-weight:600;text-decoration:none;"><i class="fa-brands fa-whatsapp" style="font-size:1.2rem;color:#25d366;"></i> Consultar por WhatsApp</a>
+               </div>
+            </div>
+            <div class="col-lg-6 mt-40 mt-lg-0 text-center">
+               <img src="img/hero-erp-aduanas.svg" alt="Panel del ERP de Aduanas — integración TICA, contenedores, DUAs y módulos aduaneros" style="width:100%;max-width:520px;border-radius:16px;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- MÓDULOS ADUANEROS PRINCIPALES -->
+   <section class="section-space" id="modulos">
+      <div class="container">
+         <div class="row"><div class="col-12"><div class="sec-heading text-center">
+            <span class="sub-title wow fadeInUp">Especializado · Integrado · Costarricense</span>
+            <h2 class="sec-title text-anim">Los 4 módulos del ERP Aduanas</h2>
+            <div class="desc wow fadeInUp"><p>Cada módulo fue desarrollado entendiendo los procesos reales de la aduana costarricense, desde el arribo de la carga hasta su entrega al consignatario.</p></div>
+         </div></div></div>
+         <div class="section-divider mt-40"></div>
+
+         <div class="row rg-30">
+            <!-- Almacén Fiscal -->
+            <div class="col-lg-6" id="almacen-fiscal">
+               <div class="modulo-card" style="border-top:4px solid var(--tj-color-theme-primary,#e63c20);">
+                  <div class="icon"><i class="tji-business"></i></div>
+                  <h4>Almacén Fiscal (ALFIS)</h4>
+                  <p style="color:#666;font-size:.95rem;line-height:1.65;margin-bottom:20px;">Control completo de la operación en almacenes fiscales bajo la regulación costarricense. Transmisión de manifiestos al sistema TICA con los formatos XML exigidos, gestión de contenedores con códigos ISO 6346 y cumplimiento del RECAUCA en cada operación.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Registro de Master Bill of Lading (MBL) y House Bill of Lading (HBL)</li>
+                     <li><i class="tji-check"></i>Manifiestos electrónicos XML al TICA (MensajeCGManifiestos V1-68)</li>
+                     <li><i class="tji-check"></i>Gestión de contenedores con ISO 6346 (20', 40', 40HC, Reefer, etc.)</li>
+                     <li><i class="tji-check"></i>Clasificación de carga: general, peligrosa, perecedera, refrigerada</li>
+                     <li><i class="tji-check"></i>Validación de consignatarios (Física, Jurídica, DIMEX, NITE)</li>
+                     <li><i class="tji-check"></i>Registro de sellos y marchamos de contenedor</li>
+                     <li><i class="tji-check"></i>Preparación y seguimiento de DUAs</li>
+                     <li><i class="tji-check"></i>Código de almacén fiscal ALFIS-315 integrado</li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Desconsolidación -->
+            <div class="col-lg-6" id="desconsolidacion">
+               <div class="modulo-card" style="border-top:4px solid #1d3557;">
+                  <div class="icon"><i class="tji-strategic"></i></div>
+                  <h4>Desconsolidación de Carga</h4>
+                  <p style="color:#666;font-size:.95rem;line-height:1.65;margin-bottom:20px;">Proceso automatizado de desconsolidación según el artículo 207-210 del RECAUCA. Control del plazo legal de 3 horas para el reporte, separación física de cargas y generación del acta de desconsolidación con todos los detalles reglamentarios.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Solicitud de desconsolidación al TICA con cumplimiento del plazo de 3 horas</li>
+                     <li><i class="tji-check"></i>Separación física de cargas con trazabilidad por HBL</li>
+                     <li><i class="tji-check"></i>Reporte de discrepancias: sobrantes y faltantes</li>
+                     <li><i class="tji-check"></i>Generación automática del Acta de Desconsolidación</li>
+                     <li><i class="tji-check"></i>Liberación individual de HBL para gestión aduanera</li>
+                     <li><i class="tji-check"></i>Seguimiento de estado por consolidación y por HBL</li>
+                     <li><i class="tji-check"></i>Historial completo de cada operación de desconsolidación</li>
+                     <li><i class="tji-check"></i>Alertas automáticas por vencimiento de plazos</li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Almacén General / 3PL -->
+            <div class="col-lg-6" id="almacen-general">
+               <div class="modulo-card" style="border-top:4px solid #2c6e49;">
+                  <div class="icon" style="color:#2c6e49;"><i class="tji-leadership"></i></div>
+                  <h4>Almacén General y 3PL</h4>
+                  <p style="color:#666;font-size:.95rem;line-height:1.65;margin-bottom:20px;">Sistema completo de gestión de almacenamiento para terceros. Configuración de bodegas físicas, virtuales y especiales con jerarquía de ubicaciones, recepción de mercancía, despacho optimizado y facturación por servicio de almacenaje.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Tipos de bodega: física, virtual, móvil, fiscal, AGD</li>
+                     <li><i class="tji-check"></i>Jerarquía de ubicaciones: Zona → Pasillo → Rack → Nivel → Posición</li>
+                     <li><i class="tji-check"></i>Generación automática de códigos de ubicación (ej: A-P01-R03-L2)</li>
+                     <li><i class="tji-check"></i>Recepción de mercancía con fotos y documentación</li>
+                     <li><i class="tji-check"></i>Pick list optimizado por orden de ubicación</li>
+                     <li><i class="tji-check"></i>Gestión de contratos de almacenaje por cliente</li>
+                     <li><i class="tji-check"></i>Tarifas por tipo de manejo y servicio</li>
+                     <li><i class="tji-check"></i>Kardex por cliente y por bodega</li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Zona Franca -->
+            <div class="col-lg-6" id="zona-franca">
+               <div class="modulo-card" style="border-top:4px solid #c0a000;">
+                  <div class="icon" style="color:#c0a000;"><i class="tji-process"></i></div>
+                  <h4>Zona Franca</h4>
+                  <p style="color:#666;font-size:.95rem;line-height:1.65;margin-bottom:20px;">Gestión de inventario y operaciones para empresas establecidas en Zonas Francas costarricenses. Control de importaciones temporales, exenciones arancelarias, re-exportaciones y movimientos de mercancía hacia el mercado nacional con la documentación requerida.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Inventario diferenciado para Zona Franca</li>
+                     <li><i class="tji-check"></i>Importaciones y exportaciones temporales</li>
+                     <li><i class="tji-check"></i>Control de exenciones arancelarias por producto</li>
+                     <li><i class="tji-check"></i>Re-exportaciones con documentación automática</li>
+                     <li><i class="tji-check"></i>Transferencia al mercado nacional con DUA</li>
+                     <li><i class="tji-check"></i>Suspensión de derechos arancelarios</li>
+                     <li><i class="tji-check"></i>Informes de cumplimiento para PROCOMER/COMEX</li>
+                     <li><i class="tji-check"></i>Trazabilidad completa de cada unidad</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- TICA COMPLIANCE SECTION -->
+   <section class="section-space" style="background:#f7f7f7;">
+      <div class="container">
+         <div class="tica-section">
+            <div class="row">
+               <div class="col-lg-6">
+                  <div style="font-size:.85rem;letter-spacing:1px;text-transform:uppercase;opacity:.7;margin-bottom:12px;">Integración nativa · Sin desarrollos adicionales</div>
+                  <h2 style="font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;margin-bottom:16px;color:#fff;">Integración TICA<br>y cumplimiento RECAUCA</h2>
+                  <p style="color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.7;margin-bottom:30px;">El sistema genera y transmite los XML de manifiestos directamente al sistema TICA del Ministerio de Hacienda, con todos los campos y validaciones que exige la normativa costarricense de comercio exterior.</p>
+                  <div class="tica-item">
+                     <h5>Manifiestos Completos (XML)</h5>
+                     <p>Generación del mensaje MensajeCGManifiestos V1-68 con todos los campos requeridos: tipo de carga, datos del consignatario, información del contenedor, puerto de carga y descarga, naviera y fecha de arribo.</p>
+                  </div>
+                  <div class="tica-item">
+                     <h5>Validación de Identificaciones</h5>
+                     <p>El sistema valida automáticamente el tipo de identificación del consignatario: persona física (01), persona jurídica (02), DIMEX (03) y NITE (04), según los formatos aceptados por TICA.</p>
+                  </div>
+               </div>
+               <div class="col-lg-6 mt-30 mt-lg-0">
+                  <div class="tica-item">
+                     <h5>Contenedores ISO 6346</h5>
+                     <p>Soporte nativo para todos los tipos de contenedor: 20 pies, 40 pies, 40HC, Reefer, Open Top y más. Generación de la clave cifrada de 50 caracteres requerida por el sistema de facturación electrónica.</p>
+                  </div>
+                  <div class="tica-item">
+                     <h5>Desconsolidación RECAUCA Art. 207-210</h5>
+                     <p>Flujo de trabajo que respeta el plazo legal de 3 horas para reportar la desconsolidación al TICA, con alertas automáticas y acta generada al finalizar la separación física de la carga.</p>
+                  </div>
+                  <div class="tica-item">
+                     <h5>DUA y Declaraciones</h5>
+                     <p>Preparación y seguimiento de la Declaración Única Aduanal. Estado del trámite en tiempo real, desde la presentación hasta la autorización de levante por parte de la aduana.</p>
+                  </div>
+                  <div class="tica-item">
+                     <h5>Arancel y Clasificación</h5>
+                     <p>Gestión del arancel armonizado (HS Code) con tasas de importación y exportación por producto, cálculo automático de derechos e impuestos arancelarios.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- MÓDULOS DE APOYO -->
+   <section class="section-space">
+      <div class="container">
+         <div class="row"><div class="col-12"><div class="sec-heading text-center">
+            <span class="sub-title wow fadeInUp">Gestión integral del negocio</span>
+            <h2 class="sec-title text-anim">También incluye: finanzas, RRHH y logística</h2>
+            <div class="desc wow fadeInUp"><p>El ERP de Aduanas no es solo un sistema de trámites. Es una plataforma empresarial completa con todos los módulos de gestión que su empresa necesita.</p></div>
+         </div></div></div>
+         <div class="row rg-30 mt-40">
+            <div class="col-lg-4 col-md-6">
+               <div class="modulo-card">
+                  <div class="icon"><i class="tji-process"></i></div>
+                  <h4>Facturación Electrónica</h4>
+                  <p style="color:#666;font-size:.92rem;">Emisión de facturas electrónicas de sus servicios (almacenaje, manejo, desconsolidación) con transmisión directa al sistema de Hacienda. Cumplimiento total con FE v4.4.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Facturas, notas de crédito y débito electrónicas</li>
+                     <li><i class="tji-check"></i>Firma XADES y transmisión automática</li>
+                     <li><i class="tji-check"></i>Multi-moneda CRC / USD con tipo de cambio BCCR</li>
+                     <li><i class="tji-check"></i>Recibos electrónicos de proveedores</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="modulo-card">
+                  <div class="icon"><i class="tji-optimization"></i></div>
+                  <h4>Contabilidad y Finanzas</h4>
+                  <p style="color:#666;font-size:.92rem;">Contabilidad de partida doble con asientos generados automáticamente desde todas las operaciones. Balance General, Estado de Resultados y flujo de caja en tiempo real.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Plan de cuentas jerárquico</li>
+                     <li><i class="tji-check"></i>Conciliación bancaria automatizada</li>
+                     <li><i class="tji-check"></i>Cuentas por cobrar y por pagar con aging</li>
+                     <li><i class="tji-check"></i>Diferencial cambiario USD/CRC automático</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="modulo-card">
+                  <div class="icon"><i class="tji-leadership"></i></div>
+                  <h4>Recursos Humanos y Planilla</h4>
+                  <p style="color:#666;font-size:.92rem;">Gestión de personal, cálculo de planilla con AFP, CAJA e impuesto de renta. Portal de autoservicio para colaboradores y app móvil de marcas de asistencia.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Expediente completo del empleado</li>
+                     <li><i class="tji-check"></i>Cálculo automático de planilla y deducciones</li>
+                     <li><i class="tji-check"></i>Vacaciones, permisos y acciones de personal</li>
+                     <li><i class="tji-check"></i>App de marcas con geolocalización</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="modulo-card">
+                  <div class="icon"><i class="tji-executive"></i></div>
+                  <h4>Logística de Última Milla (ePOD)</h4>
+                  <p style="color:#666;font-size:.92rem;">Para empresas con operaciones de reparto. Rutas optimizadas, rastreo GPS en tiempo real y comprobante de entrega digital con firma y foto del receptor.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Dashboard de flota con GPS en tiempo real</li>
+                     <li><i class="tji-check"></i>App del conductor con navegación y ePOD</li>
+                     <li><i class="tji-check"></i>Firma y foto de entrega como evidencia legal</li>
+                     <li><i class="tji-check"></i>Funciona sin internet, sincroniza al reconectar</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="modulo-card">
+                  <div class="icon"><i class="tji-strategic"></i></div>
+                  <h4>Compras y Proveedores</h4>
+                  <p style="color:#666;font-size:.92rem;">Gestión completa del ciclo de compras con validación tripartita: orden de compra, recepción y factura del proveedor. Evaluación de proveedores y control de pagos.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Órdenes de compra multi-línea</li>
+                     <li><i class="tji-check"></i>Recepción con actualización automática de inventario</li>
+                     <li><i class="tji-check"></i>Cuentas por pagar con fechas de vencimiento</li>
+                     <li><i class="tji-check"></i>Portal de proveedores self-service</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="modulo-card">
+                  <div class="icon"><i class="tji-business"></i></div>
+                  <h4>Business Intelligence</h4>
+                  <p style="color:#666;font-size:.92rem;">Dashboards ejecutivos con KPIs de operación, finanzas y logística. Análisis de rentabilidad por cliente, tipo de servicio y período. Exportación a Excel y PDF.</p>
+                  <ul>
+                     <li><i class="tji-check"></i>Métricas de eficiencia operativa</li>
+                     <li><i class="tji-check"></i>Rentabilidad por cliente y tipo de carga</li>
+                     <li><i class="tji-check"></i>Indicadores de entrega y logística</li>
+                     <li><i class="tji-check"></i>Informes de cumplimiento aduanero</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- APPS MÓVILES -->
+   <section class="section-space" style="background:#f7f7f7;">
+      <div class="container">
+         <div class="row"><div class="col-12"><div class="sec-heading text-center">
+            <span class="sub-title wow fadeInUp">Android e iOS · Offline-first</span>
+            <h2 class="sec-title text-anim">6 Apps Móviles para toda la operación</h2>
+            <div class="desc wow fadeInUp"><p>Cada perfil operativo tiene su propia aplicación. Todas se sincronizan en tiempo real con el ERP y funcionan sin conexión a internet.</p></div>
+         </div></div></div>
+         <div class="row rg-24 mt-40">
+            <div class="col-lg-4 col-md-6">
+               <div class="app-card">
+                  <div class="app-icon"><i class="tji-business"></i></div>
+                  <h5 style="font-weight:700;margin-bottom:8px;">App Almacén Fiscal</h5>
+                  <p style="color:#666;font-size:.9rem;">Para operadores de bodega fiscal. Escaneo de contenedores y mercancía, recepción con foto, generación de etiquetas e impresión en térmicas.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="app-card" style="border-color:var(--tj-color-theme-primary,#e63c20);">
+                  <div class="app-icon" style="background:linear-gradient(135deg,var(--tj-color-theme-primary,#e63c20),#c0392b);"><i class="tji-executive"></i></div>
+                  <h5 style="font-weight:700;margin-bottom:8px;">App Conductor / ePOD</h5>
+                  <p style="color:#666;font-size:.9rem;">Para repartidores. Navegación con Google Maps/Waze, firma digital, foto de entrega y reporte de entrega parcial con nota de crédito automática.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="app-card">
+                  <div class="app-icon"><i class="tji-strategic"></i></div>
+                  <h5 style="font-weight:700;margin-bottom:8px;">App Operador AGD / 3PL</h5>
+                  <p style="color:#666;font-size:.9rem;">Para operadores de almacén general. Recepción, picking guiado por ubicación, despacho y ajustes de inventario directamente desde el dispositivo móvil.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="app-card">
+                  <div class="app-icon"><i class="tji-leadership"></i></div>
+                  <h5 style="font-weight:700;margin-bottom:8px;">App Colaboradores RRHH</h5>
+                  <p style="color:#666;font-size:.9rem;">Para empleados. Marcas de asistencia con GPS, descarga de recibos de pago en PDF y solicitud de vacaciones y permisos desde el celular.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="app-card">
+                  <div class="app-icon"><i class="tji-process"></i></div>
+                  <h5 style="font-weight:700;margin-bottom:8px;">App Portal del Cliente</h5>
+                  <p style="color:#666;font-size:.9rem;">Para sus clientes importadores. Consulta del estado de su carga, descarga de facturas, tracking de entregas y comunicación directa con el equipo operativo.</p>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="app-card">
+                  <div class="app-icon"><i class="tji-optimization"></i></div>
+                  <h5 style="font-weight:700;margin-bottom:8px;">App Zona Franca</h5>
+                  <p style="color:#666;font-size:.9rem;">Para operadores de zonas francas. Control de entradas y salidas, verificación de exenciones, documentación de re-exportaciones y registro fotográfico de mercancía.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- PROCESO OPERATIVO -->
+   <section class="section-space">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6">
+               <div class="sec-heading">
+                  <span class="sub-title wow fadeInUp">Flujo completo de extremo a extremo</span>
+                  <h2 class="sec-title text-anim">Cómo funciona la operación</h2>
+                  <div class="desc wow fadeInUp"><p>Desde la llegada del barco hasta la entrega al importador, todo el proceso en un solo sistema.</p></div>
+               </div>
+               <div style="margin-top:30px;">
+                  <div class="process-step">
+                     <div class="process-num">1</div>
+                     <div><strong>Arribo del buque</strong><br><span style="color:#666;font-size:.92rem;">Se registra el MBL con todos los HBLs del contenedor. El sistema genera el XML y lo transmite al TICA como manifiesto completo.</span></div>
+                  </div>
+                  <div class="process-step">
+                     <div class="process-num">2</div>
+                     <div><strong>Ingreso al Almacén Fiscal</strong><br><span style="color:#666;font-size:.92rem;">La mercancía ingresa bajo el código ALFIS. El operador registra la recepción con la app móvil: fotos, cantidades y ubicación física.</span></div>
+                  </div>
+                  <div class="process-step">
+                     <div class="process-num">3</div>
+                     <div><strong>Desconsolidación</strong><br><span style="color:#666;font-size:.92rem;">Se solicita la desconsolidación al TICA. El sistema controla el plazo de 3 horas y genera el acta con sobrantes o faltantes.</span></div>
+                  </div>
+                  <div class="process-step">
+                     <div class="process-num">4</div>
+                     <div><strong>Gestión del DUA</strong><br><span style="color:#666;font-size:.92rem;">Cada HBL queda liberado para que el agente aduanero presente el DUA. El sistema hace seguimiento del estado del trámite.</span></div>
+                  </div>
+                  <div class="process-step">
+                     <div class="process-num">5</div>
+                     <div><strong>Despacho y Entrega</strong><br><span style="color:#666;font-size:.92rem;">El conductor recibe su ruta en la app. Entrega la mercancía con firma digital y foto del importador. El sistema emite la factura electrónica del servicio.</span></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6 mt-40 mt-lg-0">
+               <!-- A quién va dirigido -->
+               <div class="sec-heading">
+                  <span class="sub-title wow fadeInUp">¿Para quién es este sistema?</span>
+                  <h2 class="sec-title text-anim" style="font-size:1.8rem;">Diseñado para su sector</h2>
+               </div>
+               <div class="row rg-20 mt-30">
+                  <div class="col-6">
+                     <div class="audience-card">
+                        <div class="aud-icon"><i class="tji-business"></i></div>
+                        <h6 style="font-weight:700;margin-bottom:6px;">Agentes Aduaneros</h6>
+                        <p style="color:#666;font-size:.88rem;margin:0;">Gestión de DUAs, manifiestos y comunicación TICA sin salir del sistema.</p>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="audience-card">
+                        <div class="aud-icon"><i class="tji-strategic"></i></div>
+                        <h6 style="font-weight:700;margin-bottom:6px;">Almacenes Fiscales</h6>
+                        <p style="color:#666;font-size:.88rem;margin:0;">Control de inventario bajo régimen fiscal con cumplimiento ALFIS y TICA.</p>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="audience-card">
+                        <div class="aud-icon"><i class="tji-process"></i></div>
+                        <h6 style="font-weight:700;margin-bottom:6px;">Zonas Francas</h6>
+                        <p style="color:#666;font-size:.88rem;margin:0;">Exenciones, re-exportaciones y movimientos al mercado nacional con documentación automática.</p>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="audience-card">
+                        <div class="aud-icon"><i class="tji-leadership"></i></div>
+                        <h6 style="font-weight:700;margin-bottom:6px;">Operadores Logísticos</h6>
+                        <p style="color:#666;font-size:.88rem;margin:0;">3PL, almacenaje de terceros y distribución con ePOD incluido.</p>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="audience-card">
+                        <div class="aud-icon"><i class="tji-executive"></i></div>
+                        <h6 style="font-weight:700;margin-bottom:6px;">Importadores</h6>
+                        <p style="color:#666;font-size:.88rem;margin:0;">Portal del cliente para seguimiento de carga, facturas y estado de entregas.</p>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="audience-card">
+                        <div class="aud-icon"><i class="tji-optimization"></i></div>
+                        <h6 style="font-weight:700;margin-bottom:6px;">Mensajería y Courier</h6>
+                        <p style="color:#666;font-size:.88rem;margin:0;">Rutas de reparto, GPS y ePOD para garantizar cada entrega con evidencia digital.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- CLIENTES LOGÍSTICOS -->
+   <section class="section-space" style="background:#f7f7f7;">
+      <div class="container">
+         <div class="row"><div class="col-12"><div class="sec-heading text-center">
+            <span class="sub-title wow fadeInUp">Empresas que ya confían en nosotros</span>
+            <h2 class="sec-title text-anim">Clientes del sector logístico y aduanero</h2>
+         </div></div></div>
+         <div class="row mt-40 justify-content-center">
+            <div class="col-lg-10">
+               <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+                  <span class="integration-tag">Novus Mensajería</span>
+                  <span class="integration-tag">Rush Cargo</span>
+                  <span class="integration-tag">ARAICA</span>
+                  <span class="integration-tag">TNT Costa Rica</span>
+                  <span class="integration-tag">Interport</span>
+                  <span class="integration-tag">Tropical Tours</span>
+                  <span class="integration-tag">Deliexpress</span>
+                  <span class="integration-tag">Sama Internacional</span>
+                  <span class="integration-tag">Intercontinental Kargo</span>
+                  <span class="integration-tag">Aduanal Horizontes</span>
+                  <span class="integration-tag">Soluciones Logísticas Mundiales</span>
+                  <span class="integration-tag">KAF Internacional</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- INTEGRACIONES Y API -->
+   <section class="section-space">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-6">
+               <div class="sec-heading">
+                  <span class="sub-title wow fadeInUp">API REST abierta</span>
+                  <h2 class="sec-title text-anim">Conectado con lo que ya usa</h2>
+                  <div class="desc wow fadeInUp"><p>El ERP se integra con los sistemas y entidades costarricenses más importantes del comercio exterior.</p></div>
+               </div>
+               <div style="margin-top:24px;">
+                  <span class="integration-tag"><i class="tji-check"></i> Sistema TICA (XML Manifiestos)</span>
+                  <span class="integration-tag"><i class="tji-check"></i> Ministerio de Hacienda (FE v4.4)</span>
+                  <span class="integration-tag"><i class="tji-check"></i> BCCR Tipo de Cambio</span>
+                  <span class="integration-tag"><i class="tji-check"></i> Google Maps / Waze</span>
+                  <span class="integration-tag"><i class="tji-check"></i> API REST para sistemas externos</span>
+                  <span class="integration-tag"><i class="tji-check"></i> Impresoras térmicas</span>
+                  <span class="integration-tag"><i class="tji-check"></i> Excel / PDF / CSV</span>
+               </div>
+            </div>
+            <div class="col-lg-6 mt-40 mt-lg-0">
+               <div style="background:#0a192f;color:#fff;border-radius:16px;padding:40px;">
+                  <h3 style="color:#fff;font-size:1.3rem;font-weight:700;margin-bottom:22px;">Infraestructura SaaS en la nube</h3>
+                  <ul style="list-style:none;padding:0;margin:0;">
+                     <li style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;"><i class="tji-check" style="color:#ffd700;margin-top:3px;"></i><span style="color:rgba(255,255,255,.82);">Multi-empresa y multi-sucursal en una sola cuenta</span></li>
+                     <li style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;"><i class="tji-check" style="color:#ffd700;margin-top:3px;"></i><span style="color:rgba(255,255,255,.82);">Base de datos aislada por empresa (máxima seguridad)</span></li>
+                     <li style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;"><i class="tji-check" style="color:#ffd700;margin-top:3px;"></i><span style="color:rgba(255,255,255,.82);">Respaldos automáticos diarios</span></li>
+                     <li style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;"><i class="tji-check" style="color:#ffd700;margin-top:3px;"></i><span style="color:rgba(255,255,255,.82);">Auditoría completa: quién hizo qué y cuándo</span></li>
+                     <li style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;"><i class="tji-check" style="color:#ffd700;margin-top:3px;"></i><span style="color:rgba(255,255,255,.82);">Control de acceso por rol y módulo</span></li>
+                     <li style="display:flex;gap:12px;align-items:flex-start;"><i class="tji-check" style="color:#ffd700;margin-top:3px;"></i><span style="color:rgba(255,255,255,.82);">Soporte técnico especializado de Software Solutions S.A.</span></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- CTA FINAL -->
+   <section class="section-space" style="background:linear-gradient(135deg,#0a192f,#1d3557);color:#fff;">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-8">
+               <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:16px;color:#fff;">¿Su operación aduanera merece un software que la entienda?</h2>
+               <p style="color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:0;">Agendamos una demostración sin costo. Le mostramos exactamente cómo el sistema resuelve los retos de su almacén fiscal, zona franca u operación logística.</p>
+            </div>
+            <div class="col-lg-4 mt-30 mt-lg-0" style="display:flex;flex-direction:column;gap:14px;">
+               <a href="contacto.html" class="tj-primary-btn"><div class="btn_inner"><div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div><div class="btn_text"><span>Solicitar demo gratuita</span></div></div></a>
+               <a href="https://wa.me/50672722255?text=Hola, me interesa una demo del ERP de Aduanas" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#fff;padding:14px 24px;border-radius:8px;font-weight:600;text-decoration:none;"><i class="fa-brands fa-whatsapp" style="font-size:1.3rem;color:#25d366;"></i> Consultar ahora</a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+</main>
+
+<footer class="tj-footer-area" style="background:#111;">
+   <div class="footer-top-area fix"><div class="container"><div class="row rg-50 line">
+      <div class="col-xl-4 col-lg-4 col-md-6"><div class="footer-widget footer-contact-infos">
+         <div class="footer-title"><h4 class="title" style="color:#fff;">Nuestra oficina</h4></div>
+         <div class="infos-item" style="color:#aaa;"><span style="color:#fff;font-weight:600;">Software Solutions S.A.</span>
+            <p style="margin-top:8px;">Alajuela, Costa Rica</p>
+            <a href="tel:+50621013248" style="color:#aaa;display:block;margin-top:4px;">(506) 2101-3248</a>
+            <a href="https://wa.me/50672722255" style="color:#aaa;display:block;margin-top:4px;">(506) 7272-2255 (WhatsApp)</a>
+            <a href="mailto:info@softwaresolutions.co.cr" style="color:#aaa;display:block;margin-top:4px;">info@softwaresolutions.co.cr</a>
+            <p style="margin-top:8px;">Lunes a Viernes: 9:00 am – 5:00 pm</p>
+         </div>
+      </div></div>
+      <div class="col-xl-2 col-lg-2 col-md-6"><div class="footer-widget widget_nav_menu">
+         <div class="footer-title"><h4 class="title" style="color:#fff;">Empresa</h4></div>
+         <div class="widget-menu"><ul style="list-style:none;padding:0;"><li><a href="quienes-somos.html" style="color:#aaa;">Quiénes Somos</a></li><li><a href="servicios.html" style="color:#aaa;">Servicios</a></li><li><a href="contacto.html" style="color:#aaa;">Contacto</a></li></ul></div>
+      </div></div>
+      <div class="col-xl-3 col-lg-3 col-md-6"><div class="footer-widget widget_nav_menu">
+         <div class="footer-title"><h4 class="title" style="color:#fff;">ERP Aduanas</h4></div>
+         <div class="widget-menu"><ul style="list-style:none;padding:0;">
+            <li><a href="#almacen-fiscal" style="color:#aaa;">Almacén Fiscal</a></li>
+            <li><a href="#desconsolidacion" style="color:#aaa;">Desconsolidación de Carga</a></li>
+            <li><a href="#almacen-general" style="color:#aaa;">Almacén General 3PL</a></li>
+            <li><a href="#zona-franca" style="color:#aaa;">Zona Franca</a></li>
+            <li><a href="erp-comercial.html" style="color:#aaa;">ERP Comercial</a></li>
+         </ul></div>
+      </div></div>
+      <div class="col-xl-3 col-lg-3 col-md-6"><div class="footer-widget">
+         <div class="footer-title"><h4 class="title" style="color:#fff;">Sobre nosotros</h4></div>
+         <p style="color:#aaa;margin-bottom:16px;">Empresa costarricense especializada en soluciones de software a la medida, ERP comercial y software de aduanas.</p>
+         <div style="display:flex;gap:12px;margin-top:16px;">
+            <a href="https://www.facebook.com/" target="_blank" style="color:#aaa;font-size:1.2rem;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" style="color:#aaa;font-size:1.2rem;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" style="color:#aaa;font-size:1.2rem;"><i class="fa-brands fa-youtube"></i></a>
+         </div>
+      </div></div>
+   </div></div></div>
+   <div class="footer-copyright-area"><div class="container"><div class="row"><div class="col-12">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px;">
+         <p style="color:#aaa;margin:0;">© 2026 <a href="index.html" style="color:#fff;">Software Solutions S.A.</a> Todos los derechos reservados.</p>
+      </div>
+   </div></div></div></div>
+   <div class="back-to-top-wrapper"><button id="back_to_top" type="button" class="back-to-top-btn style-2"><i class="tji-arrow-up"></i><span>INICIO</span></button></div>
+</footer>
+</div></div>
+
+<script src="assets/js/jquery.min.js"></script><script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/gsap.min.js"></script><script src="assets/js/gsap-scroll-trigger.min.js"></script>
+<script src="assets/js/smooth-scroll.min.js"></script><script src="assets/js/appear.min.js"></script>
+<script src="assets/js/wow.min.js"></script><script src="assets/js/meanmenu.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

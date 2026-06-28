@@ -1,0 +1,143 @@
+@use "../utilities" as *;
+
+/* Growth css */
+.tj-growth-section {
+	position: relative;
+	overflow: hidden;
+	padding-top: 375px;
+	padding-bottom: 70px;
+	z-index: 1;
+	.tj-growth-bg {
+		position: absolute;
+		inset-inline-start: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		height: 130%; /* Slightly bigger for parallax depth */
+		background-size: cover;
+		background-position: center;
+		will-change: transform;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			inset-inline-start: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--tj-color-theme-dark);
+			opacity: 0.3;
+			z-index: 1;
+		}
+	}
+
+	@media #{$xl} {
+		padding-top: 350px;
+	}
+	@media #{$lg} {
+		padding-top: 280px;
+	}
+	@media #{$md} {
+		padding-top: 220px;
+	}
+	@media #{$sm} {
+		padding-top: 180px;
+		padding-bottom: 15px;
+	}
+	@media #{$xs} {
+		padding-top: 240px;
+		padding-bottom: 15px;
+	}
+}
+.growth-content {
+	max-width: 460px;
+	padding: 30px;
+	margin-inline-start: auto;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	position: relative;
+	.title {
+		color: var(--tj-color-common-white);
+		span {
+			color: var(--tj-color-theme-primary);
+		}
+	}
+	.icon-shape {
+		position: absolute;
+		bottom: 0;
+		inset-inline-end: 40px;
+		width: 136px;
+		@media #{$sm, $xs} {
+			width: 100px;
+			inset-inline-end: 20px;
+		}
+	}
+	@media #{$xs} {
+		padding: 20px;
+		justify-content: space-between;
+		gap: 30px;
+	}
+}
+.video-btn-wrap {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	.video-btn {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		.play-btn {
+			background-color: var(--tj-color-theme-primary);
+			color: var(--tj-color-common-white);
+			width: 52px;
+			height: 52px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 14px;
+			position: relative;
+			animation: pulse-three 2s infinite;
+			z-index: 5;
+			i {
+				line-height: 1;
+				display: inline-flex;
+				margin-inline-start: 2px;
+			}
+			@media #{$sm, $xs} {
+				width: 40px;
+				height: 40px;
+			}
+		}
+		.video-text {
+			color: var(--tj-color-common-white);
+			font-weight: var(--tj-fw-bold);
+			font-size: 15px;
+			line-height: 1.2;
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				inset-inline-end: 0;
+				width: 100%;
+				height: 1px;
+				background-color: var(--tj-color-common-white);
+			}
+		}
+		&:hover {
+			.video-text {
+				&::after {
+					-webkit-animation: linehover 0.8s linear;
+					animation: linehover 0.8s linear;
+				}
+			}
+		}
+		@media #{$sm, $xs} {
+			gap: 10px;
+		}
+	}
+	@media #{$sm, $xs} {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}

@@ -1,0 +1,46 @@
+@use "../utilities" as *;
+
+/* START: Footer CSS */
+.h8-footer {
+	&.footer-2 {
+		&.style-2 {
+			.footer-top-area {
+				.line {
+					&::before {
+						inset-inline-start: 38%;
+					}
+				}
+			}
+		}
+	}
+
+	&-newsletter-form {
+		.newsletter-form {
+			max-width: 350px;
+			.form-input {
+				input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+				.footer-widget .newsletter-form .form-input input[type="email"] {
+					border-color: transparent;
+					border-radius: 70px;
+				}
+				button {
+					inset-inline-end: 22px;
+					&::before {
+						background-color: rgba(247, 247, 247, 0.1);
+					}
+				}
+			}
+			@media #{ $xs} {
+				max-width: 100%;
+			}
+		}
+		@media #{ $xs} {
+			padding-top: 0;
+			padding-bottom: 50px;
+			border-top: 0;
+			border-bottom: 1px solid var(--tj-color-border-1);
+		}
+	}
+}
+
+/* !END: Footer CSS */

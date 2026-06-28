@@ -1,0 +1,111 @@
+@use "../utilities" as *;
+
+/* START: Service details CSS */
+.service-check-list {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		border: 1px solid var(--tj-color-border-2);
+		border-bottom: 0;
+		@media #{$xs} {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		li {
+			display: flex;
+			gap: 6px;
+			padding: 30px;
+			border-bottom: 1px solid var(--tj-color-border-2);
+			&:not(:nth-child(even)) {
+				border-inline-end: 1px solid var(--tj-color-border-2);
+				@media #{$xs} {
+					border-inline-end: 0;
+				}
+			}
+			@media #{$sm, $xs} {
+				padding: 15px;
+			}
+			span {
+				font-family: var(--tj-ff-heading);
+				font-weight: 600;
+				color: var(--tj-color-heading-primary);
+			}
+			i {
+				font-size: 18px;
+				color: var(--tj-color-theme-primary);
+				margin-top: 3px;
+			}
+		}
+	}
+}
+.tj-feature {
+	padding: 35px 30px;
+	background: var(--tj-color-theme-bg);
+	@media #{$lg, $md} {
+		padding: 25px 22px;
+	}
+	&-icon {
+		font-size: 52px;
+		color: var(--tj-color-theme-primary);
+		line-height: 1;
+		margin-bottom: 20px;
+	}
+	&-title {
+		margin-bottom: 20px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	&:hover {
+		.tj-feature-icon {
+			animation: wobble-horizontal-hover 1s ease-in-out 1;
+		}
+	}
+}
+.service-category {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				color: var(--tj-color-heading-primary);
+				font-weight: var(--tj-fw-bold);
+				padding: 17.5px 30px;
+				background: var(--tj-color-theme-bg);
+				i {
+					font-weight: 700;
+					color: var(--tj-color-heading-primary);
+				}
+				&.active,
+				&:hover {
+					color: var(--tj-color-common-white);
+					background-color: var(--tj-color-theme-primary);
+					i {
+						color: var(--tj-color-common-white);
+					}
+				}
+			}
+		}
+	}
+	@media #{$lg, $md, $sm, $xs} {
+		ul {
+			li {
+				a {
+					padding: 17px 15px;
+				}
+			}
+		}
+	}
+}
+/* !END: Service details CSS */

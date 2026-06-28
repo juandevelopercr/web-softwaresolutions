@@ -1,0 +1,306 @@
+@use "../utilities" as *;
+
+/* START: Hero CSS */
+
+.h8-hero {
+	position: relative;
+	overflow: hidden;
+	&-inner {
+		&::before {
+			display: none;
+		}
+	}
+	&-wrapper {
+		justify-content: center;
+		.h8-hero {
+			&-content {
+				max-width: 984px;
+				padding-bottom: 214px;
+
+				@media #{$xl} {
+					max-width: 850px;
+				}
+				@media #{$lg} {
+					max-width: 800px;
+				}
+				@media #{$md} {
+					padding-bottom: 244px;
+					padding-top: 218px;
+					max-width: 660px;
+				}
+				@media #{$sm} {
+					padding-bottom: 240px;
+					padding-top: 127px;
+					max-width: 465px;
+				}
+				@media #{$xs} {
+					padding-bottom: 250px;
+					padding-top: 127px;
+					max-width: 350px;
+				}
+			}
+		}
+	}
+
+	&-title {
+		font-size: 132px;
+		line-height: 1.076;
+		letter-spacing: -0.025em;
+		font-weight: var(--tj-fw-sbold);
+		@media #{$xl} {
+			font-size: 120px;
+		}
+		@media #{$lg} {
+			font-size: 100px;
+		}
+		@media #{$md} {
+			font-size: 90px;
+		}
+		@media #{$sm,$xs} {
+			text-align: center;
+		}
+		@media #{$sm} {
+			font-size: 70px;
+			margin-bottom: 27px;
+		}
+		@media #{$xs} {
+			font-size: 50px;
+		}
+		span {
+			display: block;
+			text-align: end;
+			font-style: italic;
+			@media #{$sm,$xs} {
+				text-align: center;
+			}
+
+			&:last-child {
+				text-align: center;
+				font-style: normal;
+			}
+		}
+
+		&-wrapper {
+			position: relative;
+		}
+	}
+	&-circle {
+		position: absolute;
+		max-width: inherit;
+		width: 152px;
+		height: auto;
+		top: 16%;
+		inset-inline-end: 15%;
+		inset-inline-start: auto;
+		transform: translateY(-16%);
+		mask-image: none;
+		margin-top: 0;
+		@media #{$xl} {
+			inset-inline-end: 12%;
+		}
+		@media #{$lg} {
+			inset-inline-end: 22%;
+		}
+		@media #{$md} {
+			width: 105px;
+			inset-inline-end: 16%;
+			top: 15%;
+		}
+		@media #{$sm,$xs} {
+			position: static;
+			transform: none;
+			display: flex;
+			justify-content: center;
+			background-color: transparent;
+			margin-top: 30px;
+			margin-bottom: 42px;
+			width: 100%;
+		}
+
+		.circle-wrap {
+			width: 152px;
+			height: 152px;
+			inset-inline-end: -35px;
+			@media #{$xl} {
+				width: 142px;
+				height: 142px;
+			}
+			@media #{$lg} {
+				width: 122px;
+				height: 122px;
+			}
+			@media #{$md} {
+				width: 105px;
+				height: 105px;
+			}
+			@media #{$sm,$xs} {
+				position: relative;
+				transform: none;
+				width: 122px;
+				height: 122px;
+				inset-inline-end: 0;
+			}
+
+			.rotate-image {
+				width: 132px;
+				height: 133px;
+				@media #{$xl} {
+					width: 122px;
+					height: 123px;
+				}
+				@media #{$lg} {
+					width: 102px;
+					height: 103px;
+				}
+				@media #{$md} {
+					width: 90px;
+					height: 91px;
+				}
+				@media #{$sm,$xs} {
+					width: 108px;
+					height: 109px;
+				}
+			}
+			.logo-icon {
+				width: 92px;
+				height: 92px;
+				border-radius: 100%;
+				border: 1px solid rgba(247, 247, 247, 0.15);
+				@media #{$xl} {
+					width: 82px;
+					height: 82px;
+				}
+				@media #{$lg} {
+					width: 68px;
+					height: 68px;
+				}
+				@media #{$md} {
+					width: 52px;
+					height: 52px;
+				}
+				@media #{$sm,$xs} {
+					width: 74px;
+					height: 74px;
+				}
+				img {
+					@media #{$md} {
+						width: 28px;
+					}
+					@media #{$sm,$xs} {
+						width: 30;
+					}
+				}
+			}
+		}
+	}
+	&-desc {
+		position: absolute;
+		inset-inline-start: 0;
+		bottom: 9%;
+		max-width: 365px;
+		color: var(--tj-color-common-white-2);
+		font-size: 20px;
+		overflow: hidden;
+		@media #{$xl} {
+			inset-inline-start: 35px;
+		}
+		@media #{$lg} {
+			inset-inline-start: 25px;
+		}
+		@media #{$md} {
+			max-width: 361px;
+			inset-inline-start: 15px;
+		}
+		@media #{$sm,$xs} {
+			font-size: 18px;
+			position: static;
+			text-align: center;
+			margin: 0 auto;
+		}
+		&-icon {
+			margin-bottom: 22px;
+			animation: bounce2 2s infinite;
+
+			i {
+				margin-inline-start: -10px;
+				font-size: 89px;
+				color: var(--tj-color-theme-primary);
+				@media #{$md} {
+					font-size: 70px;
+				}
+				@media #{$sm,$xs} {
+					font-size: 60px;
+				}
+			}
+		}
+	}
+	&-banner {
+		position: absolute;
+		inset-inline-end: 0;
+		bottom: 0;
+		max-width: 331px;
+		height: 221px;
+		width: 100%;
+		@media #{$xl} {
+			inset-inline-end: 35px;
+		}
+		@media #{$lg} {
+			inset-inline-end: 25px;
+		}
+		@media #{$md} {
+			inset-inline-end: 15px;
+		}
+		@media #{$sm,$xs} {
+			height: 230px;
+			max-width: 100%;
+		}
+		img,
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+// defalt section heading style
+.sec-heading.h8-section-heading {
+	&.sec-heading-centered {
+		max-width: 555px;
+		width: 100%;
+		text-align: center;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+		margin-bottom: 50px;
+		@media #{$md} {
+			margin-bottom: 45px;
+		}
+		@media #{$sm, $xs} {
+			margin-bottom: 40px;
+		}
+	}
+	.sub-title {
+		padding: 0 14px;
+		margin-bottom: 20px;
+		background-color: transparent;
+
+		&::before,
+		&::after {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			top: 50%;
+			inset-inline-start: 0;
+			transform: translateY(-50%);
+			background-color: var(--tj-color-theme-primary);
+		}
+		&::after {
+			inset-inline-start: auto;
+			inset-inline-end: 0;
+		}
+	}
+}
+/* !END: Hero CSS */

@@ -1,0 +1,243 @@
+@use "../utilities" as *;
+
+/* START: H10 Blog CSS */
+.h10-blog {
+	&_wrap {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 20px), 1fr));
+		grid-column-gap: 30px;
+		justify-content: center;
+
+		.h10-blog_item {
+			&:first-child,
+			&:nth-child(2) {
+				grid-row: 1/4;
+			}
+		}
+	}
+
+	&_item {
+		position: relative;
+		z-index: 1;
+
+		.blog_image {
+			position: absolute;
+			inset-inline-start: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			z-index: -1;
+
+			&::after {
+				content: "";
+				position: absolute;
+				inset-inline-start: 0;
+				bottom: 0;
+				width: 100%;
+				height: 75%;
+				background-image: linear-gradient(
+					180deg,
+					rgba(5, 18, 41, 0) 0%,
+					#051229 84%
+				);
+				z-index: -1;
+			}
+		}
+
+		.blog-date {
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: rgba(247, 247, 247, 0.1);
+			backdrop-filter: blur(35px);
+			color: var(--tj-color-common-white);
+			gap: 10px;
+			padding: 17px 21px;
+			position: absolute;
+			top: 15px;
+			inset-inline-start: 15px;
+			z-index: 2;
+
+			.day {
+				display: inline-flex;
+				font-family: var(--tj-ff-heading);
+				font-weight: var(--tj-fw-sbold);
+				font-size: 32px;
+				line-height: 1;
+				letter-spacing: -0.03em;
+			}
+			.month {
+				display: inline-flex;
+				font-size: 14px;
+				color: var(--tj-color-common-white-2);
+				text-transform: uppercase;
+				line-height: 1;
+				letter-spacing: 0.24em;
+			}
+		}
+
+		.blog_content {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			border-bottom: 1px solid var(--tj-color-border-2);
+
+			.blog-two-meta {
+				margin-bottom: 18px;
+			}
+			.blog_title {
+				margin: 0;
+				letter-spacing: -0.025em;
+
+				a {
+					&:hover {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+			.blog_btn {
+				margin-top: 20px;
+			}
+		}
+
+		&:nth-child(1) {
+			min-height: 435px;
+
+			.blog_content {
+				border: none;
+				padding: 40px 25px;
+				position: absolute;
+				inset-inline-start: 0;
+				bottom: 0;
+				width: 100%;
+				z-index: 2;
+
+				.blog-two-meta {
+					ul {
+						li {
+							color: var(--tj-color-common-white-2);
+
+							.meta-link {
+								color: var(--tj-color-common-white-2);
+								border-color: var(--tj-color-border-1);
+							}
+						}
+					}
+				}
+				.blog_title {
+					color: var(--tj-color-common-white);
+
+					a {
+						&:hover {
+							color: var(--tj-color-common-white);
+							letter-spacing: -0.015em;
+						}
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			.blog_thumb {
+				height: 290px;
+				margin-bottom: -5px;
+				position: relative;
+				z-index: 1;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			.blog_content {
+				border: 1px solid var(--tj-color-border-2);
+				padding: 30px 25px;
+			}
+		}
+		&:nth-child(3) {
+			.blog_content {
+				border-top: 1px solid var(--tj-color-border-2);
+			}
+		}
+	}
+	@media #{$lg, $md} {
+		&_wrap {
+			grid-template-columns: repeat(auto-fill, minmax(calc(50% - 15px), 1fr));
+
+			.h10-blog_item {
+				&:first-child,
+				&:nth-child(2) {
+					grid-row: auto;
+				}
+			}
+		}
+		&_item {
+			.blog-date {
+				.day {
+					font-size: 28px;
+				}
+				.month {
+					letter-spacing: 0.14em;
+				}
+			}
+		}
+	}
+	@media #{$md} {
+		&_item {
+			.blog-date {
+				padding: 15px 17px;
+				gap: 8px;
+
+				.day {
+					font-size: 25px;
+				}
+				.month {
+					letter-spacing: 0.14em;
+				}
+			}
+
+			&:nth-child(2) {
+				.blog_thumb {
+					height: 240px;
+				}
+			}
+		}
+	}
+	@media #{$sm, $xs} {
+		&_wrap {
+			grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+
+			.h10-blog_item {
+				&:first-child,
+				&:nth-child(2) {
+					grid-row: auto;
+				}
+			}
+		}
+		&_item {
+			.blog-date {
+				padding: 15px 17px;
+				gap: 8px;
+
+				.day {
+					font-size: 25px;
+				}
+				.month {
+					letter-spacing: 0.14em;
+				}
+			}
+			&:nth-child(1) {
+				margin-bottom: 30px;
+			}
+			&:nth-child(2) {
+				.blog_thumb {
+					height: 240px;
+				}
+			}
+		}
+	}
+}
+
+/* !END: H10 blog CSS */

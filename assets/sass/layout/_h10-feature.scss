@@ -1,0 +1,109 @@
+@use "../utilities" as *;
+
+/* START: Feature CSS */
+.h10-feature {
+	.container {
+		--bs-gutter-x: 30px;
+		.row {
+			--bs-gutter-x: 30px;
+			@media #{$sm, $xs} {
+				--bs-gutter-x: 20px;
+			}
+		}
+
+		.rg-30 {
+			@media #{$sm, $xs} {
+				row-gap: 20px;
+			}
+		}
+	}
+	.sec-heading {
+		max-width: 820px;
+		.sec-title {
+			img,
+			svg {
+				width: 44px;
+				height: 44px;
+				border-radius: 100%;
+			}
+			span {
+				color: var(--tj-color-common-white-2);
+			}
+		}
+	}
+	&-item {
+		border: 0;
+		background-color: var(--tj-color-theme-bg);
+		height: 100%;
+		padding: 40px 30px 16px;
+		@media #{ $md,  $xs} {
+			padding: 35px 15px;
+		}
+		&-2 {
+			background-color: var(--tj-color-theme-primary);
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@media #{$lg, $md, $sm, $xs} {
+				padding: 0;
+			}
+			.feature-content {
+				padding: 40px 30px 16px;
+				.title {
+					color: var(--tj-color-common-white);
+				}
+				.desc {
+					color: var(--tj-color-common-white);
+				}
+				@media #{$lg, $md,  $xs} {
+					padding: 35px 15px;
+				}
+			}
+
+			.feature-chart-img {
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-img {
+		&-item {
+			position: relative;
+			height: 100%;
+
+			.feature-img {
+				height: 100%;
+				width: 100%;
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+			.feature-content {
+				position: absolute;
+				inset-inline-start: 15px;
+				inset-inline-end: 15px;
+				bottom: 15px;
+				padding: 10px 20px;
+				border-radius: 30px;
+				background: rgba(247, 247, 247, 0.1);
+				backdrop-filter: blur(35px);
+				z-index: 1;
+				.title {
+					margin-bottom: 0;
+					line-height: 1;
+					color: var(--tj-color-common-white);
+				}
+			}
+			&-2 {
+				.feature-content {
+					background: var(--tj-color-theme-dark);
+					backdrop-filter: blur(0);
+				}
+			}
+		}
+	}
+}

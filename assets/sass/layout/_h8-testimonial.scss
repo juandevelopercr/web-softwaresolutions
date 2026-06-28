@@ -1,0 +1,195 @@
+@use "../utilities" as *;
+
+/* START: Home 8 Testimonial CSS */
+.h8-testimonial {
+	background-color: var(--tj-color-theme-bg);
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+
+	@media #{$sm, $xs} {
+		padding-bottom: 80px;
+	}
+
+	&-section-heading {
+		margin-bottom: 0;
+		@media #{$lg} {
+			margin-bottom: 0;
+		}
+		@media #{$md} {
+			margin-bottom: 0;
+		}
+
+		@media #{$sm,$xs} {
+			margin-bottom: 0;
+		}
+		&-wrapper {
+			padding: 120px 0 0;
+			@media #{$lg} {
+				padding: 100px 0 50px;
+			}
+			@media #{$md} {
+				padding: 80px 0 45px;
+			}
+
+			@media #{$sm,$xs} {
+				max-width: 540px;
+				padding: 80px 12px 40px;
+				margin-inline-start: auto;
+				margin-inline-end: auto;
+			}
+		}
+	}
+	&-fanfact {
+		.counter-item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 0;
+			max-width: 361px;
+			margin-bottom: 35px;
+			margin-top: 30px;
+			@media #{$lg,$md} {
+				margin-bottom: 15px;
+				margin-top: 10px;
+			}
+			@media #{$sm,$xs} {
+				text-align: start;
+				margin-bottom: 10px;
+				margin-top: 10px;
+			}
+		}
+		.number {
+			flex-shrink: 0;
+			color: var(--tj-color-theme-primary);
+			padding-inline-end: 10px;
+			position: relative;
+			font-size: 72px;
+			font-family: var(--tj-ff-heading);
+			margin-bottom: 0;
+			@media #{$sm,$xs} {
+				font-size: 60px;
+			}
+			&::after {
+				content: "";
+				width: 1px;
+				height: 69%;
+				position: absolute;
+				inset-inline-end: 0;
+				top: 50%;
+				transform: translateY(-50%) translateX(50%);
+				background-color: var(--tj-color-border-2);
+			}
+		}
+		.sub-title {
+			line-height: 1.5;
+		}
+	}
+	.container {
+		@media #{$sm,$xs} {
+			max-width: 100%;
+			--bs-gutter-x: 0;
+			.row {
+				--bs-gutter-x: 0;
+			}
+		}
+	}
+	&-slider {
+		height: 783px;
+		// @media #{$lg,$md} {
+		// 	height: auto;
+		// 	margin-bottom: 30px;
+		// }
+		@media #{$sm,$xs} {
+			height: auto;
+			margin-bottom: 24px;
+		}
+		.swiper-wrapper {
+			transition-timing-function: linear;
+		}
+
+		.swiper-slide {
+			height: auto;
+
+			@media #{$sm,$xs} {
+				width: 400px;
+			}
+		}
+	}
+	&-item {
+		padding: 35px 30px 35px 30px;
+		background-color: var(--tj-color-common-white);
+		@media #{$xs} {
+			padding: 30px 20px;
+		}
+		.tj-testimonial-author {
+			flex-wrap: nowrap;
+			.author-images {
+				mask-image: url(../images/shapes/h6-test-shape.svg);
+				background: var(--tj-color-theme-bg);
+				width: 90px;
+				height: 110px;
+				margin-bottom: -40px;
+				img {
+					top: 12px;
+					inset-inline-end: 8px;
+					transform: unset;
+					width: 75px;
+					height: 75px;
+				}
+			}
+
+			.author-text .author-name {
+				@media #{$xl} {
+					font-size: 20px;
+				}
+			}
+			.sub-title {
+				color: var(--tj-color-common-black-2);
+			}
+		}
+
+		.author-rating {
+			background: var(--tj-color-theme-bg);
+			display: inline-block;
+			padding: 2px 10px 4px;
+			border-radius: 32px;
+			.star-ratings {
+				color: var(--tj-color-theme-primary);
+				-webkit-text-stroke: 1px var(--tj-color-theme-primary);
+				.fill-ratings {
+					color: var(--tj-color-theme-primary);
+				}
+				.empty-ratings {
+					color: transparent;
+				}
+			}
+		}
+		.testimonial-content {
+			padding-inline-start: 0;
+			flex-direction: column;
+			.desc {
+				max-width: 100%;
+				font-size: 18px;
+				border-bottom-style: dashed;
+				padding-bottom: 25px;
+				@media #{$xs} {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+.tj-gap-30 {
+	--bs-gutter-x: 30px;
+	@media #{$xs} {
+		--bs-gutter-x: 24px;
+	}
+	.row {
+		--bs-gutter-x: 30px;
+		@media #{$xs} {
+			--bs-gutter-x: 24px;
+		}
+	}
+}
+/* START: Home 8 Testimonial CSS */

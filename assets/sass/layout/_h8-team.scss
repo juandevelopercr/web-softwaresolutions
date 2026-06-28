@@ -1,0 +1,109 @@
+@use "../utilities" as *;
+
+/* START: Team CSS */
+.h8-team-section {
+	overflow: hidden;
+	.sec-heading {
+		max-width: 585px;
+		width: 100%;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+	}
+}
+.team-item {
+	&.style-5 {
+		min-height: 380px;
+		.team-images {
+			overflow: hidden;
+			position: relative;
+		}
+		.team-content {
+			width: calc(100% - 30px);
+			height: 88px;
+			position: absolute;
+			bottom: 15px;
+			inset-inline-start: 15px;
+			padding: 20px;
+			background-color: rgba(247, 247, 247, 0.1);
+			backdrop-filter: blur(10px);
+			overflow: hidden;
+			@include transition(all 0.4s ease-in-out 0s);
+			.team-text {
+				.title {
+					a {
+						color: var(--tj-color-common-white);
+					}
+					&:hover {
+						letter-spacing: 0;
+					}
+				}
+			}
+			.desc {
+				color: var(--tj-color-common-white);
+				opacity: 0;
+				visibility: hidden;
+				margin-top: 20px;
+			}
+		}
+		.team-share {
+			position: absolute;
+			bottom: 10px;
+			inset-inline-start: 20px;
+			opacity: 0;
+			visibility: hidden;
+			z-index: 2;
+			@include transition(all 0.2s ease-in-out 0s);
+			ul {
+				flex-direction: row;
+				gap: 8px;
+				li {
+					a {
+						width: 28px;
+						height: 28px;
+						font-size: 16px;
+						color: var(--tj-color-theme-dark);
+						background: var(--tj-color-theme-bg-2);
+						opacity: 0.4;
+						i {
+							color: var(--tj-color-theme-dark);
+						}
+						&:hover {
+							color: var(--tj-color-common-white);
+							background-color: var(--tj-color-theme-primary);
+							opacity: 1;
+							transform: translateY(-3px);
+							i {
+								color: var(--tj-color-common-white);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&:hover {
+			.team-content {
+				height: calc(100% - 30px);
+				padding: 30px 20px 60px;
+			}
+			.desc {
+				opacity: 1;
+				visibility: visible;
+				transition: all 0.2s ease-in;
+				transition-delay: 0.2s;
+			}
+			.team-share {
+				opacity: 1;
+				visibility: visible;
+				bottom: 20px;
+			}
+		}
+		@media #{$sm} {
+			min-height: 340px;
+		}
+		@media #{$md, $xs} {
+			min-height: auto;
+		}
+	}
+}
+/* !END: Team CSS */

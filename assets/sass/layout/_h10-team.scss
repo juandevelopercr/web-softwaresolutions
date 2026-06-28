@@ -1,0 +1,225 @@
+@use "../utilities" as *;
+
+/* START: Home 10 team CSS */
+.h10-team {
+	&-section {
+		position: relative;
+		overflow: hidden;
+		z-index: 2;
+		border-bottom: 1px solid var(--tj-color-border-2);
+
+		.sec-heading {
+			margin: 0;
+			max-width: 550px;
+			&-wrap {
+				margin-bottom: 60px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				column-gap: 30px;
+				row-gap: 20px;
+				justify-content: space-between;
+				@media #{$md, $sm, $xs} {
+					margin-bottom: 40px;
+				}
+			}
+		}
+		.teams_btn {
+			@media #{$md, $sm, $xs} {
+				margin-top: 40px;
+			}
+		}
+	}
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media #{$md, $sm, $xs} {
+			gap: 20px;
+		}
+	}
+	&-item {
+		display: flex;
+		background-color: var(--tj-color-theme-bg);
+		width: 195px;
+		height: 380px;
+		transition: width 0.3s ease-in;
+		overflow: hidden;
+		@media #{$xl} {
+			width: 175px;
+		}
+		@media #{$lg} {
+			width: 140px;
+			height: 350px;
+		}
+		@media #{$md, $sm, $xs} {
+			width: 100%;
+		}
+		@media #{$sm, $xs} {
+			height: auto;
+			flex-direction: column;
+		}
+		.team-images {
+			width: 195px;
+			position: relative;
+			flex: 0 0 auto;
+			transition: all 0.3s ease-in-out;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+			@media #{$xl} {
+				width: 175px;
+			}
+			@media #{$lg} {
+				width: 140px;
+			}
+			@media #{$md} {
+				width: 305px;
+			}
+			@media #{$sm, $xs} {
+				width: 100%;
+			}
+		}
+		.team-content {
+			position: relative;
+			overflow: hidden;
+			flex: 1;
+			&-inner {
+				position: relative;
+				top: 0;
+				inset-inline-start: 0;
+				width: 277px;
+				height: 100%;
+				transform: translateX(-105%);
+				transition: transform 0.3s ease-in-out;
+				opacity: 0;
+				visibility: hidden;
+				padding-bottom: 75px;
+				@media #{$xl} {
+					width: 245px;
+				}
+				@media #{$lg} {
+					width: 230px;
+				}
+				@media #{$md, $sm, $xs} {
+					width: 100%;
+					transform: translateX(0);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			.team-text {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 16px;
+				.title {
+					line-height: 1.2;
+					margin-bottom: 4px;
+					a {
+						&:hover {
+							color: var(--tj-color-theme-primary);
+						}
+					}
+				}
+				.sub-title {
+					font-size: 14px;
+					color: var(--tj-color-common-black-2);
+				}
+			}
+
+			.team-share {
+				position: absolute;
+				inset-inline-start: auto;
+				bottom: 0;
+				z-index: 2;
+				.sub-title {
+					display: inline-flex;
+					color: var(--tj-color-common-black-2);
+					font-size: 14px;
+					line-height: 1;
+					margin-bottom: 15px;
+				}
+				ul {
+					list-style: none;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 8px;
+					li {
+						a {
+							width: 26px;
+							height: 26px;
+							font-size: 15px;
+							color: var(--tj-color-theme-bg);
+							background: var(--tj-color-theme-dark);
+							opacity: 0.4;
+							display: inline-flex;
+							align-items: center;
+							justify-content: center;
+							border-radius: 50%;
+							line-height: 1;
+							&:hover {
+								color: var(--tj-color-common-white);
+								background-color: var(--tj-color-theme-primary);
+								opacity: 1;
+								transform: translateY(-3px);
+							}
+						}
+					}
+				}
+			}
+			@media #{$md} {
+				display: flex;
+				align-items: center;
+				padding: 30px 20px;
+			}
+			@media #{$sm, $xs} {
+				padding: 30px 20px;
+			}
+		}
+		&.active {
+			width: 640px;
+			.team-images {
+				width: 305px;
+				@media #{$xl} {
+					width: 245px;
+				}
+				@media #{$lg} {
+					width: 220px;
+				}
+				@media #{$sm,$xs} {
+					width: 100%;
+				}
+			}
+			.team-content {
+				padding: 48px 30px;
+				@media #{$xl} {
+					padding: 48px 20px;
+				}
+				@media #{$lg} {
+					padding: 35px 15px;
+				}
+				@media #{$md,$sm,$xs} {
+					padding: 30px 20px;
+				}
+				&-inner {
+					transform: translateX(0);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			@media #{$xl} {
+				width: 530px;
+			}
+			@media #{$lg} {
+				width: 480px;
+			}
+			@media #{$md, $sm, $xs} {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* END: Home 10 team CSS */

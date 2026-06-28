@@ -1,0 +1,118 @@
+@use "../utilities" as *;
+
+/* START: Header CSS */
+
+// header 7 css
+.tj-header-area {
+	&.header-10 {
+		&.header-absolute {
+			.header-wrapper {
+				padding: 0px 24px;
+
+				@media #{$md, $sm, $xs} {
+					padding: 10px 15px;
+				}
+			}
+		}
+		.mainmenu {
+			> ul {
+				column-gap: 20px;
+				@media #{$xl,$lg} {
+					column-gap: 15px;
+				}
+
+				> li {
+					> a {
+						column-gap: 20px;
+						@media #{$xl} {
+							column-gap: 12px;
+						}
+						@media #{$lg} {
+							column-gap: 10px;
+						}
+						&::after {
+							display: none;
+						}
+						&::before {
+							content: "";
+							width: 4px;
+							height: 4px;
+							border-radius: 100%;
+							background: rgba(247, 247, 247, 0.1);
+							transition: all 0.3s ease-in-out 0s;
+						}
+
+						&:hover {
+							color: var(--tj-color-theme-primary);
+						}
+					}
+
+					&.current-menu-ancestor,
+					&.current-menu-item,
+					&:hover {
+						> a {
+							color: var(--tj-color-common-white);
+							&::before {
+								background: rgba(247, 247, 247, 1);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.header_btn.tj-primary-btn {
+			background-color: var(--tj-color-common-white);
+			.btn_text {
+				color: var(--tj-color-theme-dark);
+			}
+			&:hover {
+				.btn_text {
+					color: var(--tj-color-common-white);
+				}
+			}
+		}
+	}
+
+	.header-10-topbar {
+		background-color: var(--tj-color-common-white);
+		padding: 9px 24px;
+		@media #{$xxxl, $xxl, $xl, $lg} {
+			padding: 9px 24px;
+		}
+
+		@media #{$md, $sm, $xs} {
+			padding: 12px 15px;
+		}
+		.topbar_note {
+			color: var(--tj-color-theme-dark);
+			a {
+				> span::after {
+					background-color: var(--tj-color-theme-dark);
+				}
+			}
+			i {
+				color: var(--tj-color-text-body);
+			}
+		}
+		.topbar_infos {
+			.info_item {
+				color: var(--tj-color-theme-dark);
+				i {
+					color: var(--tj-color-text-body);
+				}
+
+				&:has(a):hover {
+					a {
+						color: var(--tj-color-theme-primary);
+					}
+
+					i {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+		}
+	}
+}
+/* !END: Header CSS */

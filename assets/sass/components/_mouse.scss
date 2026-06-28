@@ -1,0 +1,121 @@
+@use "../utilities" as *;
+/* START: Mouse CSS */
+.cursor-outer {
+	margin-inline-start: -15px;
+	margin-top: -15px;
+	width: 30px;
+	height: 30px;
+	border: 2px solid var(--tj-color-theme-primary);
+	box-sizing: border-box;
+	z-index: 10000000;
+	opacity: 0.5;
+	transition: all 0.08s ease-out;
+}
+
+.mouseCursor {
+	position: fixed;
+	top: 0;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	bottom: 0;
+	pointer-events: none;
+	border-radius: 50%;
+	transform: translateZ(0);
+	visibility: hidden;
+	text-align: center;
+	@media #{$sm, $xs} {
+		display: none;
+	}
+}
+
+.cursor-inner {
+	margin-inline-start: -3px;
+	margin-top: -3px;
+	width: 6px;
+	height: 6px;
+	z-index: 10000001;
+	background-color: var(--tj-color-theme-primary);
+	transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+		margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	& span {
+		color: var(--tj-color-common-white);
+		line-height: 120px;
+		opacity: 0;
+		font-size: 15px;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		@media #{$md} {
+			line-height: 80px;
+		}
+		@media #{$sm, $xs} {
+			line-height: 50px;
+		}
+	}
+
+	&.cursor-big {
+		& span {
+			opacity: 1;
+		}
+	}
+}
+
+.mouseCursor.cursor-big {
+	width: 120px;
+	height: 120px;
+	margin-inline-start: -40px;
+	margin-top: -40px;
+	@media #{$md} {
+		width: 80px;
+		height: 80px;
+	}
+	@media #{$sm, $xs} {
+		width: 50px;
+		height: 50px;
+	}
+}
+.mouseCursor.cursor-big {
+	&.cursor-outer {
+		display: none;
+	}
+
+	&.d-none {
+		display: none;
+	}
+}
+.project-slider-one,
+.slider-drag .swiper-slide {
+	cursor: none;
+}
+
+.tj-cursor {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	inset-inline-start: 0;
+	width: 120px;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border-radius: 50%;
+	color: var(--tj-color-common-white);
+	background-color: var(--tj-color-theme-primary);
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.2s ease, visibility 0.2s ease;
+	@media #{$md} {
+		width: 80px;
+		height: 80px;
+	}
+	@media #{$sm, $xs} {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+/* !END: Mouse CSS */

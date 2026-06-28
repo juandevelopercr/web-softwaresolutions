@@ -1,0 +1,130 @@
+@use "../utilities" as *;
+
+/* START: Back to Top CSS */
+.back-to-top-wrapper {
+	position: absolute;
+	inset-inline-end: 20px;
+	bottom: 0;
+	width: 40px;
+	height: 140px;
+	cursor: pointer;
+	display: block;
+	border-radius: 25px;
+	z-index: 99;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.6s;
+	&.back-to-top-btn-show {
+		visibility: visible;
+		opacity: 1;
+		bottom: 120px;
+	}
+	@media #{$lg, $md, $sm, $xs} {
+		inset-inline-end: 15px;
+
+		&.back-to-top-btn-show {
+			bottom: 50px;
+		}
+	}
+}
+
+.back-to-top-btn {
+	display: inline-flex;
+	width: 40px;
+	height: 130px;
+	text-align: center;
+	background: transparent;
+	color: var(--tj-color-heading-primary);
+	border: 1px solid var(--tj-color-border-2);
+	border-radius: 25px;
+	transition: all, 0.3s;
+	line-height: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		color: var(--tj-color-theme-primary);
+		border-color: var(--tj-color-theme-primary);
+	}
+	& i {
+		margin-bottom: 10px;
+		animation: bounce2 2s infinite;
+	}
+	& span {
+		display: inline-block;
+		font-weight: var(--tj-fw-bold);
+		text-transform: uppercase;
+		writing-mode: vertical-lr;
+		letter-spacing: -0.03em;
+	}
+	&:hover {
+		@include transform(translateY(-4px));
+	}
+	&.style-2 {
+		color: var(--tj-color-common-white);
+		border: 1px solid var(--tj-color-border-1);
+		&:hover {
+			color: var(--tj-color-theme-primary);
+			border-color: var(--tj-color-theme-primary);
+		}
+	}
+	&.style-3 {
+		color: var(--tj-color-common-white);
+		background: rgb(247, 247, 247, 0.1);
+		border: 1px solid var(--tj-color-border-1);
+
+		&:hover {
+			background: var(--tj-color-theme-primary);
+			border-color: var(--tj-color-theme-primary);
+		}
+	}
+	&.style-5 {
+		color: var(--tj-color-heading-primary);
+		background: var(--tj-color-common-white);
+		border: 1px solid var(--tj-color-common-white);
+		&:hover {
+			color: var(--tj-color-common-white);
+			background: var(--tj-color-theme-primary);
+			border-color: var(--tj-color-theme-primary);
+		}
+	}
+
+	&.style-6 {
+		color: var(--tj-color-common-white);
+		background-color: transparent;
+		border: 1px solid var(--tj-color-border-1);
+		&:hover {
+			background: var(--tj-color-theme-primary);
+			border-color: var(--tj-color-theme-primary);
+		}
+	}
+}
+
+.backtop {
+	position: absolute;
+	bottom: 40px;
+	inset-inline-end: 60px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	font-size: 20px;
+	color: var(--tj-color-common-white);
+	background-color: var(--tj-color-theme-primary);
+	border-radius: 50%;
+	z-index: 5;
+	@media #{$md, $sm, $xs} {
+		inset-inline-end: 20px;
+	}
+	&:hover {
+		color: var(--tj-color-common-white);
+		@include transform(translateY(-4px));
+	}
+	&:focus {
+		color: var(--tj-color-common-white);
+	}
+}
+
+/* !END: back to top CSS */

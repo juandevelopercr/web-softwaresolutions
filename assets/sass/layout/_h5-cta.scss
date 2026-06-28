@@ -1,0 +1,60 @@
+@use "../utilities" as *;
+
+/* START: Home 5 CTA CSS */
+.h5-cta {
+	&-section {
+		padding: 60px 0;
+		background-color: var(--tj-color-theme-primary);
+		position: relative;
+		overflow: hidden;
+		.thumb {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			inset-inline-start: 0;
+			img {
+				width: 100%;
+				height: 100%;
+				opacity: 0.15;
+				mix-blend-mode: luminosity;
+			}
+		}
+	}
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+		align-items: center;
+		justify-content: space-between;
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			justify-content: center;
+		}
+		.sec-title {
+			color: var(--tj-color-common-white);
+			margin-bottom: 0;
+			max-width: 685px;
+			@media #{$xl, $lg} {
+				max-width: 480px;
+			}
+			@media #{$md, $sm, $xs} {
+				max-width: 100%;
+				text-align: center;
+			}
+		}
+	}
+	&-contact {
+		display: inline-flex;
+		gap: 15px;
+		.tj-primary-btn {
+			.btn_inner {
+				.btn_icon {
+					font-size: 20px;
+				}
+			}
+		}
+		@media (max-width: 450px) {
+			flex-direction: column;
+		}
+	}
+}

@@ -1,0 +1,106 @@
+@use "../utilities" as *;
+
+/* START: Swiper Nav & Dots CSS */
+.swiper_navigations {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	.navigation {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		font-size: 22px;
+		line-height: 1;
+		color: var(--tj-color-heading-primary);
+		border: 1px solid var(--tj-color-border-2);
+		background: transparent;
+		@include transition(all 0.4s ease-in-out 0s);
+		cursor: pointer;
+		@media #{$sm, $xs} {
+			width: 40px;
+			height: 40px;
+			font-size: 18px;
+		}
+		i {
+			display: inline-flex;
+			line-height: 1;
+			color: var(--tj-color-heading-primary);
+		}
+		&:hover {
+			color: var(--tj-color-common-white);
+			background-color: var(--tj-color-theme-primary);
+			border-color: var(--tj-color-theme-primary);
+			i {
+				color: var(--tj-color-common-white);
+			}
+		}
+	}
+}
+.swiper_pagination {
+	text-align: center;
+	margin-top: 50px;
+	@media #{$md, $sm, $xs} {
+		margin-top: 40px;
+	}
+	.swiper-pagination-bullet {
+		position: relative;
+		z-index: 1;
+		width: 21px;
+		height: 22px;
+		background-color: transparent;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 1;
+		margin: 0 2px !important;
+
+		&::before {
+			content: "";
+			display: inline-flex;
+			width: 21px;
+			height: 22px;
+			background-color: var(--tj-color-theme-primary);
+			aspect-ratio: 1;
+			clip-path: polygon(
+				93.3% 75%,
+				50% 100%,
+				6.7% 75%,
+				6.7% 25%,
+				50% 0%,
+				93.3% 25%,
+				93.3% 75%,
+				88.97% 27.5%,
+				50% 5%,
+				11.03% 27.5%,
+				11.03% 72.5%,
+				50% 95%,
+				88.97% 72.5%,
+				88.97% 27.5%
+			);
+			opacity: 0;
+			transform: scale(0);
+		}
+		&::after {
+			content: "";
+			display: inline-flex;
+			width: 9px;
+			height: 10px;
+			background-color: var(--tj-color-theme-primary);
+			clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 70%, 0 30%);
+			position: absolute;
+			top: 6px;
+		}
+
+		&.swiper-pagination-bullet-active {
+			&::before {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+}
+/* !END: Swiper Nav & Dots CSS */

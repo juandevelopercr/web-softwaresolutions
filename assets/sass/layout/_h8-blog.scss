@@ -1,0 +1,166 @@
+@use "../utilities" as *;
+
+/* START: Home 8 Blog CSS */
+.h8-blog {
+	&-section {
+		position: relative;
+		overflow: hidden;
+		z-index: 2;
+	}
+	&-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 28px;
+		@media #{$xl} {
+			gap: 20px;
+		}
+		@media #{$lg} {
+			gap: 15px;
+		}
+		@media #{$sm,$xs} {
+			gap: 20px;
+		}
+	}
+	&-item {
+		display: flex;
+		border: 1px solid var(--tj-color-border-2);
+		background-color: var(--tj-color-common-white);
+		width: 300px;
+		height: 400px;
+		transition: width 0.3s ease-in;
+		overflow: hidden;
+		@media #{$xl} {
+			width: 240px;
+		}
+		@media #{$lg} {
+			width: 200px;
+		}
+		@media #{$md, $sm, $xs} {
+			width: 100%;
+		}
+		@media #{$sm, $xs} {
+			height: auto;
+			flex-direction: column;
+		}
+		.blog-images {
+			width: 300px;
+			position: relative;
+			flex: 0 0 auto;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+			.blog-date {
+				position: absolute;
+				top: 15px;
+				inset-inline-start: 15px;
+				background: rgba(247, 247, 247, 0.1);
+				backdrop-filter: blur(35px);
+				padding: 20px;
+				text-align: center;
+				.date {
+					display: block;
+					font-family: var(--tj-ff-heading);
+					font-size: 32px;
+					color: var(--tj-color-common-white);
+					font-weight: var(--tj-fw-sbold);
+					letter-spacing: -0.03em;
+					margin-bottom: 8px;
+					line-height: 1;
+				}
+				.month {
+					display: block;
+					font-size: 14px;
+					color: var(--tj-color-common-white);
+					letter-spacing: 0.24em;
+					text-transform: uppercase;
+					line-height: 1;
+				}
+			}
+			@media #{$xl} {
+				width: 240px;
+			}
+			@media #{$lg} {
+				width: 200px;
+			}
+			@media #{$sm, $xs} {
+				width: 100%;
+			}
+		}
+		.blog-content {
+			position: relative;
+			overflow: hidden;
+			flex: 1;
+			&-inner {
+				position: relative;
+				top: 0;
+				inset-inline-start: 0;
+				width: 300px;
+				transform: translateX(-105%);
+				transition: transform 0.2s ease-in-out;
+				opacity: 0;
+				visibility: hidden;
+				@media #{$xl} {
+					width: 290px;
+				}
+				@media #{$lg} {
+					width: 270px;
+				}
+				@media #{$md, $sm, $xs} {
+					width: 100%;
+					transform: translateX(0);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			.blog-two-meta {
+				margin-bottom: 15px;
+			}
+			.title {
+				line-height: 1.333;
+				margin-bottom: 12px;
+			}
+			.blog-button {
+				margin-top: 25px;
+			}
+			@media #{$md} {
+				display: flex;
+				align-items: center;
+				padding: 30px 20px;
+			}
+			@media #{$sm, $xs} {
+				padding: 30px 20px;
+			}
+		}
+		&.active {
+			width: 640px;
+			.blog-content {
+				padding: 45px 20px;
+				@media #{$lg} {
+					padding: 48px 15px;
+				}
+				@media #{$md,$sm,$xs} {
+					padding: 30px 20px;
+				}
+				&-inner {
+					transform: translateX(0);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			@media #{$xl} {
+				width: 595px;
+			}
+			@media #{$lg} {
+				width: 500px;
+			}
+			@media #{$md,$sm,$xs} {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* END: Home 8 Blog CSS */

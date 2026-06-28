@@ -1,0 +1,181 @@
+@use "../utilities" as *;
+
+/* START: Team details CSS */
+.team-details {
+	padding: 120px 0;
+	@media #{$lg} {
+		padding: 100px 0;
+	}
+	@media #{$md} {
+		padding: 80px 0;
+	}
+	@media #{$sm,$xs} {
+		padding: 80px 0;
+	}
+	&__img {
+		margin-top: 8px;
+		@media #{$md, $sm, $xs} {
+			margin-top: 0;
+		}
+		img {
+			border-radius: var(--tj-br-md);
+			width: 100%;
+		}
+	}
+	&__content {
+		padding-inline-start: 30px;
+		@media #{$md,$sm,$xs} {
+			margin-top: 30px;
+			padding-inline-start: 0;
+		}
+		@media #{$sm,$xs} {
+			margin-top: 20px;
+		}
+	}
+	.team-details__subtitle {
+		margin-bottom: 16px;
+		@media #{$md,$sm,$xs} {
+			margin-bottom: 12px;
+		}
+	}
+	&__name {
+		@media #{$md,$sm,$xs} {
+			font-size: 36px;
+			margin-bottom: 8px;
+		}
+		@media #{$sm,$xs} {
+			font-size: 30px;
+			margin-bottom: 8px;
+		}
+	}
+	&__desig {
+		margin-bottom: 20px;
+		color: var(--tj-color-grey-4);
+		display: inline-block;
+		@media #{$md,$sm,$xs} {
+			margin-bottom: 8px;
+		}
+		@media #{$sm,$xs} {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__contact-info {
+		ul {
+			display: flex;
+			border: 1px solid var(--tj-color-border-2);
+			margin: 25px 0;
+			border-radius: var(--tj-br-md);
+			list-style: none;
+			@media #{$md,$sm,$xs} {
+				margin: 20px 0;
+			}
+			@media #{$xs} {
+				flex-direction: column;
+			}
+
+			li {
+				flex: 1 1 50%;
+				padding: 25px 28px;
+				border-inline-end: 1px solid var(--tj-color-border-2);
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+				&:last-child {
+					border-inline-end: 0;
+					border-bottom: 0;
+				}
+				@media #{$lg,$md} {
+					padding: 16px 18px;
+				}
+				@media #{$sm,$xs} {
+					padding: 12px 14px;
+				}
+				@media #{$xs} {
+					border-inline-end: 0;
+					border-bottom: 1px solid var(--tj-color-border-2);
+				}
+			}
+			span {
+				color: var(--tj-color-grey-4);
+				display: inline-block;
+			}
+			a {
+				font-size: 20px;
+				color: var(--tj-color-heading-primary);
+				font-weight: var(--tj-fw-sbold);
+				margin-bottom: 0;
+				position: relative;
+				display: inline-block;
+				&::after {
+					content: "";
+					width: 0;
+					height: 1px;
+					transition: all 0.3s;
+					position: absolute;
+					bottom: 2px;
+					inset-inline-start: 0;
+					background-color: var(--tj-color-heading-primary);
+				}
+				@media #{$lg,$md} {
+					font-size: 15px;
+				}
+
+				&:hover {
+					&::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	&__experience {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		@media #{$md,$sm,$xs} {
+			margin-top: 24px;
+			margin-bottom: 24px;
+		}
+		@media #{$sm,$xs} {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		&__list {
+			ul {
+				display: flex;
+				border: 1px solid var(--tj-color-border-2);
+				flex-wrap: wrap;
+				margin: 25px 0;
+				border-radius: 0;
+				list-style: none;
+				li {
+					flex: 1 1 50%;
+					padding: 25px;
+					display: flex;
+					gap: 8px;
+					border: 1px solid var(--tj-color-border-2);
+					border-top: 0;
+					border-inline-start: 0;
+					@media #{$md,$sm,$xs} {
+						padding: 16px;
+					}
+					p {
+						margin-bottom: 0;
+					}
+					i {
+						font-size: 18px;
+						color: var(--tj-color-theme-primary);
+						margin-top: 4px;
+					}
+					&:last-child {
+						border-inline-end: 0;
+					}
+					&:nth-child(2n) {
+						border-inline-end: 0;
+					}
+				}
+			}
+		}
+	}
+}
+/* !END: Team details CSS */

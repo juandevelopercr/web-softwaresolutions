@@ -1,0 +1,175 @@
+@use "../utilities" as *;
+
+/* START: About CSS */
+.h8-about {
+	position: relative;
+	background-color: var(--tj-color-theme-bg);
+
+	&-wrapper {
+		flex-wrap: nowrap;
+		@media #{$lg} {
+			gap: 35px;
+		}
+
+		@media #{$md,$sm,$xs} {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+
+		.about-images-group-three {
+			max-width: 645px;
+
+			@media #{$xl} {
+				min-height: 630px;
+			}
+			@media #{$lg} {
+				min-height: 630px;
+			}
+
+			@media #{$md,$sm,$xs} {
+				width: 100%;
+				max-width: 100%;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	&-content {
+		@media #{$md,$sm,$xs} {
+			width: 100%;
+			max-width: 100%;
+		}
+		.desc {
+			margin-top: 20px;
+		}
+		.check-list-one {
+			display: flex;
+			gap: 20px;
+			margin: 24px 0 30px;
+			@media #{$xs} {
+				gap: 5px;
+				flex-direction: column;
+			}
+			.vr-line {
+				width: 1px;
+				background-color: var(--tj-color-border-2);
+
+				@media #{$xs} {
+					width: 0;
+					height: 0;
+				}
+			}
+			ul {
+				@media #{$md} {
+					max-width: 45%;
+					width: 100%;
+				}
+				@media #{$sm} {
+					max-width: 44%;
+					width: 100%;
+				}
+			}
+		}
+
+		.btn-area {
+			display: flex;
+			align-items: flex-end;
+			flex-wrap: wrap;
+			gap: 10px 20px;
+			margin-top: 26px;
+			.images-thumb {
+				margin-bottom: 0;
+				li {
+					max-width: 60px;
+					flex-shrink: 0;
+					@media #{$xs} {
+						max-width: 56px;
+					}
+					&:not(&:first-child) {
+						margin-inline-start: -24px;
+					}
+					img {
+						height: 60px;
+						padding: 4px;
+						@media #{$xs} {
+							height: 56px;
+						}
+					}
+					&.plus {
+						padding: 4px;
+						i {
+							background-color: var(--tj-color-theme-primary);
+							height: 52px;
+							width: 52px;
+							padding: 4px;
+							@media #{$xs} {
+								height: 48px;
+								width: 48px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&-banner {
+		&::after {
+			display: none;
+		}
+	}
+	&-float-area {
+		position: absolute;
+		inset-inline-start: 0;
+		bottom: 0;
+		padding: 27px 30px 22px;
+		background-color: var(--tj-color-theme-primary);
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		outline: 10px solid var(--tj-color-theme-bg);
+		@media #{$xs} {
+			padding: 27px 20px 22px;
+			outline-width: 8px;
+		}
+	}
+	&-client-experience {
+		&.client-experience {
+			.images-thumb {
+				margin-bottom: 0;
+				li {
+					max-width: 54px;
+					flex-shrink: 0;
+					@media #{$xs} {
+						max-width: 54px;
+					}
+					&:not(&:first-child) {
+						margin-inline-start: -23px;
+					}
+					img {
+						height: 54px;
+						width: 54px;
+						padding: 3px;
+					}
+					&.plus {
+						padding: 3px;
+						i {
+							background-color: var(--tj-color-theme-dark);
+							height: 48px;
+							width: 48px;
+							padding: 3px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-feedback-text {
+		color: var(--tj-color-common-white);
+		max-width: 158px;
+		margin-bottom: 0;
+	}
+}
+
+/* !END: About CSS */

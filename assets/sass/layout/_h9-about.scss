@@ -1,0 +1,170 @@
+@use "../utilities" as *;
+
+/* START: About CSS */
+.h9-about {
+	position: relative;
+	background-color: var(--tj-color-theme-bg);
+
+	&.section-space {
+		padding-bottom: 0;
+		@media #{$lg} {
+			padding-bottom: 0;
+		}
+		@media #{$md, $sm, $xs} {
+			padding-bottom: 0;
+		}
+	}
+	.sec-heading {
+		&.style-4 {
+			+ .desc {
+				margin-top: 16px;
+			}
+		}
+	}
+
+	&-wrapper {
+		flex-wrap: nowrap;
+		align-items: flex-start;
+		@media #{$lg} {
+			gap: 35px;
+		}
+		@media #{$md,$sm,$xs} {
+			flex-wrap: wrap;
+		}
+	}
+	.about {
+		&-wrapper-four {
+			.about-images-group-three {
+				max-width: 647px;
+				&::after {
+					display: none;
+				}
+
+				@media #{$md,$sm,$xs} {
+					width: 100%;
+					max-width: 100%;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	&-content {
+		position: static;
+		padding-top: 110px;
+
+		@media #{$xl} {
+			margin-inline-start: 30px;
+			padding-top: 90px;
+			margin-bottom: 30px;
+		}
+		@media #{$lg} {
+			padding-top: 90px;
+		}
+		@media #{$md,$sm,$xs} {
+			max-width: 100%;
+			padding-top: 80px;
+		}
+		.btn-area {
+			margin-top: 26px;
+		}
+	}
+	&-list {
+		display: flex;
+		gap: 15px 20px;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		margin-top: 25px;
+		&-item {
+			max-width: 240px;
+			padding-inline-end: 20px;
+			border-inline-end: 1px solid var(--tj-color-border-2);
+			color: var(--tj-color-common-black-2);
+			&:last-child {
+				padding: 0;
+				border: 0;
+			}
+			@media #{$xs} {
+				max-width: 100%;
+				padding-inline-end: 0;
+				padding-bottom: 15px;
+				border-inline-end: 0;
+				border-bottom: 1px solid var(--tj-color-border-2);
+			}
+		}
+		&-title {
+			margin-bottom: 10px;
+		}
+		&-desc {
+			margin-bottom: 0;
+		}
+	}
+	&-bottom {
+		display: flex;
+		gap: 30px;
+
+		@media #{$lg} {
+			width: 100%;
+			margin-top: 30px;
+		}
+		@media #{$md,$sm,$xs} {
+			flex-direction: column;
+			margin-top: 30px;
+		}
+
+		&-left {
+			padding: 120px 0;
+
+			@media #{$lg} {
+				padding: 100px 0;
+			}
+			@media #{$md, $sm, $xs} {
+				padding: 35px 0 40px;
+			}
+		}
+	}
+	&-statistics {
+		position: relative;
+		margin-inline-start: auto;
+
+		> img {
+			height: auto;
+			object-fit: cover;
+			margin-bottom: 0;
+		}
+		@media #{$md,$sm,$xs} {
+			margin-inline-start: auto;
+			margin-inline-end: auto;
+		}
+		@media #{$xs} {
+			width: 100%;
+			text-align: end;
+			> img {
+				width: calc(100% - 69px);
+				margin-inline-start: auto;
+			}
+		}
+	}
+
+	&-circle {
+		inset-inline-end: auto;
+		inset-inline-start: 0;
+
+		.circle-wrap {
+			inset-inline-end: auto;
+			inset-inline-start: 0;
+			transform: translateY(-50%) translateX(-50%);
+			background-color: var(--tj-color-common-white);
+			border: 9px solid var(--tj-color-theme-bg);
+			box-sizing: content-box;
+		}
+		@media #{$xs} {
+			.circle-wrap {
+				transform: translateY(-50%) translateX(0);
+			}
+		}
+	}
+}
+
+/* !END: About CSS */
