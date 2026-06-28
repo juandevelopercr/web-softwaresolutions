@@ -217,9 +217,14 @@ $htmlDuenos = plantillaBase($contenidoDuenos, $pieDuenos);
 $asuntoDuenos = '=?UTF-8?B?' . base64_encode('Nueva consulta: ' . $nombre . ($empresa ? ' — ' . $empresa : '')) . '?=';
 $cabDuenos    = cabeceras(FROM_NAME, FROM_EMAIL, $email);
 
+$logFile = __DIR__ . '/mail_log.txt';
+$logMsg  = date('Y-m-d H:i:s') . " | Nombre: $nombre | Email: $email\n";
+
 foreach (OWNERS as $destinatario) {
-    mail($destinatario, $asuntoDuenos, $htmlDuenos, $cabDuenos);
+    $resultado = mail($destinatario, $asuntoDuenos, $htmlDuenos, $cabDuenos);
+    $logMsg .= "  -> $destinatario: " . ($resultado ? 'OK' : 'FALLO') . "\n";
 }
+file_put_contents($logFile, $logMsg, FILE_APPEND);
 
 // ── Email 2: Confirmación al cliente ─────────────────────────────────────────
 $contenidoCliente = "
