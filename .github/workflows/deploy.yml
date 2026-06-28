@@ -1,0 +1,31 @@
+name: Deploy a Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Subir archivos al servidor via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 194.163.140.149
+          username: ${{ secrets.FTPUSER }}
+          password: ${{ secrets.FTPPASSWORD }}          
+          # Solo sube archivos que cambiaron (más rápido a partir del 2do deploy)
+          state-name: .ftp-deploy-sync-state.json
+          # No borrar archivos del servidor que no estén en el repo
+          dangerous-clean-slate: false
+          # Excluir archivos que no deben subirse al servidor
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .ftp-deploy-sync-state.json
