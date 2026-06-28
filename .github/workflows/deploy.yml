@@ -20,11 +20,9 @@ jobs:
           username: ${{ secrets.FTPUSER }}
           password: ${{ secrets.FTPPASSWORD }}
           port: 21
-          # Solo sube archivos que cambiaron (más rápido a partir del 2do deploy)
+          server-dir: /
           state-name: .ftp-deploy-sync-state.json
-          # No borrar archivos del servidor que no estén en el repo
           dangerous-clean-slate: false
-          # Excluir archivos que no deben subirse al servidor
           exclude: |
             **/.git*
             **/.git*/**
