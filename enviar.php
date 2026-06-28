@@ -17,7 +17,8 @@ define('OWNERS',       [
 ]);
 define('URL_EXITO',    'https://www.softwaresolutions.co.cr/gracias.html');
 define('URL_ERROR',    'https://www.softwaresolutions.co.cr/contacto.html?error=1');
-define('HONEYPOT',     '_honey');
+define('HONEYPOT',          '_honey');
+define('TURNSTILE_SECRET',  '0x4AAAAAADsd9PUT16135x2G35wvktkyY8k');
 
 // ── Solo POST ────────────────────────────────────────────────────────────────
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -29,6 +30,29 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 if (!empty($_POST[HONEYPOT])) {
     // Simular éxito para no revelar la trampa
     header('Location: ' . URL_EXITO);
+    exit;
+}
+
+// ── Verificar Cloudflare Turnstile ───────────────────────────────────────────
+$turnstileToken = $_POST['cf-turnstile-response'] ?? '';
+if (empty($turnstileToken)) {
+    header('Location: ' . URL_ERROR);
+    exit;
+}
+$verify = file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false,
+    stream_context_create(['http' => [
+        'method'  => 'POST',
+        'header'  => 'Content-Type: application/x-www-form-urlencoded',
+        'content' => http_build_query([
+            'secret'   => TURNSTILE_SECRET,
+            'response' => $turnstileToken,
+            'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+        ]),
+    ]])
+);
+$verifyData = json_decode($verify, true);
+if (!($verifyData['success'] ?? false)) {
+    header('Location: ' . URL_ERROR);
     exit;
 }
 

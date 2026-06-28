@@ -274,6 +274,9 @@
                   <label for="mensaje" class="form-label">Mensaje <span style="color:#e63c20">*</span></label>
                   <textarea id="mensaje" name="mensaje" class="form-control" rows="5" placeholder="Cuéntenos sobre su proyecto o necesidad..." required maxlength="2000"></textarea>
 
+                  <!-- Cloudflare Turnstile -->
+                  <div class="cf-turnstile" data-sitekey="0x4AAAAAADsd9E8iB9zRnzsj" style="margin-bottom:20px;"></div>
+
                   <button type="submit" class="tj-primary-btn" style="border:none;cursor:pointer;">
                      <div class="btn_inner">
                         <div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div>
@@ -368,5 +371,6 @@
 <script src="assets/js/gsap.min.js"></script><script src="assets/js/gsap-scroll-trigger.min.js"></script>
 <script src="assets/js/smooth-scroll.min.js"></script><script src="assets/js/wow.min.js"></script>
 <script src="assets/js/meanmenu.js"></script><script src="assets/js/main.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
