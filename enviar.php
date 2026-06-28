@@ -18,7 +18,7 @@ define('OWNERS',       [
 define('URL_EXITO',    'https://www.softwaresolutions.co.cr/gracias.html');
 define('URL_ERROR',    'https://www.softwaresolutions.co.cr/contacto.html?error=1');
 define('HONEYPOT',          '_honey');
-define('TURNSTILE_SECRET',  '0x4AAAAAADsd9PUT16135x2G35wvktkyY8k');
+require_once __DIR__ . '/config.php'; // clave cargada desde archivo no versionado
 
 // ── Solo POST ────────────────────────────────────────────────────────────────
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
