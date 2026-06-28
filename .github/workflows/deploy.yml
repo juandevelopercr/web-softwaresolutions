@@ -1,28 +1,25 @@
-name: Deploy a Hostinger
+name: Sitio web softwaresolutions
 
 on:
   push:
-    branches:
-      - main
+    branches: ['main']
+  pull_request:
+    branches: ['main']
 
 jobs:
-  deploy:
+  ftp_produccion:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
-
-      - name: Checkout del repositorio
+      - name: Checkout del repositorio erpv4 V4.4
         uses: actions/checkout@v4
-
-      - name: Subir archivos al servidor via FTP
+      - name: Upload erpv4 V4.4
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 194.163.140.149
           username: ${{ secrets.FTPUSER }}
           password: ${{ secrets.FTPPASSWORD }}
-          port: 21
-          server-dir: /
-          state-name: .ftp-deploy-sync-state.json
-          dangerous-clean-slate: false
+          # El exclude debe ir aquí adentro con 10 espacios de sangría
           exclude: |
             **/.git*
             **/.git*/**
