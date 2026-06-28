@@ -5,19 +5,20 @@ Options -Indexes
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # HTTP → HTTPS
+    # HTTP → HTTPS (solo en producción, no en localhost)
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
     RewriteCond %{HTTPS} off
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-    # sin www → con www
+    # sin www → con www (solo en producción)
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
     RewriteCond %{HTTP_HOST} !^www\. [NC]
     RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
 # ── Proteger archivos sensibles ───────────────────────────────────────────────
 <FilesMatch "^(config\.php|mail_log\.txt|\.env)$">
-    Order allow,deny
-    Deny from all
+    Require all denied
 </FilesMatch>
 
 # ── Cabeceras de seguridad ────────────────────────────────────────────────────
@@ -49,12 +50,14 @@ Options -Indexes
 </IfModule>
 
 # ── IPs bloqueadas ───────────────────────────────────────────────────────────
-<RequireAll>
-    Require all granted
-    Require not ip 189.204.172.177
-    Require not ip 154.122.63.192
-    Require not ip 50.87.144.109
-</RequireAll>
+<IfModule mod_authz_core.c>
+    <RequireAll>
+        Require all granted
+        Require not ip 189.204.172.177
+        Require not ip 154.122.63.192
+        Require not ip 50.87.144.109
+    </RequireAll>
+</IfModule>
 
 # ── PHP ───────────────────────────────────────────────────────────────────────
 <IfModule php_module>
