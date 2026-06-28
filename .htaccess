@@ -48,6 +48,14 @@ Options -Indexes
     ExpiresByType font/woff2                "access plus 1 year"
 </IfModule>
 
+# ── IPs bloqueadas ───────────────────────────────────────────────────────────
+<RequireAll>
+    Require all granted
+    Require not ip 189.204.172.177
+    Require not ip 154.122.63.192
+    Require not ip 50.87.144.109
+</RequireAll>
+
 # ── PHP ───────────────────────────────────────────────────────────────────────
 <IfModule php_module>
     php_flag display_errors Off
