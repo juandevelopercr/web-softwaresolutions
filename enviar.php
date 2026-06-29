@@ -112,7 +112,7 @@ function plantillaBase(string $contenido, string $pie): string {
       <tr>
         <td style="background:#1a1a2e;border-radius:10px 10px 0 0;padding:28px 36px;text-align:center;">
           <span style="font-size:22px;font-weight:700;color:#ffffff;letter-spacing:1px;">
-            Software Solutions S.A.
+            Development Software Solutions S.A.
           </span><br>
           <span style="font-size:12px;color:#aab4c8;letter-spacing:2px;text-transform:uppercase;">
             softwaresolutions.co.cr
@@ -208,7 +208,7 @@ $contenidoDuenos = "
 $pieDuenos = "
   Este mensaje fue generado automáticamente desde el formulario de contacto de
   <a href='https://www.softwaresolutions.co.cr' style='color:#e63c20;'>softwaresolutions.co.cr</a><br>
-  Software Solutions S.A. &nbsp;|&nbsp; Alajuela, Costa Rica &nbsp;|&nbsp; (506) 2101-3248
+  Development Software Solutions S.A. &nbsp;|&nbsp; Alajuela, Costa Rica &nbsp;|&nbsp; (506) 2101-3248
 ";
 
 $htmlDuenos = plantillaBase($contenidoDuenos, $pieDuenos);
@@ -265,14 +265,14 @@ $contenidoCliente = "
 ";
 
 $pieCliente = "
-  © " . date('Y') . " Software Solutions S.A. &nbsp;|&nbsp; Alajuela, Costa Rica<br>
+  © " . date('Y') . " Development Software Solutions S.A. &nbsp;|&nbsp; Alajuela, Costa Rica<br>
   Usted recibe este correo porque completó el formulario de contacto en
   <a href='https://www.softwaresolutions.co.cr' style='color:#e63c20;'>softwaresolutions.co.cr</a>
 ";
 
 $htmlCliente = plantillaBase($contenidoCliente, $pieCliente);
 
-$asuntoCliente = '=?UTF-8?B?' . base64_encode('Hemos recibido su consulta — Software Solutions S.A.') . '?=';
+$asuntoCliente = '=?UTF-8?B?' . base64_encode('Hemos recibido su consulta — Development Software Solutions S.A.') . '?=';
 $cabCliente    = cabeceras(FROM_NAME, FROM_EMAIL, REPLY_TO);
 
 mail($email, $asuntoCliente, $htmlCliente, $cabCliente);
