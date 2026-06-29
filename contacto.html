@@ -276,13 +276,23 @@
                   <!-- Cloudflare Turnstile -->
                   <div class="cf-turnstile" data-sitekey="0x4AAAAAADsd9E8iB9zRnzsj" style="margin-bottom:20px;"></div>
 
-                  <button type="submit" class="tj-primary-btn" style="border:none;cursor:pointer;">
+                  <button type="submit" id="btnEnviar" class="tj-primary-btn" style="border:none;cursor:pointer;">
                      <div class="btn_inner">
                         <div class="btn_icon"><span><i class="tji-arrow-right"></i><i class="tji-arrow-right"></i></span></div>
-                        <div class="btn_text"><span>Enviar mensaje</span></div>
+                        <div class="btn_text"><span id="btnTexto">Enviar mensaje</span></div>
                      </div>
                   </button>
                </form>
+               <script>
+               document.querySelector('form').addEventListener('submit', function() {
+                  var btn = document.getElementById('btnEnviar');
+                  var txt = document.getElementById('btnTexto');
+                  btn.disabled = true;
+                  btn.style.opacity = '0.6';
+                  btn.style.cursor = 'not-allowed';
+                  txt.textContent = 'Enviando...';
+               });
+               </script>
             </div>
             <div class="col-lg-6">
                <div class="sec-heading" style="margin-bottom:30px;">
